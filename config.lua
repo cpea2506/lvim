@@ -1,37 +1,44 @@
+require "pea.options"
+require "pea.keys"
+require "pea.plugins"
+require "pea.lsp_installer"
+require "pea.icons"
+require "pea.dashboard"
+require "pea.treesitter"
+require "pea.nvimtree"
+
 lvim.leader = "space"
-lvim.colorscheme = "one_monokai"
-lvim.transparent_window = true
+lvim.colornnheme = "one_monokai"
+-- nvim.lsp.document_highlight = false
+
 vim.g.one_monokai_no_bg = true
-
-require("pea.plugins")
-require("pea.keys")
-require("pea.dashboard")
-require("pea.notify")
-require("pea.treesitter")
-
-lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.active = true
-lvim.line_wrap_cursor_movement = true
-lvim.builtin.nvimtree.setup.view.side = "right"
-lvim.builtin.nvimtree.git_hl = 0
-lvim.builtin.nvimtree.show_icons.git = 0
-lvim.builtin.nvimtree.quit_on_open = 1
-lvim.builtin.evil_lualine = { active = true }
-
-if lvim.builtin.evil_lualine.active then
-	require("pea.config.evil_lualine").config()
-end
 
 -- neovide
 vim.g.neovide_cursor_animation_length = 0.12
 vim.g.neovide_cursor_vfx_mode = "sonicboom"
 vim.g.neovide_transparency = 0.75
 
--- vim move
-vim.g.move_key_modifier = "C"
+lvim.builtin.terminal.active = true
+lvim.builtin.bufferline.active = true
 
--- exclude these from numbers
-vim.gnumbers_exclude = { "lsp-installer", "toggleterm", "dashboard", "help", "NvimTree", "alpha" }
+-- telescope
+lvim.builtin.telescope.defaults.path_display = { "smart" }
 
--- vim visual multi
-vim.gVM_mouse_mappings = 1
+-- notify
+lvim.builtin.notify.active = true
+lvim.builtin.notify.opts.stages = "fade_in_slide_out"
+
+-- cmp
+lvim.builtin.cmp.confirm_opts.select = true
+lvim.builtin.cmp.formatting.source_names["crates"] = "(Crates)"
+
+-- autopairs
+lvim.builtin.autopairs.enable_check_bracket_line = true
+lvim.builtin.autopairs.map_c_w = true
+lvim.builtin.autopairs.fast_wrap.map = "<C-f>"
+
+-- lualine
+lvim.builtin.evil_lualine = { active = true }
+if lvim.builtin.evil_lualine.active then
+    require("pea.config.evil_lualine").config()
+end

@@ -1,37 +1,69 @@
 -- Additional Plugins
 lvim.plugins = {
-	{ "myusuf3/numbers.vim" },
-	{ "matze/vim-move" },
-	{ "cpea2506/one_monokai.nvim" },
-	{
-		"nacro90/numb.nvim",
-		config = function()
-			require("pea.config.numb").config()
-		end,
-		event = "BufRead",
-	},
-	{
-		"andweeb/presence.nvim",
-		config = function()
-			require("pea.config.presence").config()
-		end,
-	},
-	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("pea.config.colorizer").config()
-		end,
-	},
-	{
-		"simrat39/rust-tools.nvim",
-		ft = "rust",
-		after = "nvim-lsp-installer",
-	},
-	{
-		"Saecki/crates.nvim",
-		event = { "BufRead Cargo.toml" },
-		config = function()
-			require("pea.config.crates").config()
-		end,
-	},
+    {
+        "nvim-telescope/telescope-ui-select.nvim",
+        config = function()
+            require("telescope").load_extension "ui-select"
+        end,
+        event = "BufRead",
+    },
+    {
+        "cpea2506/one_monokai.nvim",
+        event = "BufRead",
+    },
+    {
+        "p00f/nvim-ts-rainbow",
+        event = "BufRead",
+    },
+    {
+        "ray-x/lsp_signature.nvim",
+        config = function()
+            require("pea.config.signatures").config()
+        end,
+        event = "BufRead",
+    },
+    {
+        "windwp/nvim-ts-autotag",
+        config = function()
+            require("pea.config.autotag").config()
+        end,
+        event = "InsertEnter",
+    },
+    {
+        "simrat39/rust-tools.nvim",
+        config = function()
+            require("pea.config.rust-tools").config()
+        end,
+        ft = { "rust", "rs" },
+        after = "nvim-lsp-installer",
+        event = "BufRead *.rs",
+    },
+    {
+        "nacro90/numb.nvim",
+        config = function()
+            require("pea.config.numb").config()
+        end,
+        event = "BufRead",
+    },
+    {
+        "Saecki/crates.nvim",
+        config = function()
+            require("pea.config.crates").config()
+        end,
+        event = "BufRead Cargo.toml",
+    },
+    {
+        "norcalli/nvim-colorizer.lua",
+        config = function()
+            require("pea.config.colorizer").config()
+        end,
+        event = "BufRead",
+    },
+    {
+        "andweeb/presence.nvim",
+        config = function()
+            require("pea.config.presence").config()
+        end,
+        event = "BufRead",
+    },
 }
