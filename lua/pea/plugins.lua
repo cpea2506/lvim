@@ -1,6 +1,11 @@
 -- Additional Plugins
 lvim.plugins = {
-    { "cpea2506/one_monokai.nvim" },
+    {
+        "cpea2506/one_monokai.nvim",
+        config = function()
+            lvim.colorscheme = "one_monokai"
+        end,
+    },
     {
         "p00f/nvim-ts-rainbow",
         event = "BufRead",
