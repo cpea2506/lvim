@@ -10,8 +10,8 @@ require "pea.nvimtree"
 lvim.leader = "space"
 lvim.lsp.document_highlight = false
 
-lvim.colorscheme = "one_monokai"
-vim.g.one_monokai_no_bg = true
+--lvim.colorscheme = "one_monokai"
+--vim.g.one_monokai_no_bg = true
 
 -- neovide
 vim.g.neovide_cursor_animation_length = 0.12
