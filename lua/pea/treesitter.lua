@@ -1,4 +1,4 @@
-lvim.builtin.treesitter.ensure_installed = "maintained"
+-- lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.highlight.enable = true
 lvim.builtin.treesitter.rainbow.enable = true
