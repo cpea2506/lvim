@@ -56,8 +56,8 @@ function packer_setup {
 function main {
     echo "Start setting up configuration"
 
-    remove_old_config
     install_lunar
+    remove_old_config
     clone_config
     packer_setup
 }
