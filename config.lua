@@ -8,8 +8,8 @@ require "pea.treesitter"
 require "pea.nvimtree"
 
 lvim.leader = "space"
-lvim.colornnheme = "one_monokai"
--- nvim.lsp.document_highlight = false
+lvim.colorscheme = "one_monokai"
+-- lvim.lsp.document_highlight = false
 
 vim.g.one_monokai_no_bg = true
 
