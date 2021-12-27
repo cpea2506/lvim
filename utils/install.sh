@@ -57,7 +57,7 @@ function packer_setup {
 function main {
     echo "Start setting up configuration"
 
-    [ -d $LUNAR_RUNTIME_HOME ] && install_lunar
+    [ ! -d $LUNAR_RUNTIME_HOME ] && install_lunar
      
     remove_old_config
 
