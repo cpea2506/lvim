@@ -50,8 +50,10 @@ function packer_setup {
     msg "Preparing Packer setup"
 
     lvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+
     printf "\nPacker setup complete"
 
+    lvim -c PackerSync
 }
 
 function main {
@@ -60,7 +62,6 @@ function main {
     [ ! -d $LUNAR_RUNTIME_HOME ] && install_lunar
      
     remove_old_config
-
     clone_config
     packer_setup
 }
