@@ -1,6 +1,7 @@
 #!/bin/bash
 
 declare -r LUNAR_CONFIG_HOME="${LUNAR_CONFIG_HOME:-"$HOME/.config/lvim"}" 
+declare -r LUNAR_RUNTIME_HOME="${LUNAR_RUNTIME_HOME:-"$HOME/.local/share/lvim"}"
 
 function msg {
     local text="$1"
@@ -56,11 +57,9 @@ function packer_setup {
 function main {
     echo "Start setting up configuration"
 
-    if [ -d $LUNAR_CONFIG_HOME ]; then
-      remove_old_config
-    else
-      install_lunar
-    fi
+    [ -d $LUNAR_RUNTIME_HOME ] && install_lunar
+     
+    remove_old_config
 
     clone_config
     packer_setup
