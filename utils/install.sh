@@ -42,7 +42,7 @@ function clone_config {
 function remove_old_config {
     msg "Remove old LunarVim config"
     
-    [ -d $LUNAR_CONFIG_HOME ] && rm -rf $LUNAR_CONFIG_HOME     
+    rm -rf $LUNAR_CONFIG_HOME     
 }
 
 function packer_setup {
@@ -56,8 +56,12 @@ function packer_setup {
 function main {
     echo "Start setting up configuration"
 
-    install_lunar
-    remove_old_config
+    if [ -d $LUNAR_CONFIG_HOME ]; then
+      remove_old_config
+    else
+      install_lunar
+    fi
+
     clone_config
     packer_setup
 }
