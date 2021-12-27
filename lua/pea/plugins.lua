@@ -1,16 +1,6 @@
 -- Additional Plugins
 lvim.plugins = {
-    {
-        "nvim-telescope/telescope-ui-select.nvim",
-        config = function()
-            require("telescope").load_extension "ui-select"
-        end,
-        event = "BufRead",
-    },
-    {
-        "cpea2506/one_monokai.nvim",
-        event = "BufRead",
-    },
+    { "cpea2506/one_monokai.nvim" },
     {
         "p00f/nvim-ts-rainbow",
         event = "BufRead",

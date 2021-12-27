@@ -1,7 +1,6 @@
 lvim.builtin.nvimtree.active = true
 lvim.builtin.nvimtree.quit_on_open = 1
 lvim.builtin.nvimtree.special_files = ""
-lvim.builtin.nvimtree.setup.diagnostics.enable = false
 lvim.builtin.nvimtree.icons.git = {
     unstaged = "✗",
     staged = "✓",
@@ -10,6 +9,7 @@ lvim.builtin.nvimtree.icons.git = {
     untracked = "★",
     deleted = "",
 }
+lvim.builtin.nvimtree.setup.diagnostics.enable = false
 
 -- setup
 lvim.builtin.nvimtree.setup.view.side = "right"

@@ -135,5 +135,8 @@ lvim.builtin.devicons = {
 local status_ok, icons = pcall(require, "nvim-web-devicons")
 
 if status_ok then
-    icons.set_icon(lvim.builtin.devicons)
+    icons.setup {
+        override = lvim.builtin.devicons,
+        defaults = true,
+    }
 end
