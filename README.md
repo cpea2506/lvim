@@ -10,7 +10,7 @@ bash <(curl -s https://raw.githubusercontent.com/cpea2506/lvim/main/utils/instal
 
 This will install LunarVim for you if there isn't any.
 
-### Require
+### Requirement
 
 - Neovim >= 0.6
 
@@ -18,13 +18,14 @@ This will install LunarVim for you if there isn't any.
 
 - Setting LunarVim for Neovide
 
-```
-chmod +x ./util/lvide
-mv ./util/lvide $HOME/.local/bin
-```
+  ```bash
+  chmod +x ./utils/lvide
+  mv ./util/lvide $HOME/.local/bin/.
+  ```
 
 - Setting LunarVim for Vimr
 
-```
-
-```
+  ```bash
+  chmod +x ./utils/lvimr
+  mv ./util/lvide $HOME/.local/bin/.
+  ```
