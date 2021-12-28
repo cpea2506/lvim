@@ -17,9 +17,18 @@ vim.g.one_monokai_no_bg = true
 ]]
 
 -- neovide
+--[[
 vim.g.neovide_cursor_animation_length = 0.12
 vim.g.neovide_cursor_vfx_mode = "sonicboom"
 vim.g.neovide_transparency = 0.75
+]]
+
+-- vimr
+--[[
+if vim.fn.has "gui_vimr" ~= 0 then
+    vim.g.one_monokai_no_bg = false
+end
+]]
 
 lvim.builtin.terminal.active = true
 lvim.builtin.bufferline.active = true
