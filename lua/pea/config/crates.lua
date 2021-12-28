@@ -7,9 +7,6 @@ M.config = function()
         return
     end
 
-    lvim.keys.normal_mode["K"] = [[:lua require("crates").show_versions_popup()<CR>]]
-    lvim.keys.normal_mode["F"] = [[:lua require("crates").show_features_popup()<CR>]]
-
     crates.setup {
         smart_insert = true,
         avoid_prerelease = true,
