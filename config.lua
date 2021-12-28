@@ -8,10 +8,10 @@ require "pea.treesitter"
 require "pea.nvimtree"
 
 lvim.leader = "space"
-lvim.lsp.document_highlight = false
+lvim.lsp.diagnostics.update_in_insert = true
 
 -- theme
---[[ 
+--[[
 lvim.colorscheme = "one_monokai"
 vim.g.one_monokai_no_bg = true
 ]]
@@ -39,6 +39,7 @@ lvim.builtin.telescope.defaults.path_display = { "smart" }
 -- notify
 lvim.builtin.notify.active = true
 lvim.builtin.notify.opts.stages = "fade_in_slide_out"
+lvim.builtin.notify.opts.timeout = 1000
 
 -- cmp
 lvim.builtin.cmp.confirm_opts.select = true
@@ -49,8 +50,17 @@ lvim.builtin.autopairs.enable_check_bracket_line = true
 lvim.builtin.autopairs.map_c_w = true
 lvim.builtin.autopairs.fast_wrap.map = "<C-f>"
 
+-- terminal
+lvim.builtin.terminal.shade_terminals = false
+
 -- lualine
 lvim.builtin.evil_lualine = { active = true }
 if lvim.builtin.evil_lualine.active then
     require("pea.config.evil_lualine").config()
 end
+
+-- autocmd
+lvim.autocommands.custom_groups = {
+    -- On entering insert mode in any file, scroll the window so the cursor line is centered
+    { "InsertEnter", "*", ":normal zz" },
+}
