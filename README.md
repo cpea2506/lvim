@@ -13,3 +13,18 @@ This will install LunarVim for you if there isn't any.
 ### Require
 
 - Neovim >= 0.6
+
+### Options
+
+- Setting LunarVim for Neovide
+
+```
+chmod +x ./util/lvide
+mv ./util/lvide $HOME/.local/bin
+```
+
+- Setting LunarVim for Vimr
+
+```
+
+```
