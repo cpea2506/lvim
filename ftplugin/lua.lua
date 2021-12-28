@@ -5,3 +5,11 @@ formatters.setup {
         filetypes = { "lua" },
     },
 }
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+    {
+        exe = "luacheck",
+        filetypes = { "lua" },
+    },
+}
