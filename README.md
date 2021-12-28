@@ -35,3 +35,5 @@ If you are using `Neovide` and/or `Vimr`. You need to do these things to make it
   
   mv ./utils/lvimr $HOME/.local/bin/.
   ```
+  
+3. Now you can start it with `lvide` for `neovide` and/or `lvimr` for `vimr`
