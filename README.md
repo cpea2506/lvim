@@ -16,16 +16,22 @@ This will install LunarVim for you if there isn't any.
 
 ### Options
 
-- Setting LunarVim for Neovide
+If you are using `Neovide` and/or `Vimr`. You need to do these things to make it receive LunarVim config:
+
+1. Go inside lvim folder: `cd $HOME/.config/lvim`
+2. Setup
+- Neovide
 
   ```bash
   chmod +x ./utils/lvide
-  mv ./util/lvide $HOME/.local/bin/.
+  
+  mv ./utils/lvide $HOME/.local/bin/.
   ```
 
-- Setting LunarVim for Vimr
+- Vimr
 
   ```bash
   chmod +x ./utils/lvimr
-  mv ./util/lvide $HOME/.local/bin/.
+  
+  mv ./utils/lvimr $HOME/.local/bin/.
   ```
