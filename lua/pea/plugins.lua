@@ -17,6 +17,7 @@ lvim.plugins = {
         config = function()
             require("pea.config.autotag").config()
         end,
+        ft = { "html", "javascript", "javascriptreact", "typescriptreact" },
         event = "InsertEnter",
     },
     {
@@ -25,7 +26,6 @@ lvim.plugins = {
             require("pea.config.rust-tools").config()
         end,
         ft = { "rust", "rs" },
-        after = "nvim-lsp-installer",
         event = "BufRead *.rs",
     },
     {
