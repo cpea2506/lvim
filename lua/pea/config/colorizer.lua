@@ -8,6 +8,7 @@ M.config = function()
     end
 
     colorizer.setup({ "*" }, {
+        names = false, -- "Name" codes like Blue
         RGB = true, -- #RGB hex codes
         RRGGBB = true, -- #RRGGBB hex codes
         RRGGBBAA = true, -- #RRGGBBAA hex codes
