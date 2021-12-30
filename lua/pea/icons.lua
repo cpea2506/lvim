@@ -119,7 +119,6 @@ lvim.builtin.devicons = {
         color = "#42a5f5",
         name = "Lua",
     },
-
     md = {
         icon = "",
         color = "#ffffff",
@@ -129,6 +128,11 @@ lvim.builtin.devicons = {
         icon = "",
         color = "#EE7950",
         name = "Rust",
+    },
+    default_icon = {
+        icon = "",
+        color = "#ffffff",
+        name = "Default",
     },
 }
 
