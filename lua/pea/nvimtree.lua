@@ -16,6 +16,7 @@ lvim.builtin.nvimtree.setup.view.side = "right"
 lvim.builtin.nvimtree.setup.hijack_cursor = true
 lvim.builtin.nvimtree.setup.open_on_setup = true
 lvim.builtin.nvimtree.setup.update_cwd = true
+lvim.builtin.nvimtree.setup.filters.dotfiles = true
 lvim.builtin.nvimtree.setup.trash = {
     cmd = "trash",
     require_confirm = true,
