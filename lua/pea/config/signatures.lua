@@ -10,7 +10,7 @@ M.config = function()
     lsp_signature.setup {
         bind = true,
         handler_opts = {
-            border = "rounded",
+            border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
         },
         floating_window = true,
         floating_window_above_cur_line = true,
