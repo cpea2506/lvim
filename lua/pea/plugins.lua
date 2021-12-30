@@ -50,7 +50,7 @@ lvim.plugins = {
         event = "BufRead",
     },
     {
-        "andweeb/presence.nvim",
+        "cpea2506/presence.nvim",
         config = function()
             require("pea.config.presence").config()
         end,
