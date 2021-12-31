@@ -1,6 +1,7 @@
 lvim.builtin.nvimtree.active = true
 lvim.builtin.nvimtree.quit_on_open = 1
 lvim.builtin.nvimtree.special_files = ""
+lvim.builtin.nvimtree.create_in_closed_folder = 1
 lvim.builtin.nvimtree.icons.git = {
     unstaged = "✗",
     staged = "✓",
