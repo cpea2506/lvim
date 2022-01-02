@@ -145,6 +145,7 @@ M.config = function()
             msg = msg or "LS Inactive"
             local buf_clients = vim.lsp.buf_get_clients()
             if next(buf_clients) == nil then
+                -- TODO: clean up this if statement
                 if type(msg) == "boolean" or #msg == 0 then
                     return "LS Inactive"
                 end
@@ -152,44 +153,22 @@ M.config = function()
             end
             local buf_ft = vim.bo.filetype
             local buf_client_names = {}
-            local trim = vim.fn.winwidth(0) < 70
 
             -- add client
-            -- local utils = require "lsp.utils"
-            -- local active_client = utils.get_active_client_by_ft(buf_ft)
             for _, client in pairs(buf_clients) do
                 if client.name ~= "null-ls" then
-                    local _added_client = client.name
-                    if trim then
-                        _added_client = string.sub(client.name, 1, 4)
-                    end
-                    table.insert(buf_client_names, _added_client)
+                    table.insert(buf_client_names, client.name)
                 end
             end
-            -- vim.list_extend(buf_client_names, active_client or {})
 
             -- add formatter
             local formatters = require "lvim.lsp.null-ls.formatters"
-            local supported_formatters = {}
-            for _, fmt in pairs(formatters.list_registered_providers(buf_ft)) do
-                local _added_formatter = fmt
-                if trim then
-                    _added_formatter = string.sub(fmt, 1, 4)
-                end
-                table.insert(supported_formatters, _added_formatter)
-            end
+            local supported_formatters = formatters.list_registered(buf_ft)
             vim.list_extend(buf_client_names, supported_formatters)
 
             -- add linter
             local linters = require "lvim.lsp.null-ls.linters"
-            local supported_linters = {}
-            for _, lnt in pairs(linters.list_registered_providers(buf_ft)) do
-                local _added_linter = lnt
-                if trim then
-                    _added_linter = string.sub(lnt, 1, 4)
-                end
-                table.insert(supported_linters, _added_linter)
-            end
+            local supported_linters = linters.list_registered(buf_ft)
             vim.list_extend(buf_client_names, supported_linters)
 
             return table.concat(buf_client_names, ", ")
