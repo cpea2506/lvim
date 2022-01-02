@@ -63,9 +63,6 @@ if status_ok then
     }
 end
 
-lvim.builtin.which_key.mappings.l.d[1] = ":Telescope diagnostics bufnr=0<CR>"
-lvim.builtin.which_key.mappings.l.w[1] = ":Telescope diagnostics<CR>"
-
 lvim.builtin.bufferline.keymap.normal_mode = {
     ["<Tab>"] = ":BufferNext<CR>",
     ["<S-Tab>"] = ":BufferPrevious<CR>",
