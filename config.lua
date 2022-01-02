@@ -1,6 +1,7 @@
 require "pea.options"
 require "pea.keys"
 require "pea.plugins"
+require "pea.notify"
 require "pea.lsp_installer"
 require "pea.icons"
 require "pea.dashboard"
@@ -35,11 +36,6 @@ lvim.builtin.bufferline.active = true
 
 -- telescope
 lvim.builtin.telescope.defaults.path_display = { "smart" }
-
--- notify
-lvim.builtin.notify.active = true
-lvim.builtin.notify.opts.stages = "fade_in_slide_out"
-lvim.builtin.notify.opts.timeout = 1000
 
 -- cmp
 lvim.builtin.cmp.confirm_opts.select = true
