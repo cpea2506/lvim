@@ -6,13 +6,6 @@ lvim.plugins = {
         event = "BufRead",
     },
     {
-        "ray-x/lsp_signature.nvim",
-        config = function()
-            require("pea.config.signatures").config()
-        end,
-        event = "BufRead",
-    },
-    {
         "windwp/nvim-ts-autotag",
         config = function()
             require("pea.config.autotag").config()
