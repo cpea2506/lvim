@@ -1,5 +1,8 @@
 local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
 
+lvim.lsp.override = { "rust" }
+lvim.lsp.automatic_servers_installation = false
+
 if status_ok then
     lsp_installer.settings {
         ui = {
