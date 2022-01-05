@@ -9,6 +9,7 @@ require "pea.treesitter"
 require "pea.nvimtree"
 
 lvim.leader = "space"
+lvim.transparent_window = false
 lvim.lsp.diagnostics.update_in_insert = true
 
 -- theme
