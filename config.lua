@@ -8,6 +8,8 @@ require "pea.dashboard"
 require "pea.treesitter"
 require "pea.nvimtree"
 
+vim.cmd "syntax on"
+
 lvim.leader = "space"
 lvim.transparent_window = false
 lvim.lsp.diagnostics.update_in_insert = true
