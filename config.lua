@@ -62,4 +62,8 @@ end
 lvim.autocommands.custom_groups = {
     -- On entering insert mode in any file, scroll the window so the cursor line is centered
     { "InsertEnter", "*", ":normal zz" },
+    -- set relativenumber in no insert mode (only works if leave insert mode by <ESC> or <jk>)
+    { "BufEnter,FocusGained,InsertLeave,WinEnter", "*", "if &nu && mode() != 'i' | set rnu | endif" },
+    -- set norelativenumber in insert mode
+    { "BufLeave,FocusLost,InsertEnter,WinLeave", "*", "if &nu | set nornu | endif" },
 }
