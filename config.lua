@@ -12,6 +12,7 @@ vim.cmd "syntax on"
 
 lvim.leader = "space"
 lvim.transparent_window = false
+lvim.lsp.float.focusable = true
 lvim.lsp.diagnostics.update_in_insert = true
 
 -- theme
