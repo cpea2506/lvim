@@ -18,7 +18,7 @@ lvim.lsp.diagnostics.update_in_insert = true
 -- theme
 --[[
 lvim.colorscheme = "one_monokai"
-vim.g.one_monokai_no_bg = true
+vim.g.one_monokai_transparent = true
 ]]
 
 -- neovide
