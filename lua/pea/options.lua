@@ -9,6 +9,7 @@ local options = {
     showcmd = false,
     tabstop = 4,
     shiftwidth = 4,
+    whichwrap = "",
     fillchars = "eob: ",
     guifont = "JetBrainsMonoMedium Nerd Font:h12",
 }
