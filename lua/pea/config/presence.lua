@@ -8,6 +8,7 @@ M.config = function()
     end
 
     local client_id = {
+        default = "793271441293967371",
         vs_code = "383226320970055681",
         coc_nvim = "768090036633206815",
         lunar_vim = "914799712794705961",
