@@ -8,16 +8,15 @@ require "pea.dashboard"
 require "pea.treesitter"
 require "pea.nvimtree"
 
+-- -- theme
+-- lvim.colorscheme = "one_monokai"
+-- vim.g.one_monokai_transparent = true
+
 lvim.leader = "space"
 lvim.transparent_window = false
-lvim.lsp.float.focusable = true
+lvim.format_on_save = true
 lvim.lsp.diagnostics.update_in_insert = true
-
--- theme
---[[
-lvim.colorscheme = "one_monokai"
-vim.g.one_monokai_transparent = true
-]]
+lvim.lsp.float.focusable = true
 
 lvim.builtin.terminal.active = true
 lvim.builtin.bufferline.active = true
