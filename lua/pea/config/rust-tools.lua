@@ -17,14 +17,16 @@ M.config = function()
             inlay_hints = {
                 -- Only show inlay hints for the current line
                 only_current_line = false,
-                -- Event which triggers a refersh of the inlay hints.
+                -- Event which triggers a refresh of the inlay hints.
                 -- You can make this "CursorMoved" or "CursorMoved,CursorMovedI" but
                 -- not that this may cause  higher CPU usage.
                 -- This option is only respected when only_current_line and
                 -- autoSetHints both are true.
                 only_current_line_autocmd = "CursorHold",
-                -- wheter to show parameter hints with the inlay hints or not
+                -- whether to show parameter hints with the inlay hints or not
                 show_parameter_hints = true,
+                -- whether to show variable name before type hints with the inlay hints or not
+                show_variable_name = true,
                 -- prefix for parameter hints
                 parameter_hints_prefix = "<- ",
                 -- prefix for all the other hints (type, chaining)
