@@ -134,6 +134,14 @@ M.config = function()
         },
     }
 
+    local status_ok, gps = pcall(require, "nvim-gps")
+    if status_ok then
+        ins_left {
+            gps.get_location,
+            cond = gps.is_available,
+        }
+    end
+
     ins_left {
         function()
             return "%="
