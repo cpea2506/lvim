@@ -8,8 +8,6 @@ require "pea.dashboard"
 require "pea.treesitter"
 require "pea.nvimtree"
 
-vim.cmd "syntax on"
-
 lvim.leader = "space"
 lvim.transparent_window = false
 lvim.lsp.float.focusable = true
@@ -19,20 +17,6 @@ lvim.lsp.diagnostics.update_in_insert = true
 --[[
 lvim.colorscheme = "one_monokai"
 vim.g.one_monokai_transparent = true
-]]
-
--- neovide
---[[
-vim.g.neovide_cursor_animation_length = 0.12
-vim.g.neovide_cursor_vfx_mode = "sonicboom"
-vim.g.neovide_transparency = 0.75
-]]
-
--- vimr
---[[
-if vim.fn.has "gui_vimr" ~= 0 then
-    vim.g.one_monokai_no_bg = false
-end
 ]]
 
 lvim.builtin.terminal.active = true
