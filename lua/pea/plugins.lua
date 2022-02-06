@@ -2,6 +2,13 @@
 lvim.plugins = {
     { "cpea2506/one_monokai.nvim" },
     {
+        "SmiteshP/nvim-gps",
+        config = function()
+            require("pea.config.gps").config()
+        end,
+        event = "BufRead",
+    },
+    {
         "p00f/nvim-ts-rainbow",
         event = "BufRead",
     },
