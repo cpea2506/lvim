@@ -11,7 +11,8 @@ local options = {
     shiftwidth = 4,
     whichwrap = "",
     fillchars = "eob: ",
-    guifont = "JetBrainsMonoMedium Nerd Font:h12",
+    guifont = "SFMono Nerd Font:h13",
+    guicursor = "n-v-c-sm:block,i-ci-ve:hor30,r-cr-o:hor20",
 }
 
 for k, v in pairs(options) do
