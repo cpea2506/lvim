@@ -8,9 +8,9 @@ require "pea.dashboard"
 require "pea.treesitter"
 require "pea.nvimtree"
 
--- -- theme
--- lvim.colorscheme = "one_monokai"
--- vim.g.one_monokai_transparent = true
+-- theme
+lvim.colorscheme = "one_monokai"
+vim.g.one_monokai_transparent = true
 
 lvim.leader = "space"
 lvim.transparent_window = false
