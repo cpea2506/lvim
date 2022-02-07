@@ -53,7 +53,7 @@ function packer_setup {
 
     printf "\nPacker setup complete"
 
-    lvim -c PackerSync
+    # lvim -c PackerSync
 }
 
 function main {
