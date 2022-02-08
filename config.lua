@@ -13,7 +13,6 @@ lvim.colorscheme = "one_monokai"
 vim.g.one_monokai_transparent = true
 
 lvim.leader = "space"
-lvim.transparent_window = false
 lvim.format_on_save = true
 lvim.lsp.diagnostics.update_in_insert = true
 lvim.lsp.float.focusable = true
@@ -35,6 +34,13 @@ lvim.builtin.autopairs.fast_wrap.map = "<C-f>"
 
 -- terminal
 lvim.builtin.terminal.shade_terminals = false
+
+-- bufferline
+lvim.builtin.bufferline.options.always_show_bufferline = true
+lvim.builtin.bufferline.options.diagnostics = nil
+lvim.builtin.bufferline.options.offsets = nil
+lvim.builtin.bufferline.options.enforce_regular_tabs = true
+lvim.builtin.bufferline.options.show_close_icon = true
 
 -- lualine
 lvim.builtin.evil_lualine = { active = true }

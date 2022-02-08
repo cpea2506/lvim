@@ -10,16 +10,12 @@ lvim.keys = {
         ["<C-k>"] = "<C-w>k",
         ["<C-l>"] = "<C-w>l",
 
-        -- Tab switch buffer
-        ["<S-l>"] = ":BufferNext<CR>",
-        ["<S-h>"] = ":BufferPrevious<CR>",
-
         -- Move current line / block
         ["<A-j>"] = ":m .+1<CR>==",
         ["<A-k>"] = ":m .-2<CR>==",
 
         -- other plugins
-        ["<C-e>"] = ":BufferClose<CR>",
+        ["<C-e>"] = ":bdelete!<CR>",
         ["<C-b>"] = ":NvimTreeToggle<CR>",
         ["<C-p>"] = ":Telescope find_files<CR>",
         ["<C-s>"] = ":w<CR>",
@@ -64,6 +60,6 @@ if status_ok then
 end
 
 lvim.builtin.bufferline.keymap.normal_mode = {
-    ["<Tab>"] = ":BufferNext<CR>",
-    ["<S-Tab>"] = ":BufferPrevious<CR>",
+    ["<Tab>"] = ":BufferLineCycleNext<CR>",
+    ["<S-Tab>"] = ":BufferLineCyclePrev<CR>",
 }
