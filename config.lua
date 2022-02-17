@@ -50,10 +50,13 @@ end
 
 -- autocmd
 lvim.autocommands.custom_groups = {
+    -- hardwrap md file line at width 80.
+    { "BufRead,BufNewFile", "*.md", "setlocal textwidth=80" },
     -- On entering insert mode in any file, scroll the window so the cursor line is centered
     { "InsertEnter", "*", ":normal zz" },
-    -- set relativenumber in no insert mode (only works if leave insert mode by <ESC> or <jk>)
+    -- switch line number modes between normal and other vim modes
     { "BufEnter,FocusGained,InsertLeave,WinEnter", "*", "if &nu && mode() != 'i' | set rnu | endif" },
-    -- set norelativenumber in insert mode
     { "BufLeave,FocusLost,InsertEnter,WinLeave", "*", "if &nu | set nornu | endif" },
+    { "CmdLineEnter", "*", "set norelativenumber" },
+    { "CmdLineLeave", "*", "set relativenumber" },
 }
