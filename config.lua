@@ -55,8 +55,6 @@ lvim.autocommands.custom_groups = {
     -- On entering insert mode in any file, scroll the window so the cursor line is centered
     { "InsertEnter", "*", ":normal zz" },
     -- switch line number modes between normal and other vim modes
-    { "BufEnter,FocusGained,InsertLeave,WinEnter", "*", "if &nu && mode() != 'i' | set rnu | endif" },
-    { "BufLeave,FocusLost,InsertEnter,WinLeave", "*", "if &nu | set nornu | endif" },
-    { "CmdLineEnter", "*", "set norelativenumber" },
-    { "CmdLineLeave", "*", "set relativenumber" },
+    -- { "BufEnter,FocusGained,InsertLeave,WinEnter", "*", "if &nu && mode() != 'i' | set rnu | endif" },
+    -- { "BufLeave,FocusLost,InsertEnter,WinLeave", "*", "if &nu | set nornu | endif" },
 }
