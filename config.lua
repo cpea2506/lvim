@@ -14,8 +14,16 @@ vim.g.one_monokai_transparent = true
 
 lvim.leader = "space"
 lvim.format_on_save = true
+
+-- lsp
 lvim.lsp.diagnostics.update_in_insert = true
 lvim.lsp.float.focusable = true
+lvim.lsp.diagnostics.signs.values = {
+    { name = "DiagnosticSignError", text = "" },
+    { name = "DiagnosticSignWarn", text = "" },
+    { name = "DiagnosticSignHint", text = "" },
+    { name = "DiagnosticSignInfo", text = "" },
+}
 
 lvim.builtin.terminal.active = true
 lvim.builtin.bufferline.active = true
