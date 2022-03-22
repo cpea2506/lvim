@@ -29,7 +29,7 @@ local conditions = {
     end,
 }
 
-M.config = function()
+M.setup = function()
     -- Config
     local config = {
         options = {
