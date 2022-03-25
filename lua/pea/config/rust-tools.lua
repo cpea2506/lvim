@@ -11,9 +11,6 @@ M.config = function()
         tools = {
             autoSetHints = true,
             hover_with_actions = true,
-            runnables = {
-                use_telescope = true,
-            },
             inlay_hints = {
                 -- Only show inlay hints for the current line
                 only_current_line = false,
