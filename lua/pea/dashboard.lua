@@ -39,18 +39,24 @@ lvim.builtin.alpha.dashboard.section.footer.val = text.align_center({ width = 0 
     "Let me show you what is true text editor!",
 }, 0.5)
 
-local dashboard = require "alpha.themes.dashboard"
-lvim.builtin.alpha.dashboard.section.buttons.val = {}
+local resolve_buttons = function()
+    local dashboard = require "alpha.themes.dashboard"
+    local buttons = {}
 
-for _, entry in pairs(lvim.builtin.alpha.dashboard.section.buttons.entries) do
-    local on_press = function()
-        local sc_ = entry[1]:gsub("%s", ""):gsub("SPC", "<leader>")
-        local key = vim.api.nvim_replace_termcodes(sc_, true, false, true)
-        vim.api.nvim_feedkeys(key, "normal", false)
+    for _, entry in pairs(lvim.builtin.alpha.dashboard.section.buttons.entries) do
+        local on_press = function()
+            local sc_ = entry[1]:gsub("%s", ""):gsub("SPC", "<leader>")
+            local key = vim.api.nvim_replace_termcodes(sc_, true, false, true)
+            vim.api.nvim_feedkeys(key, "normal", false)
+        end
+
+        local button_element = dashboard.button(entry[1], entry[2], entry[3])
+        button_element.on_press = on_press
+        button_element.opts.hl = "DashBoardCenter"
+        table.insert(buttons, button_element)
     end
 
-    local button_element = dashboard.button(entry[1], entry[2], entry[3])
-    button_element.on_press = on_press
-    button_element.opts.hl = "DashBoardCenter"
-    table.insert(lvim.builtin.alpha.dashboard.section.buttons.val, button_element)
+    return buttons
 end
+
+lvim.builtin.alpha.dashboard.section.buttons.val = resolve_buttons()
