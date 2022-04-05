@@ -20,6 +20,5 @@ lvim.builtin.nvimtree.setup.hijack_cursor = true
 lvim.builtin.nvimtree.setup.open_on_setup = true
 lvim.builtin.nvimtree.setup.update_cwd = true
 lvim.builtin.nvimtree.setup.filters.dotfiles = true
-lvim.builtin.nvimtree.setup.auto_close = true
 lvim.builtin.nvimtree.setup.actions.open_file.quit_on_open = true
 lvim.builtin.nvimtree.setup.hijack_unnamed_buffer_when_opening = true
