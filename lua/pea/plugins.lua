@@ -1,4 +1,3 @@
--- Additional Plugins
 lvim.plugins = {
     { "cpea2506/one_monokai.nvim" },
     {
