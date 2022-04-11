@@ -22,7 +22,7 @@ This will install LunarVim for you if there isn't any.
 
 #### Treesitter:
 
-The treesitter (`lua/treesitter.lua`) installation has been disabled by default. You need to specify
+The treesitter (`lua/pea/treesitter.lua`) installation has been disabled by default. You need to specify
 your list of language or using "all".
 
 ```lua
