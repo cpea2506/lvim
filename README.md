@@ -22,32 +22,36 @@ This will install LunarVim for you if there isn't any.
 
 #### Treesitter:
 
-The treesitter installation has been disabled by default. You can enable it in `lua/treesitter.lua`
+The treesitter (`lua/treesitter.lua`) installation has been disabled by default. You need to specify
+your list of language or using "all"
 
 ```lua
-lvim.builtin.treesitter.sync_install = true
-lvim.builtin.treesitter.ensure_installed = "maintained"
+lvim.builtin.treesitter.ensure_installed = {}
+
+-- or 
+
+lvim.builtin.treesitter.ensure_installed = "all"
 ```
 
 #### GUI:
 
 If you are using `Neovide` and/or `Vimr`. You need to do these things to make it receive LunarVim config:
 
-  1. Go inside lvim folder: `cd $HOME/.config/lvim`
+  1. Go inside `lvim/utils` folder: `cd $HOME/.config/lvim/utils`
   2. Setup
   - Neovide
 
     ```bash
-    chmod +x ./utils/lvide
+    chmod +x ./lvide
   
-    mv ./utils/lvide $HOME/.local/bin/.
+    mv ./lvide $HOME/.local/bin/.
     ```
   - Vimr
 
     ```bash
-    chmod +x ./utils/lvimr
+    chmod +x ./lvimr
   
-    mv ./utils/lvimr $HOME/.local/bin/.
+    mv ./lvimr $HOME/.local/bin/.
     ```
   
-  3. Now you can start it with `lvide` for `neovide` and/or `lvimr` for `vimr`
+  3. Now you can start using `lvide` for `neovide` and/or `lvimr` for `vimr`
