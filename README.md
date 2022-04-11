@@ -23,13 +23,11 @@ This will install LunarVim for you if there isn't any.
 #### Treesitter:
 
 The treesitter (`lua/treesitter.lua`) installation has been disabled by default. You need to specify
-your list of language or using "all"
+your list of language or using "all".
 
 ```lua
-lvim.builtin.treesitter.ensure_installed = {}
-
+lvim.builtin.treesitter.ensure_installed = {"rust", "swift", "lua", ...}
 -- or 
-
 lvim.builtin.treesitter.ensure_installed = "all"
 ```
 
