@@ -47,7 +47,6 @@ lvim.builtin.terminal.shade_terminals = false
 lvim.builtin.bufferline.options.always_show_bufferline = true
 lvim.builtin.bufferline.options.diagnostics = nil
 lvim.builtin.bufferline.options.offsets = nil
-lvim.builtin.bufferline.options.enforce_regular_tabs = true
 lvim.builtin.bufferline.options.show_close_icon = true
 
 -- lualine
