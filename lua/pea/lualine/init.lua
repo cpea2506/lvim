@@ -49,4 +49,4 @@ local style = {
     extensions = { "nvim-tree" },
 }
 
-lvim.builtin.lualine = vim.tbl_deep_extend("keep", lvim.builtin.lualine, style)
+lvim.builtin.lualine = vim.tbl_deep_extend("force", lvim.builtin.lualine, style)
