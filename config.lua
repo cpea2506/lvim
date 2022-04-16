@@ -26,6 +26,7 @@ lvim.lsp.diagnostics.signs.values = {
 
 -- cmp
 lvim.builtin.cmp.confirm_opts.select = true
+lvim.builtin.cmp.formatting.source_names["crates"] = "(Crates)"
 
 -- autopairs
 lvim.builtin.autopairs.enable_check_bracket_line = true
@@ -47,7 +48,7 @@ lvim.builtin.bufferline.options.show_close_icon = true
 lvim.builtin.notify.active = true
 lvim.builtin.notify.opts.stages = "fade_in_slide_out"
 lvim.builtin.notify.opts.timeout = 1000
-lvim.builtin.notify.opts.background_colour = "Normal"
+lvim.builtin.notify.opts.background_colour = "#282c34"
 
 -- autocmd
 lvim.autocommands.custom_groups = {
