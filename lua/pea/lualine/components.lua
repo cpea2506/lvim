@@ -1,86 +1,26 @@
-local M = {}
+local conditions = require "lvim.core.lualine.conditions"
+local colors = require "pea.lualine.colors"
 
-local colors = {
-    bg = "#212121",
-    fg = "#eceef0",
-    yellow = "#f5e960",
-    cyan = "#64fcda",
-    darkblue = "#081633",
-    green = "#9ee37d",
-    jungle_green = "#00b295",
-    orange = "#FF8840",
-    violet = "#a9a1e1",
-    magenta = "#ff3f80",
-    blue = "#00b0ff",
-    red = "#ee2c68",
-}
-
-local conditions = {
-    buffer_not_empty = function()
-        return vim.fn.empty(vim.fn.expand "%:t") ~= 1
-    end,
-    hide_in_width = function()
-        return vim.fn.winwidth(0) > 80
-    end,
-    check_git_workspace = function()
-        local filepath = vim.fn.expand "%:p:h"
-        local gitdir = vim.fn.finddir(".git", filepath .. ";")
-        return gitdir and #gitdir > 0 and #gitdir < #filepath
-    end,
-}
-
-M.setup = function()
-    -- Config
-    local config = {
-        options = {
-            component_separators = "",
-            section_separators = "",
-            theme = {
-                normal = { c = { fg = colors.fg, bg = colors.bg } },
-                inactive = { c = { fg = colors.fg, bg = colors.bg } },
-            },
-            disabled_filetypes = { "NvimTree", "dashboard", "toggleterm", "alpha" },
-        },
-        sections = {
-            lualine_a = {},
-            lualine_b = {},
-            lualine_y = {},
-            lualine_z = {},
-
-            -- only fill here
-            lualine_c = {},
-            lualine_x = {},
-        },
-        inactive_sections = {
-            lualine_a = {},
-            lualine_b = {},
-            lualine_y = {},
-            lualine_z = {},
-            lualine_c = {},
-            lualine_x = {},
-        },
-    }
-
-    -- Inserts a component in lualine_c at left section
-    local function ins_left(component)
-        table.insert(config.sections.lualine_c, component)
+local function diff_source()
+    local gitsigns = vim.b.gitsigns_status_dict
+    if gitsigns then
+        return {
+            added = gitsigns.added,
+            modified = gitsigns.changed,
+            removed = gitsigns.removed,
+        }
     end
+end
 
-    -- Inserts a component in lualine_x at right section
-    local function ins_right(component)
-        table.insert(config.sections.lualine_x, component)
-    end
-
-    ins_left {
+return {
+    leftbar = {
         function()
             return "▊"
         end,
         color = { fg = colors.blue }, -- Sets highlighting of component
         padding = { left = 0, right = 1 }, -- We don't need space before this
-    }
-
-    ins_left {
-        -- mode component
+    },
+    evil = {
         function()
             -- auto change color according to neovims mode
             local mode_color = {
@@ -110,20 +50,12 @@ M.setup = function()
         end,
         color = "LualineMode",
         padding = { right = 1 },
-    }
-
-    ins_left {
+    },
+    filesize = {
         "filesize",
         cond = conditions.buffer_not_empty,
-    }
-
-    ins_left {
-        "filetype",
-    }
-
-    ins_left { "location" }
-
-    ins_left {
+    },
+    diagnostics = {
         "diagnostics",
         sources = { "nvim_diagnostic" },
         symbols = { error = " ", warn = " ", info = " " },
@@ -132,23 +64,13 @@ M.setup = function()
             color_warn = { fg = colors.yellow },
             color_info = { fg = colors.cyan },
         },
-    }
-
-    local status_ok, gps = pcall(require, "nvim-gps")
-    if status_ok then
-        ins_left {
-            gps.get_location,
-            cond = gps.is_available,
-        }
-    end
-
-    ins_left {
+    },
+    center = {
         function()
             return "%="
         end,
-    }
-
-    ins_left {
+    },
+    lsp = {
         function(msg)
             msg = msg or "LS Inactive"
             local buf_clients = vim.lsp.buf_get_clients()
@@ -179,30 +101,10 @@ M.setup = function()
         end,
         icon = " LSP:",
         color = { fg = colors.jungle_green, gui = "bold" },
-    }
-
-    -- Add components to right sections
-    ins_right {
-        "o:encoding", -- option component same as &encoding in viml
-        cond = conditions.hide_in_width,
-        color = { fg = colors.green, gui = "bold" },
-    }
-
-    -- os icon
-    ins_right {
-        function()
-            return ""
-        end,
-        color = { fg = colors.fg },
-    }
-
-    ins_right {
-        "branch",
-        color = { fg = colors.violet, gui = "bold" },
-    }
-
-    ins_right {
+    },
+    diff = {
         "diff",
+        source = diff_source,
         symbols = { added = " ", modified = " 柳", removed = "  " },
         diff_color = {
             added = { fg = colors.green },
@@ -210,9 +112,23 @@ M.setup = function()
             removed = { fg = colors.red },
         },
         cond = conditions.hide_in_width,
-    }
-
-    ins_right {
+    },
+    branch = {
+        "branch",
+        color = { fg = colors.violet, gui = "bold" },
+    },
+    os = {
+        function()
+            return ""
+        end,
+        color = { fg = colors.fg },
+    },
+    encoding = {
+        "o:encoding", -- option component same as &encoding in viml
+        cond = conditions.hide_in_width,
+        color = { fg = colors.green, gui = "bold" },
+    },
+    scrollbar = {
         function()
             local current_line = vim.fn.line "."
             local total_lines = vim.fn.line "$"
@@ -224,12 +140,5 @@ M.setup = function()
         end,
         color = { fg = colors.yellow },
         padding = { left = 1 },
-    }
-
-    -- Now don't forget to initialize lualine
-    lvim.builtin.lualine.options = config.options
-    lvim.builtin.lualine.sections = config.sections
-    lvim.builtin.lualine.inactive_sections = config.inactive_sections
-end
-
-return M
+    },
+}

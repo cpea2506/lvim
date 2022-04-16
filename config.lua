@@ -7,6 +7,7 @@ require "pea.icons"
 require "pea.dashboard"
 require "pea.treesitter"
 require "pea.nvimtree"
+require "pea.lualine"
 
 -- theme
 lvim.colorscheme = "one_monokai"
@@ -48,12 +49,6 @@ lvim.builtin.bufferline.options.always_show_bufferline = true
 lvim.builtin.bufferline.options.diagnostics = nil
 lvim.builtin.bufferline.options.offsets = nil
 lvim.builtin.bufferline.options.show_close_icon = true
-
--- lualine
-lvim.builtin.evil_lualine = { active = true }
-if lvim.builtin.evil_lualine.active then
-    require("pea.config.evil_lualine").setup()
-end
 
 -- autocmd
 lvim.autocommands.custom_groups = {
