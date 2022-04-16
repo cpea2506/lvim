@@ -1,7 +1,6 @@
 require "pea.options"
 require "pea.keys"
 require "pea.plugins"
-require "pea.notify"
 require "pea.lsp_installer"
 require "pea.icons"
 require "pea.dashboard"
@@ -16,8 +15,8 @@ lvim.leader = "space"
 lvim.format_on_save = true
 
 -- lsp
-lvim.lsp.diagnostics.update_in_insert = true
 lvim.lsp.float.focusable = true
+lvim.lsp.diagnostics.update_in_insert = true
 lvim.lsp.diagnostics.signs.values = {
     { name = "DiagnosticSignError", text = "" },
     { name = "DiagnosticSignWarn", text = "" },
@@ -25,15 +24,8 @@ lvim.lsp.diagnostics.signs.values = {
     { name = "DiagnosticSignInfo", text = "" },
 }
 
-lvim.builtin.terminal.active = true
-lvim.builtin.bufferline.active = true
-
--- telescope
-lvim.builtin.telescope.defaults.path_display = { "smart" }
-
 -- cmp
 lvim.builtin.cmp.confirm_opts.select = true
-lvim.builtin.cmp.formatting.source_names["crates"] = "(Crates)"
 
 -- autopairs
 lvim.builtin.autopairs.enable_check_bracket_line = true
@@ -41,13 +33,21 @@ lvim.builtin.autopairs.map_c_w = true
 lvim.builtin.autopairs.fast_wrap.map = "<C-f>"
 
 -- terminal
+lvim.builtin.terminal.active = true
 lvim.builtin.terminal.shade_terminals = false
 
 -- bufferline
+lvim.builtin.bufferline.active = true
 lvim.builtin.bufferline.options.always_show_bufferline = true
 lvim.builtin.bufferline.options.diagnostics = nil
 lvim.builtin.bufferline.options.offsets = nil
 lvim.builtin.bufferline.options.show_close_icon = true
+
+-- notify
+lvim.builtin.notify.active = true
+lvim.builtin.notify.opts.stages = "fade_in_slide_out"
+lvim.builtin.notify.opts.timeout = 1000
+lvim.builtin.notify.opts.background_colour = "Normal"
 
 -- autocmd
 lvim.autocommands.custom_groups = {
