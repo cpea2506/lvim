@@ -1,7 +1,7 @@
 local components = require "pea.lualine.components"
 local colors = require "pea.lualine.colors"
 
-local config = {
+local style = {
     options = {
         icons_enabled = true,
         component_separators = "",
@@ -49,7 +49,4 @@ local config = {
     extensions = { "nvim-tree" },
 }
 
-lvim.builtin.lualine.options = config.options
-lvim.builtin.lualine.sections = config.sections
-lvim.builtin.lualine.inactive_sections = config.inactive_sections
-lvim.builtin.lualine.extensions = config.extensions
+lvim.builtin.lualine = vim.tbl_deep_extend("keep", lvim.builtin.lualine, style)
