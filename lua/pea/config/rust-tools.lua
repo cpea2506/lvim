@@ -72,7 +72,7 @@ M.config = function()
                     },
                 },
             },
-            standalone = false,
+            standalone = true,
         },
     }
 
