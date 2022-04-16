@@ -11,8 +11,7 @@ require "pea.lualine"
 
 -- theme
 lvim.colorscheme = "one_monokai"
-vim.g.one_monokai_transparent = true
-
+lvim.transparent_window = true
 lvim.leader = "space"
 lvim.format_on_save = true
 
