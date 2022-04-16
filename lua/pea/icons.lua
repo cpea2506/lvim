@@ -1,4 +1,4 @@
-lvim.builtin.devicons = {
+local devicons = {
     lock = {
         icon = "",
         color = "#bbbbbb",
@@ -140,7 +140,7 @@ local status_ok, icons = pcall(require, "nvim-web-devicons")
 
 if status_ok then
     icons.setup {
-        override = lvim.builtin.devicons,
+        override = devicons,
         defaults = true,
     }
 end
