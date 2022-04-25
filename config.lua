@@ -7,8 +7,8 @@ require "pea.dashboard"
 require "pea.treesitter"
 require "pea.nvimtree"
 require "pea.lualine"
+require "pea.popup"
 
--- theme
 lvim.colorscheme = "one_monokai"
 lvim.transparent_window = true
 lvim.leader = "space"

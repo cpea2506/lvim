@@ -1,4 +1,5 @@
 lvim.plugins = {
+    { "RishabhRD/popfix" },
     { "cpea2506/one_monokai.nvim" },
     {
         "p00f/nvim-ts-rainbow",
