@@ -16,7 +16,6 @@ lvim.builtin.nvimtree.setup.diagnostics.enable = false
 lvim.builtin.nvimtree.setup.view.side = "right"
 lvim.builtin.nvimtree.setup.view.preserve_window_proportions = true
 lvim.builtin.nvimtree.setup.hijack_cursor = true
-lvim.builtin.nvimtree.setup.open_on_setup_file = true
 lvim.builtin.nvimtree.setup.renderer.indent_markers.enable = true
 lvim.builtin.nvimtree.setup.open_on_setup = true
 lvim.builtin.nvimtree.setup.update_cwd = true
