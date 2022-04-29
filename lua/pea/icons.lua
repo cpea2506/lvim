@@ -129,6 +129,11 @@ local devicons = {
         color = "#EE7950",
         name = "Rust",
     },
+    prisma = {
+        icon = "卑",
+        color = "#ffffff",
+        name = "Prima",
+    },
     default_icon = {
         icon = "",
         color = "#ffffff",
