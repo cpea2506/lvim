@@ -7,6 +7,8 @@ M.config = function()
         return
     end
 
+    local lsp = require "lvim.lsp"
+
     local config = {
         tools = {
             autoSetHints = true,
@@ -14,7 +16,7 @@ M.config = function()
             inlay_hints = {
                 -- Only show inlay hints for the current line
                 only_current_line = false,
-                -- Event which triggers a refresh of the inlay hints.
+                -- Event which triggers a refersh of the inlay hints.
                 -- You can make this "CursorMoved" or "CursorMoved,CursorMovedI" but
                 -- not that this may cause  higher CPU usage.
                 -- This option is only respected when only_current_line and
@@ -58,9 +60,9 @@ M.config = function()
             },
         },
         server = {
-            cmd = { vim.fn.stdpath "data" .. "/lsp_servers/rust/rust-analyzer" },
-            on_attach = require("lvim.lsp").common_on_attach,
-            on_init = require("lvim.lsp").common_on_init,
+            on_attach = lsp.common_on_attach,
+            on_init = lsp.common_on_init,
+            capabilities = lsp.common_capabilities(),
             settings = {
                 ["rust-analyzer"] = {
                     diagnostics = {
