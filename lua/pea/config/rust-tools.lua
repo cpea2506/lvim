@@ -16,7 +16,7 @@ M.config = function()
             inlay_hints = {
                 -- Only show inlay hints for the current line
                 only_current_line = false,
-                -- Event which triggers a refersh of the inlay hints.
+                -- Event which triggers a refresh of the inlay hints.
                 -- You can make this "CursorMoved" or "CursorMoved,CursorMovedI" but
                 -- not that this may cause  higher CPU usage.
                 -- This option is only respected when only_current_line and
