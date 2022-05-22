@@ -6,6 +6,12 @@ lvim.plugins = {
         event = "BufRead",
     },
     {
+        "stevearc/dressing.nvim",
+        config = function()
+            require("pea.config.dressing").config()
+        end,
+    },
+    {
         "windwp/nvim-ts-autotag",
         config = function()
             require("pea.config.autotag").config()
