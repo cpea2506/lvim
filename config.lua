@@ -51,12 +51,34 @@ lvim.builtin.notify.opts.timeout = 1000
 lvim.builtin.notify.opts.background_colour = "#282c34"
 
 -- autocmd
-lvim.autocommands.custom_groups = {
-    -- hardwrap md file line at width 80.
-    { "BufRead,BufNewFile", "*.md", "setlocal textwidth=80" },
-    -- On entering insert mode in any file, scroll the window so the cursor line is centered
-    { "InsertEnter", "*", ":normal zz" },
-    -- switch line number modes between normal and other vim modes
-    { "BufEnter,FocusGained,InsertLeave,WinEnter", "*", "if &nu && mode() != 'i' | set rnu | endif" },
-    { "BufLeave,FocusLost,InsertEnter,WinLeave", "*", "if &nu | set nornu | endif" },
+lvim.autocommands = {
+    {
+        { "BufRead", "BufNewFile" },
+        {
+            desc = "Hardwrap md file line at width 80",
+            pattern = "*.md",
+            command = "setlocal textwidth=80",
+        },
+    },
+    {
+        "InsertEnter",
+        {
+            desc = "Centered window when access insert mode",
+            command = "normal zz",
+        },
+    },
+    {
+        { "BufEnter", "FocusGained", "InsertLeave", "WinEnter" },
+        {
+            desc = "Set relative number when in vim mode that's not insert",
+            command = "if &nu && mode() != 'i' | set rnu | endif",
+        },
+    },
+    {
+        { "BufLeave", "FocusLost", "InsertEnter", "WinLeave" },
+        {
+            desc = "Set number when in normal mode",
+            command = "if &nu | set nornu | endif",
+        },
+    },
 }
