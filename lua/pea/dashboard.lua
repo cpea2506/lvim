@@ -82,15 +82,15 @@ local config = function()
     local buttons = {
         type = "group",
         val = {
-            button("SPC f", "  Find File", "<CMD>Telescope find_files<CR>"),
-            button("SPC n", "  New File", "<CMD>ene!<CR>"),
-            button("SPC P", "  Recent Projects ", "<CMD>Telescope projects<CR>"),
-            button("SPC s r", "  Recently Used Files", "<CMD>Telescope oldfiles<CR>"),
-            button("SPC s t", "  Find Word", "<CMD>Telescope live_grep<CR>"),
+            button("SPC f", "  Find File", ":Telescope find_files<CR>"),
+            button("SPC n", "  New File", ":ene!<CR>"),
+            button("SPC P", "  Recent Projects ", ":Telescope projects<CR>"),
+            button("SPC s r", "  Recently Used Files", ":Telescope oldfiles<CR>"),
+            button("SPC s t", "  Find Word", ":Telescope live_grep<CR>"),
             button(
                 "SPC L c",
                 "  Configuration",
-                "<CMD>edit " .. require("lvim.config").get_user_config_path() .. " <CR>"
+                ":edit " .. require("lvim.config"):get_user_config_path() .. " <CR>"
             ),
         },
         opts = {

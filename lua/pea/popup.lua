@@ -1,51 +1,57 @@
-local popfix = require "popfix"
+local status_ok, popfix = pcall(require, "popfix")
 
-local ui_popup_ref = nil
+if not status_ok then
+    return
+end
 
 vim.ui.input = function(opts, onConfirm)
-    assert(ui_popup_ref == nil, "Busy in other LSP popup.")
-
-    ui_popup_ref = popfix:new {
-        mode = "editor",
+    local popup_opts = {
+        mode = vim.bo.filetype ~= "NvimTree" and "cursor" or "editor",
         close_on_bufleave = true,
         keymaps = {
             i = {
                 ["<Cr>"] = function(popup)
-                    popup:close(function(_, text)
+                    local function confirm(_, text)
                         onConfirm(text)
-                    end)
-                    ui_popup_ref = nil
+                    end
+
+                    popup:close(confirm)
                 end,
                 ["<C-c>"] = function(popup)
                     popup:close()
-                    ui_popup_ref = nil
                 end,
-                ["<Esc>"] = function(popup)
+            },
+            n = {
+                ["<Cr>"] = function(popup)
+                    local function confirm(_, text)
+                        onConfirm(text)
+                    end
+
+                    popup:close(confirm)
+                end,
+                ["q"] = function(popup)
                     popup:close()
-                    ui_popup_ref = nil
                 end,
             },
         },
-        callbacks = {
-            close = function()
-                ui_popup_ref = nil
-            end,
-        },
         prompt = {
-            border = true,
-            numbering = true,
+            width = 40,
+            numbering = false,
             title = opts.prompt,
-            -- rounded
+            highlight = "Operator",
+            prompt_highlight = "Normal",
+            init_text = opts.default,
+            border = true,
             border_chars = {
                 TOP_LEFT = "╭",
                 TOP_RIGHT = "╮",
                 MID_HORIZONTAL = "─",
                 MID_VERTICAL = "│",
                 BOTTOM_LEFT = "╰",
+                BOTTOM_RIGHT = "╯",
             },
-            highlight = "Operator",
-            prompt_highlight = "Normal",
-            init_text = opts.default,
         },
     }
+
+    popfix:new(popup_opts)
 end
