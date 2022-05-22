@@ -1,4 +1,9 @@
 local devicons = {
+    prisma = {
+        icon = "卑",
+        color = "#ffffff",
+        name = "Prima",
+    },
     lock = {
         icon = "",
         color = "#bbbbbb",
@@ -18,6 +23,12 @@ local devicons = {
         icon = "ﯤ",
         color = "#3178c6",
         name = "Ts",
+    },
+    [".DS_Store"] = {
+        icon = "",
+        color = "#41535b",
+        cterm_color = "59",
+        name = "DsStore",
     },
     toml = {
         icon = "[T]",
@@ -114,6 +125,11 @@ local devicons = {
         color = "#42a5f5",
         name = "Lua",
     },
+    [".stylua.toml"] = {
+        icon = "",
+        color = "#42a5f5",
+        name = "Lua",
+    },
     [".luacheckrc"] = {
         icon = "",
         color = "#42a5f5",
@@ -126,13 +142,8 @@ local devicons = {
     },
     rs = {
         icon = "",
-        color = "#EE7950",
+        color = "#ee7950",
         name = "Rust",
-    },
-    prisma = {
-        icon = "卑",
-        color = "#ffffff",
-        name = "Prima",
     },
     default_icon = {
         icon = "",
