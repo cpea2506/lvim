@@ -16,8 +16,9 @@ M.config = function()
 
     presence:setup {
         auto_update = true,
-        neovim_image_text = "NeoVim Chick!",
+        neovim_image_text = "NeoVim, not Vim pls!",
         main_image = "file",
+        -- log_level = "debug",
         client_id = client_id.pea_vim,
         buttons = true,
         workspace_text = function()

@@ -1,7 +1,7 @@
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
     {
-        exe = "prettier",
+        command = "prettier",
         filetypes = { "css" },
     },
 }
@@ -9,7 +9,7 @@ formatters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
     {
-        exe = "stylelint",
+        command = "stylelint",
         filetypes = { "css" },
     },
 }

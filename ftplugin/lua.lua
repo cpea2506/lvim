@@ -1,7 +1,7 @@
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
     {
-        exe = "stylua",
+        command = "stylua",
         filetypes = { "lua" },
     },
 }
@@ -9,7 +9,7 @@ formatters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
     {
-        exe = "luacheck",
+        command = "luacheck",
         filetypes = { "lua" },
     },
 }

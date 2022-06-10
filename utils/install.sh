@@ -34,7 +34,7 @@ function clone_config {
     msg "Cloning configuration"
 
     if ! git clone --branch main --depth 1 \
-        "git@github.com:cpea2506/lvim.git" $LUNAR_CONFIG_HOME; then 
+        "https://github.com/cpea2506/lvim.git" $LUNAR_CONFIG_HOME; then 
         echo "Failed to clone repository.";
         exit 1
     fi

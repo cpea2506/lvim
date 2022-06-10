@@ -1,5 +1,4 @@
-lvim.plugins = {
-    { "RishabhRD/popfix" },
+local plugins = {
     { "cpea2506/one_monokai.nvim" },
     {
         "p00f/nvim-ts-rainbow",
@@ -22,7 +21,7 @@ lvim.plugins = {
     {
         "simrat39/rust-tools.nvim",
         config = function()
-            require("pea.config.rust-tools").config()
+            require("pea.config.rust_tools").config()
         end,
         ft = { "rust", "rs" },
         event = "BufRead *.rs",
@@ -56,3 +55,5 @@ lvim.plugins = {
         event = "BufRead",
     },
 }
+
+return plugins

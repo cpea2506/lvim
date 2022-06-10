@@ -1,8 +1,9 @@
 local conditions = require "lvim.core.lualine.conditions"
-local colors = require "pea.lualine.colors"
+local colors = require "pea.builtin.lualine.colors"
 
 local function diff_source()
     local gitsigns = vim.b.gitsigns_status_dict
+
     if gitsigns then
         return {
             added = gitsigns.added,
@@ -12,7 +13,7 @@ local function diff_source()
     end
 end
 
-return {
+local components = {
     leftbar = {
         function()
             return "▊"
@@ -142,3 +143,5 @@ return {
         padding = { left = 1 },
     },
 }
+
+return components

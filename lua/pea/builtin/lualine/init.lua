@@ -1,16 +1,20 @@
-local components = require "pea.lualine.components"
-local colors = require "pea.lualine.colors"
+local components = require "pea.builtin.lualine.components"
+local colors = require "pea.builtin.lualine.colors"
 
-local style = {
+local styles = {
     options = {
         icons_enabled = true,
         component_separators = "",
         section_separators = "",
         theme = {
-            normal = { c = { fg = colors.fg, bg = colors.bg } },
-            inactive = { c = { fg = colors.fg, bg = colors.bg } },
+            normal = {
+                c = { fg = colors.fg, bg = colors.bg },
+            },
+            inactive = {
+                c = { fg = colors.fg, bg = colors.bg },
+            },
         },
-        disabled_filetypes = { "NvimTree", "toggleterm", "alpha" },
+        disabled_filetypes = { "NvimTree", "toggleterm", "alpha", "DressingInput", "lsp-installer", "lspinfo" },
         globalstatus = true,
     },
     sections = {
@@ -46,7 +50,6 @@ local style = {
         lualine_c = {},
         lualine_x = {},
     },
-    extensions = { "nvim-tree" },
 }
 
-lvim.builtin.lualine = vim.tbl_deep_extend("force", lvim.builtin.lualine, style)
+return styles

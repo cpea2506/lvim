@@ -9,7 +9,9 @@ M.config = function()
 
     dressing.setup {
         input = {
-            enabled = false,
+            enabled = true,
+            winblend = 0,
+            anchor = "NW",
         },
         select = {
             enabled = true,
