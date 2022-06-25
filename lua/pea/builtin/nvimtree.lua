@@ -1,8 +1,7 @@
-local opts = {
+local nvimtree = {
     active = true,
     setup = {
-        disable_netrw = true,
-        hijack_netrw = true,
+        disable_netrw = false,
         hijack_cursor = true,
         open_on_setup = true,
         update_cwd = true,
@@ -50,4 +49,4 @@ local opts = {
     },
 }
 
-return opts
+return nvimtree

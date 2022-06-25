@@ -1,9 +1,9 @@
-local opts = {}
+local telescope = {}
 
 local status_ok, actions = pcall(require, "telescope.actions")
 
 if status_ok then
-    opts = {
+    telescope = {
         defaults = {
             mappings = {
                 i = {
@@ -21,4 +21,4 @@ if status_ok then
     }
 end
 
-return opts
+return telescope

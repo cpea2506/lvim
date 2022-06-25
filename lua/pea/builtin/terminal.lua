@@ -1,6 +1,6 @@
-local opts = {
+local terminal = {
     active = true,
     shade_terminals = false,
 }
 
-return opts
+return terminal

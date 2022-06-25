@@ -1,4 +1,4 @@
-local opts = {
+local autocommands = {
     {
         { "BufRead", "BufNewFile" },
         {
@@ -30,4 +30,4 @@ local opts = {
     },
 }
 
-return opts
+return autocommands

@@ -14,11 +14,11 @@ if status_ok then
             border = "rounded",
             icons = {
                 server_installed = "✓",
-                server_pending = "➜",
+                server_pending = "",
                 server_uninstalled = "✗",
             },
             keymaps = {
-                toggle_server_expand = "<CR>",
+                toggle_server_expand = "o",
                 install_server = "i",
                 update_server = "u",
                 uninstall_server = "d",
@@ -32,7 +32,13 @@ local opts = {
     float = {
         focusable = true,
     },
+    buffer_mappings = {
+        normal_mode = {
+            ["gm"] = { ":TSHighlightCapturesUnderCursor<CR>", "See highlight group" },
+        },
+    },
     diagnostics = {
+        virtual_text = true,
         float = {
             focusable = true,
         },

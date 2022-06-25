@@ -1,22 +1,20 @@
-local opts = {
+local treesitter = {
     sync_install = true,
     ensure_installed = {
         "rust",
         "swift",
         "lua",
+        "vim",
         "typescript",
         "tsx",
-        "javascript",
         "bash",
         "json",
         "markdown",
         "comment",
         "regex",
-        "dockerfile",
         "scss",
-        "css",
+        "svelte",
         "toml",
-        "html",
         "yaml",
     },
     autotag = {
@@ -24,7 +22,6 @@ local opts = {
     },
     highlight = {
         enable = true,
-        additional_vim_regex_highlighting = false,
     },
     rainbow = {
         enable = true,
@@ -39,6 +36,9 @@ local opts = {
             "#a3f7b5",
         },
     },
+    playground = {
+        enable = true,
+    },
 }
 
-return opts
+return treesitter

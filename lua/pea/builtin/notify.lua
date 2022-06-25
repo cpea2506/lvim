@@ -1,4 +1,4 @@
-local opts = {
+local notify = {
     active = true,
     opts = {
         stages = "fade_in_slide_out",
@@ -14,4 +14,4 @@ local opts = {
     },
 }
 
-return opts
+return notify

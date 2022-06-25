@@ -1,4 +1,4 @@
-local opts = {
+local bufferline = {
     active = true,
     options = {
         always_show_bufferline = true,
@@ -14,4 +14,4 @@ local opts = {
     },
 }
 
-return opts
+return bufferline

@@ -1,7 +1,32 @@
 local plugins = {
     { "cpea2506/one_monokai.nvim" },
     {
+        "nvim-treesitter/playground",
+        event = "BufRead",
+    },
+    {
         "p00f/nvim-ts-rainbow",
+        event = "BufRead",
+    },
+    {
+        "phaazon/hop.nvim",
+        config = function()
+            require("pea.config.hop").config()
+        end,
+        event = "BufRead",
+    },
+    {
+        "kosayoda/nvim-lightbulb",
+        config = function()
+            require("pea.config.lightbulb").config()
+        end,
+        event = "BufRead",
+    },
+    {
+        "Maan2003/lsp_lines.nvim",
+        config = function()
+            require("pea.config.lsp_lines").config()
+        end,
         event = "BufRead",
     },
     {
@@ -9,13 +34,14 @@ local plugins = {
         config = function()
             require("pea.config.dressing").config()
         end,
+        event = "BufRead",
     },
     {
         "windwp/nvim-ts-autotag",
         config = function()
             require("pea.config.autotag").config()
         end,
-        ft = { "html", "javascript", "javascriptreact", "typescriptreact" },
+        ft = { "html", "javascriptreact", "typescriptreact" },
         event = "InsertEnter",
     },
     {
@@ -24,7 +50,6 @@ local plugins = {
             require("pea.config.rust_tools").config()
         end,
         ft = { "rust", "rs" },
-        event = "BufRead *.rs",
     },
     {
         "nacro90/numb.nvim",
