@@ -2,9 +2,8 @@
 
 My LunarVim configuration, inspired from my [Peavim](https://github.com/cpea2506/peavim) config
 
-<img width="1500"
-     alt="Screen Shot 2022-04-08 at 00 42 08" 
-     src="https://user-images.githubusercontent.com/42694704/162264344-6dcdf17a-b734-4e9d-bdd4-5442a18ca24c.png">
+<img width="1500" alt="dashboard" src="./assets/dashboard.png">
+<img width="1500" alt="main" src="./assets/main.png">
 
 ### One Line Installation Command
 
