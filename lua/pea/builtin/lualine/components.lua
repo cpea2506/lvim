@@ -129,6 +129,18 @@ local components = {
         cond = conditions.hide_in_width,
         color = { fg = colors.green, gui = "bold" },
     },
+    treesitter = {
+        function()
+            local buf = vim.api.nvim_get_current_buf()
+            if next(vim.treesitter.highlighter.active[buf]) then
+                return "滑"
+            end
+            return ""
+        end,
+        color = { fg = colors.green },
+        cond = conditions.hide_in_width,
+        padding = { right = 0 },
+    },
     scrollbar = {
         function()
             local current_line = vim.fn.line "."

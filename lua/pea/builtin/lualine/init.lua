@@ -1,7 +1,7 @@
 local components = require "pea.builtin.lualine.components"
 local colors = require "pea.builtin.lualine.colors"
 
-local styles = {
+local lualine = {
     options = {
         icons_enabled = true,
         component_separators = "",
@@ -33,6 +33,7 @@ local styles = {
             components.lsp,
         },
         lualine_x = {
+            components.treesitter,
             components.encoding,
             components.os,
             components.branch,
@@ -52,4 +53,4 @@ local styles = {
     },
 }
 
-return styles
+return lualine
