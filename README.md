@@ -20,16 +20,26 @@ This will install LunarVim for you if there isn't any.
 
 ### Options
 
-#### Treesitter:
+#### [Treesitter](lua/pea/builtin/treesitter.lua)
 
-The treesitter (`lua/pea/builtin/treesitter.lua`) installation has been disabled by default. You need to specify
-your list of language or using "all".
+You can ensure install by specifying your list of languages or using `"all"`.
 
 ```lua
 lvim.builtin.treesitter.ensure_installed = {"rust", "swift", "lua", ...}
 -- or 
 lvim.builtin.treesitter.ensure_installed = "all"
 ```
+
+#### [LspInstaller](lua/pea/lsp.lua)
+
+You can ensure install by specifying your list of servers
+
+```lua
+{
+     ensure_installed = {"rust_analyzer", "sumneko_lua", ...}
+}
+```
+
 
 #### GUI:
 
