@@ -6,10 +6,6 @@ local nvimtree = {
         open_on_setup = true,
         update_cwd = true,
         hijack_unnamed_buffer_when_opening = true,
-        update_focused_file = {
-            enable = true,
-            update_cwd = true,
-        },
         filesystem_watchers = {
             enable = true,
         },
@@ -29,7 +25,6 @@ local nvimtree = {
             preserve_window_proportions = true,
         },
         renderer = {
-            highlight_git = true,
             indent_markers = {
                 enable = true,
             },
@@ -38,10 +33,7 @@ local nvimtree = {
                     git = {
                         unstaged = "✗",
                         staged = "✓",
-                        unmerged = "",
-                        renamed = "➜",
                         untracked = "★",
-                        deleted = "",
                     },
                 },
             },
