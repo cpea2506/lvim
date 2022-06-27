@@ -4,7 +4,7 @@ if not status_ok then
     return
 end
 
-local devicons = {
+icons.set_icon {
     prisma = {
         icon = "卑",
         color = "#ffffff",
@@ -93,7 +93,7 @@ local devicons = {
     },
     xml = {
         icon = "",
-        color = "#98C15C",
+        color = "#98c15c",
         name = "Xml",
     },
     [".gitignore"] = {
@@ -131,11 +131,6 @@ local devicons = {
         color = "#42a5f5",
         name = "Lua",
     },
-    [".stylua.toml"] = {
-        icon = "",
-        color = "#42a5f5",
-        name = "Lua",
-    },
     [".luacheckrc"] = {
         icon = "",
         color = "#42a5f5",
@@ -151,14 +146,4 @@ local devicons = {
         color = "#ee7950",
         name = "Rust",
     },
-    default_icon = {
-        icon = "",
-        color = "#ffffff",
-        name = "Default",
-    },
-}
-
-icons.setup {
-    override = devicons,
-    defaults = true,
 }

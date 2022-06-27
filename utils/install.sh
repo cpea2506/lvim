@@ -13,7 +13,7 @@ function msg {
 function install_lunar {
         msg "Seem like you do not have LunarVim installed"
 
-        echo "Would you like to install LunarVim? Please specific which version: "
+        echo "Would you like to install LunarVim? Please choose which version: "
         printf "1. stable\n2. rolling\n(default: 1): "
         read answer
         
@@ -27,6 +27,7 @@ function install_lunar {
                 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
                 ;;
         esac
+
         echo "Lunarvim installation done!"
 }
 
@@ -52,8 +53,6 @@ function packer_setup {
     lvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
     printf "\nPacker setup complete"
-
-    # lvim -c PackerSync
 }
 
 function main {
