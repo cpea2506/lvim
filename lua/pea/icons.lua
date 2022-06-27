@@ -1,3 +1,9 @@
+local status_ok, icons = pcall(require, "nvim-web-devicons")
+
+if not status_ok then
+    return
+end
+
 local devicons = {
     prisma = {
         icon = "卑",
@@ -152,11 +158,7 @@ local devicons = {
     },
 }
 
-local status_ok, icons = pcall(require, "nvim-web-devicons")
-
-if status_ok then
-    icons.setup {
-        override = devicons,
-        defaults = true,
-    }
-end
+icons.setup {
+    override = devicons,
+    defaults = true,
+}

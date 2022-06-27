@@ -5,8 +5,9 @@ local plugins = {
         event = "BufRead",
     },
     {
-        "p00f/nvim-ts-rainbow",
-        event = "BufRead",
+        "windwp/nvim-ts-autotag",
+        ft = { "html", "javascriptreact", "typescriptreact", "svelte", "tsx", "jsx" },
+        event = "InsertEnter",
     },
     {
         "phaazon/hop.nvim",
@@ -30,19 +31,15 @@ local plugins = {
         event = "BufRead",
     },
     {
+        "p00f/nvim-ts-rainbow",
+        event = "BufRead",
+    },
+    {
         "stevearc/dressing.nvim",
         config = function()
             require("pea.config.dressing").config()
         end,
         event = "BufRead",
-    },
-    {
-        "windwp/nvim-ts-autotag",
-        config = function()
-            require("pea.config.autotag").config()
-        end,
-        ft = { "html", "javascriptreact", "typescriptreact" },
-        event = "InsertEnter",
     },
     {
         "simrat39/rust-tools.nvim",
