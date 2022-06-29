@@ -1,0 +1,39 @@
+name: install-config-on-rolling
+
+on:
+  push:
+    paths:
+      - '.github/workflows/**'
+      - 'lua/**'
+
+jobs:
+  unix:
+    name: ${{ matrix.os }} ${{ matrix.runner }} (${{ matrix.neovim }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: ubuntu-latest
+            os: linux
+            neovim: v0.7.0
+          - runner: ubuntu-22.04
+            os: linux
+            neovim: nightly
+          - runner: macos-latest
+            os: osx
+            neovim: v0.7.0
+          - runner: macos-12
+            os: osx
+            neovim: nightly
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@main
+
+      - name: Install Neovim
+        env:
+          RELEASE_VER: ${{ matrix.neovim }}
+        run: bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/rolling/utils/installer/install-neovim-from-release)
+      - name: Installing config
+        timeout-minutes: 5
+        run: bash ./utils/install.sh <<< 2
+   
