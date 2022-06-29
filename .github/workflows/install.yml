@@ -31,7 +31,11 @@ jobs:
       - name: Install Neovim
         env:
           RELEASE_VER: ${{ matrix.neovim }}
-        run: bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/rolling/utils/installer/install-neovim-from-release)
+        run: | 
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/rolling/utils/installer/install-neovim-from-release)
       - name: Install config
         timeout-minutes: 4
-        run: bash ./utils/install.sh
+        run: |
+          export PATH="$HOME/.local/bin:$PATH"
+          bash ./utils/install.sh

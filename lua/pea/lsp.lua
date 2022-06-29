@@ -6,6 +6,7 @@ local lsp = {
                 "rust_analyzer",
                 "sumneko_lua",
                 "taplo",
+                "bashls",
                 "tsserver",
                 "cssls",
                 "jsonls",
