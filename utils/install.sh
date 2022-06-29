@@ -10,7 +10,14 @@ function msg {
     printf "%s\n" "$text"   
 }
 
-function install_lunar {
+function try {
+    if ! $@; then
+        echo "Failed to execute command!"
+        exit 1
+    fi
+}
+
+function install_lunarvim {
         msg "Seem like you do not have LunarVim installed"
 
         echo "Would you like to install LunarVim? Please choose which version: "
@@ -21,16 +28,16 @@ function install_lunar {
             case $answer in
                 1 | *[[:blank:]]* | "")
                     echo "Start to install stable"
-                    bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+                    try bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
                     return 0
                     ;;
                 2)
                     echo "Start to install rolling"
-                    LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)
+                    try LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)
                     return 0
                     ;;
                 *)
-                    echo "Please answer 1 or 2"
+                    echo "Please answer 1 or 2!"
                     ;;
             esac
         done
@@ -41,11 +48,8 @@ function install_lunar {
 function clone_config {
     msg "Cloning configuration"
 
-    if ! git clone --branch main --depth 1 \
-        "https://github.com/cpea2506/lvim.git" $LUNAR_CONFIG_HOME; then 
-        echo "Failed to clone repository.";
-        exit 1
-    fi
+    try $(git clone --branch main --depth 1 \
+        "https://github.com/cpea2506/lvim.git" $LUNAR_CONFIG_HOME)
 }
 
 function remove_old_config {
@@ -65,7 +69,7 @@ function packer_setup {
 function main {
     echo "Start setting up configuration"
 
-    [ ! -d $LUNAR_RUNTIME_HOME ] && install_lunar
+    [ ! -d $LUNAR_RUNTIME_HOME ] && install_lunarvim
      
     remove_old_config
     clone_config
