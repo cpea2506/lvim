@@ -4,10 +4,8 @@ declare -r LUNAR_CONFIG_HOME="${LUNAR_CONFIG_HOME:-"$HOME/.config/lvim"}"
 declare -r LUNAR_RUNTIME_HOME="${LUNAR_RUNTIME_HOME:-"$HOME/.local/share/lunarvim"}"
 
 function msg {
-    local text="$1"
-    local div_width="80"
-    printf "%${div_width}s\n" ' ' | tr ' ' -
-    printf "%s\n" "$text"   
+    printf "%80s\n" ' ' | tr ' ' -
+    printf "%s\n" "$1"
 }
 
 function try {
@@ -48,14 +46,14 @@ function install_lunarvim {
 function clone_config {
     msg "Cloning configuration"
 
-    try $(git clone --branch main --depth 1 \
-        "https://github.com/cpea2506/lvim.git" $LUNAR_CONFIG_HOME)
+    try git clone --branch main --depth 1 \
+        "https://github.com/cpea2506/lvim.git" $LUNAR_CONFIG_HOME
 }
 
 function remove_old_config {
     msg "Remove old LunarVim config"
     
-    rm -rf $LUNAR_CONFIG_HOME     
+    try rm -rf $LUNAR_CONFIG_HOME
 }
 
 function packer_setup {
@@ -63,7 +61,7 @@ function packer_setup {
 
     lvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
-    printf "\nPacker setup complete"
+    echo "Packer setup complete"
 }
 
 function main {
