@@ -2,9 +2,12 @@ name: install-config
 
 on:
   push:
+    branches:
+      - "main"
+      - "test/ci"
     paths:
-      - '.github/workflows/**'
-      - 'lua/**'
+      - ".github/workflows/**"
+      - "lua/**"
 
 jobs:
   unix:
