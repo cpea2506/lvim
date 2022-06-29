@@ -14,19 +14,26 @@ function install_lunar {
         msg "Seem like you do not have LunarVim installed"
 
         echo "Would you like to install LunarVim? Please choose which version: "
-        printf "1. stable\n2. rolling\n(default: 1): "
-        read answer
-        
-        case $answer in 
-            2)
-                echo "Start to install rolling"
-                LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)
-                ;;
-            *)
-                echo "Start to install stable"
-                bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-                ;;
-        esac
+
+        while true; do
+            read -p "1. stable\n2. rolling\n(default: 1): " -r answer
+
+            case $answer in
+                1 | *[[:blank:]]* | "")
+                    echo "Start to install stable"
+                    bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+                    return 0
+                    ;;
+                2)
+                    echo "Start to install rolling"
+                    LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)
+                    return 0
+                    ;;
+                *)
+                    echo "Please answer 1 or 2"
+                    ;;
+            esac
+        done
 
         echo "Lunarvim installation done!"
 }
