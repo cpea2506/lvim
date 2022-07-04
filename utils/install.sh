@@ -9,7 +9,7 @@ function msg {
 }
 
 function try {
-	if ! $@; then
+	if ! "$@"; then
 		echo "Failed to execute command!"
 		exit 1
 	fi
@@ -47,13 +47,13 @@ function clone_config {
 	msg "Cloning configuration"
 
 	try git clone --branch main --depth 1 \
-		"https://github.com/cpea2506/lvim.git" $LUNAR_CONFIG_HOME
+		"https://github.com/cpea2506/lvim.git" "$LUNAR_CONFIG_HOME"
 }
 
 function remove_old_config {
 	msg "Remove old LunarVim config"
 
-	try rm -rf $LUNAR_CONFIG_HOME
+	try rm -rf "$LUNAR_CONFIG_HOME"
 }
 
 function packer_setup {
@@ -67,7 +67,7 @@ function packer_setup {
 function main {
 	echo "Start setting up configuration"
 
-	[ ! -d $LUNAR_RUNTIME_HOME ] && install_lunarvim
+	[ ! -d "$LUNAR_RUNTIME_HOME" ] && install_lunarvim
 
 	remove_old_config
 	clone_config

@@ -25,17 +25,6 @@ M.config = function()
             on_attach = lsp.common_on_attach,
             on_init = lsp.common_on_init,
             capabilities = lsp.common_capabilities(),
-            settings = {
-                ["rust-analyzer"] = {
-                    diagnostics = {
-                        enable = true,
-                    },
-                    checkOnSave = {
-                        enable = true,
-                        command = "clippy",
-                    },
-                },
-            },
             standalone = false,
         },
     }
