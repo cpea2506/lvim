@@ -1,15 +1,15 @@
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
     {
-        command = "black",
-        filetypes = { "python" },
+        command = "shfmt",
+        filetypes = { "sh" },
     },
 }
 
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
     {
-        command = "flake8",
-        filetypes = { "python" },
+        command = "shellcheck",
+        filetypes = { "sh" },
     },
 }
