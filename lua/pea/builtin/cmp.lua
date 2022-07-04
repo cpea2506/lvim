@@ -8,11 +8,6 @@ local cmp = {
     confirm_opts = {
         select = true,
     },
-    formatting = {
-        source_names = {
-            crates = "(Crates)",
-        },
-    },
 }
 
 return cmp

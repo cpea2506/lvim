@@ -1,7 +1,11 @@
 require "pea.options"
 require "pea.icons"
 
-lvim = vim.tbl_deep_extend("force", lvim, {
+lvim.extend = function(opts)
+    lvim = vim.tbl_deep_extend("force", lvim, opts)
+end
+
+lvim.extend {
     colorscheme = "one_monokai",
     transparent_window = true,
     leader = "space",
@@ -22,4 +26,4 @@ lvim = vim.tbl_deep_extend("force", lvim, {
         treesitter = require "pea.builtin.treesitter",
         bufferline = require "pea.builtin.bufferline",
     },
-})
+}
