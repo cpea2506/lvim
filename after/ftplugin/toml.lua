@@ -1,7 +1,7 @@
 local filename = vim.fn.expandcmd "%:r"
 
 if filename:match "Cargo" then
-    lvim.extend {
+    lvim:extend {
         lsp = {
             buffer_mappings = {
                 normal_mode = {
@@ -23,6 +23,7 @@ if filename:match "Cargo" then
                         name = "+Crates",
                         a = { ":lua require('crates').update_all_crates()<CR>", "Update all crates" },
                         A = { ":lua require('crates').upgrade_all_crates()<CR>", "Upgrade all crates" },
+                        c = { ":lua require('crates').show_crate_popup()<CR>", "Show crate popup" },
                         C = { ":lua require('crates').open_crates_io()<CR>", "Open crates.io" },
                         d = { ":lua require('crates').show_dependencies_popup()<CR>", "Show dependencies" },
                         D = { ":lua require('crates').open_documentation()<CR>", "Open documentation" },

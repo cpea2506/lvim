@@ -1,11 +1,11 @@
 require "pea.options"
 require "pea.icons"
 
-lvim.extend = function(opts)
-    lvim = vim.tbl_deep_extend("force", lvim, opts)
+function lvim:extend(opts)
+    lvim = vim.tbl_deep_extend("force", self, opts)
 end
 
-lvim.extend {
+lvim:extend {
     colorscheme = "one_monokai",
     transparent_window = true,
     leader = "space",

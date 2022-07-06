@@ -5,68 +5,7 @@ if not status_ok then
 end
 
 icons.set_icon {
-    prisma = {
-        icon = "卑",
-        color = "#ffffff",
-        name = "Prima",
-    },
-    lock = {
-        icon = "",
-        color = "#bbbbbb",
-        name = "Lock",
-    },
-    log = {
-        icon = "",
-        color = "#ffffff",
-        name = "Log",
-    },
-    json = {
-        icon = "ﬥ",
-        color = "#cbcb41",
-        name = "Json",
-    },
-    ts = {
-        icon = "ﯤ",
-        color = "#3178c6",
-        name = "Ts",
-    },
-    [".DS_Store"] = {
-        icon = "",
-        color = "#41535b",
-        cterm_color = "59",
-        name = "DsStore",
-    },
-    toml = {
-        icon = "[T]",
-        color = "#ffffff",
-        name = "Toml",
-    },
-    js = {
-        icon = "",
-        color = "#e7d54c",
-        name = "Js",
-    },
-    Procfile = {
-        icon = "",
-        color = "#6e286c",
-        name = "Procfile",
-    },
-    Dockerfile = {
-        icon = "",
-        color = "#00a4ff",
-        name = "Dockerfile",
-    },
-    ["Dockerfile.dev"] = {
-        icon = "",
-        color = "#00a4ff",
-        name = "Dockerfile",
-    },
     ["docker-compose.yml"] = {
-        icon = "",
-        color = "#00a4ff",
-        name = "Dockerfile",
-    },
-    ["Dockerfile.prod"] = {
         icon = "",
         color = "#00a4ff",
         name = "Dockerfile",
@@ -76,25 +15,10 @@ icons.set_icon {
         color = "#00a4ff",
         name = "Dockerfile",
     },
-    [".env"] = {
-        icon = "",
-        color = "#faf743",
-        name = "Env",
-    },
-    [".env.local"] = {
-        icon = "",
-        color = "#faf743",
-        name = "Env",
-    },
-    css = {
-        icon = "",
-        color = "#42a5f5",
-        name = "Css",
-    },
-    xml = {
-        icon = "",
-        color = "#98c15c",
-        name = "Xml",
+    ["Dockerfile"] = {
+        icon = "",
+        color = "#00a4ff",
+        name = "Dockerfile",
     },
     [".gitignore"] = {
         icon = "",
@@ -106,27 +30,17 @@ icons.set_icon {
         color = "#aaeaff",
         name = "GitModules",
     },
-    vim = {
-        icon = "",
-        color = "#43a047",
-        name = "Vim",
+    ["js"] = {
+        icon = "",
+        color = "#e7d54c",
+        name = "Js",
     },
-    html = {
-        icon = "",
-        color = "#e44d26",
-        name = "Html",
+    ["json"] = {
+        icon = "ﬥ",
+        color = "#cbcb41",
+        name = "Json",
     },
-    yaml = {
-        icon = "",
-        color = "#ff5252",
-        name = "Yaml",
-    },
-    yml = {
-        icon = "",
-        color = "#ff5252",
-        name = "Yaml",
-    },
-    lua = {
+    ["lua"] = {
         icon = "",
         color = "#42a5f5",
         name = "Lua",
@@ -136,14 +50,34 @@ icons.set_icon {
         color = "#42a5f5",
         name = "Lua",
     },
-    md = {
-        icon = "",
-        color = "#ffffff",
-        name = "Md",
-    },
-    rs = {
+    ["rs"] = {
         icon = "",
         color = "#ee7950",
         name = "Rust",
+    },
+    ["toml"] = {
+        icon = "[T]",
+        color = "#ffffff",
+        name = "Toml",
+    },
+    ["ts"] = {
+        icon = "ﯤ",
+        color = "#3178c6",
+        name = "Ts",
+    },
+    ["xml"] = {
+        icon = "",
+        color = "#98c15c",
+        name = "Xml",
+    },
+    ["yaml"] = {
+        icon = "",
+        color = "#ff5252",
+        name = "Yaml",
+    },
+    ["yml"] = {
+        icon = "",
+        color = "#ff5252",
+        name = "Yaml",
     },
 }
