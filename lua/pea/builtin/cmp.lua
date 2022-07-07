@@ -7,6 +7,7 @@ local cmp = {
     },
     confirm_opts = {
         select = true,
+        behavior = "insert",
     },
     formatting = {
         kind_icons = {
@@ -18,5 +19,9 @@ local cmp = {
         },
     },
 }
+
+vim.list_extend(lvim.builtin.cmp.sources, {
+    { name = "nvim_lsp_signature_help" },
+})
 
 return cmp

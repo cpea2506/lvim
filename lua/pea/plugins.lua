@@ -1,5 +1,6 @@
 local plugins = {
     { "cpea2506/one_monokai.nvim" },
+    { "hrsh7th/cmp-nvim-lsp-signature-help" },
     {
         "nvim-treesitter/playground",
         event = "BufRead",
