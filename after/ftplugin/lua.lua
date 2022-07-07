@@ -9,7 +9,7 @@ formatters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
     {
-        command = "luacheck",
+        command = "selene",
         filetypes = { "lua" },
     },
 }

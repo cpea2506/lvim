@@ -1,6 +1,5 @@
 local plugins = {
     { "cpea2506/one_monokai.nvim" },
-    { "hrsh7th/cmp-nvim-lsp-signature-help" },
     {
         "nvim-treesitter/playground",
         event = "BufRead",
@@ -21,13 +20,6 @@ local plugins = {
         "kosayoda/nvim-lightbulb",
         config = function()
             require("pea.config.lightbulb").config()
-        end,
-        event = "BufRead",
-    },
-    {
-        "Maan2003/lsp_lines.nvim",
-        config = function()
-            require("pea.config.lsp_lines").config()
         end,
         event = "BufRead",
     },
@@ -76,6 +68,10 @@ local plugins = {
             require("pea.config.presence").config()
         end,
         event = "BufRead",
+    },
+    {
+        "hrsh7th/cmp-nvim-lsp-signature-help",
+        event = "InsertEnter",
     },
 }
 
