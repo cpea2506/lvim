@@ -1,20 +1,17 @@
 local keys = {
     normal_mode = {
+        -- hop
         ["fa"] = ":HopAnywhere<CR>",
         ["fc"] = ":HopChar1<CR>",
         ["fw"] = ":HopWord<CR>",
         ["fl"] = ":HopLine<CR>",
         ["fr"] = ":HopPattern<CR>",
 
-        -- move current line / block
-        ["<A-j>"] = ":m .+1<CR>==",
-        ["<A-k>"] = ":m .-2<CR>==",
-
         -- disable default tab switch buffer
-        ["<S-l>"] = false,
-        ["<S-h>"] = false,
+        ["<S-l>"] = nil,
+        ["<S-h>"] = nil,
 
-        -- other plugins
+        -- other
         ["<C-e>"] = ":bdelete!<CR>",
         ["<C-b>"] = ":NvimTreeToggle<CR>",
         ["<C-s>"] = ":w<CR>",
