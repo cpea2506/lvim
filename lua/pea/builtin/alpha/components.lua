@@ -3,10 +3,10 @@ local text = require "lvim.interface.text"
 local packer_path = vim.fn.stdpath "data" .. "/site/pack/packer/start"
 local num_plugins_loaded = #vim.fn.globpath(packer_path, "*", 0, 1)
 
-local function button(sc, txt, keybind)
+local function button(sc, val, _)
     local sc_ = sc:gsub("%s", ""):gsub("SPC", "<leader>")
 
-    local button_opts = {
+    local opts = {
         position = "center",
         shortcut = sc,
         cursor = 5,
@@ -14,7 +14,6 @@ local function button(sc, txt, keybind)
         align_shortcut = "right",
         hl = "DashBoardCenter",
         hl_shortcut = "Keyword",
-        keymap = { "n", sc_, keybind, { noremap = true, silent = true } },
     }
 
     local on_press = function()
@@ -24,9 +23,9 @@ local function button(sc, txt, keybind)
 
     return {
         type = "button",
-        val = txt,
+        val = val,
         on_press = on_press,
-        opts = button_opts,
+        opts = opts,
     }
 end
 
