@@ -34,8 +34,8 @@ local lualine = {
         },
         lualine_x = {
             components.treesitter,
-            components.encoding,
             components.os,
+            components.encoding,
             components.branch,
             components.diff,
             components.scrollbar,

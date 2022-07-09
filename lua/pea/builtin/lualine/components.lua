@@ -1,4 +1,4 @@
-local conditions = require "lvim.core.lualine.conditions"
+local conditions = require "pea.builtin.lualine.conditions"
 local colors = require "pea.builtin.lualine.colors"
 
 local function diff_source()
@@ -120,8 +120,13 @@ local components = {
     },
     os = {
         function()
-            return ""
+            if vim.fn.has "mac" then
+                return ""
+            else
+                return ""
+            end
         end,
+        cond = conditions.hide_in_width,
         color = { fg = colors.fg },
     },
     encoding = {
@@ -138,7 +143,6 @@ local components = {
             return ""
         end,
         color = { fg = colors.green },
-        cond = conditions.hide_in_width,
         padding = { right = 0 },
     },
     scrollbar = {
