@@ -1,13 +1,5 @@
 local autocommands = {
     {
-        { "BufRead", "BufNewFile" },
-        {
-            pattern = "*.md",
-            desc = "Hardwrap markdown file line at width 80",
-            command = "setlocal textwidth=80",
-        },
-    },
-    {
         "InsertEnter",
         {
             desc = "Centered window when access insert mode",
