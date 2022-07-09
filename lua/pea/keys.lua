@@ -8,8 +8,8 @@ local keys = {
         ["fr"] = ":HopPattern<CR>",
 
         -- disable default tab switch buffer
-        ["<S-l>"] = nil,
-        ["<S-h>"] = nil,
+        ["<S-l>"] = false,
+        ["<S-h>"] = false,
 
         -- other
         ["<C-e>"] = ":bdelete!<CR>",
