@@ -5,3 +5,7 @@ globals:
     any: true
   lvim:
     any: true
+  get_runtime_dir:
+    args:
+      - type: nil
+        required: false

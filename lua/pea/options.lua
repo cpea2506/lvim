@@ -8,6 +8,7 @@ local options = {
     autoindent = true,
     tabstop = 4,
     shiftwidth = 4,
+    cmdheight = 1,
     fillchars = "eob: ",
     whichwrap = "",
     guifont = "SFMono Nerd Font:h13",

@@ -1,6 +1,6 @@
 local user_config_path = require("lvim.config"):get_user_config_path()
 local text = require "lvim.interface.text"
-local packer_path = vim.fn.stdpath "data" .. "/site/pack/packer/start"
+local packer_path = get_runtime_dir() .. "/site/pack/packer/start"
 local num_plugins_loaded = #vim.fn.globpath(packer_path, "*", 0, 1)
 
 local function button(sc, val, _)
