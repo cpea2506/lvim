@@ -14,7 +14,15 @@ local lualine = {
                 c = { fg = colors.fg, bg = colors.bg },
             },
         },
-        disabled_filetypes = { "NvimTree", "toggleterm", "alpha", "DressingInput", "lsp-installer", "lspinfo" },
+        disabled_filetypes = {
+            "TelescopePrompt",
+            "NvimTree",
+            "toggleterm",
+            "alpha",
+            "DressingInput",
+            "lsp-installer",
+            "lspinfo",
+        },
         globalstatus = true,
     },
     sections = {

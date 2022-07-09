@@ -1,6 +1,7 @@
-local filename = vim.fn.expandcmd "%:r"
+---@diagnostic disable-next-line: missing-parameter
+local filename = vim.fn.expand "%:r"
 
-if filename:match "Cargo" then
+if filename and filename:match "Cargo" then
     lvim:extend {
         lsp = {
             buffer_mappings = {

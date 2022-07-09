@@ -1,9 +1,12 @@
+-- nothing can stop me from having mismatch parameter's type
+---@diagnostic disable: param-type-mismatch
+
 local user_config_path = require("lvim.config"):get_user_config_path()
 local text = require "lvim.interface.text"
 local packer_path = get_runtime_dir() .. "/site/pack/packer/start"
 local num_plugins_loaded = #vim.fn.globpath(packer_path, "*", 0, 1)
 
-local function button(sc, val, _)
+local function button(sc, val, keybind)
     local sc_ = sc:gsub("%s", ""):gsub("SPC", "<leader>")
 
     local opts = {
@@ -14,6 +17,7 @@ local function button(sc, val, _)
         align_shortcut = "right",
         hl = "DashBoardCenter",
         hl_shortcut = "Keyword",
+        keymap = { "n", sc_, keybind, { silent = true, nowait = true, noremap = true } },
     }
 
     local on_press = function()

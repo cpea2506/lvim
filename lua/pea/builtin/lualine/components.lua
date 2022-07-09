@@ -75,7 +75,7 @@ local components = {
         function(msg)
             msg = msg or "LS Inactive"
             local buf_clients = vim.lsp.buf_get_clients()
-            if next(buf_clients) == nil then
+            if vim.tbl_isempty(buf_clients) then
                 return type(msg) == "boolean" or #msg == 0 and "LS Inactive" or msg
             end
             local buf_ft = vim.bo.filetype
