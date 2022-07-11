@@ -22,6 +22,7 @@ local lualine = {
             "DressingInput",
             "lsp-installer",
             "lspinfo",
+            "null-ls-info",
         },
         globalstatus = true,
     },
