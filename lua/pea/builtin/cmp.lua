@@ -12,7 +12,6 @@ local cmp = {
     formatting = {
         kind_icons = {
             Class = "ﴯ",
-            Interface = "",
             Module = "",
             Struct = "פּ",
             Variable = "",
