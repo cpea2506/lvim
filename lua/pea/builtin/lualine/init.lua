@@ -23,6 +23,7 @@ local lualine = {
             "lsp-installer",
             "lspinfo",
             "null-ls-info",
+            "packer",
         },
         globalstatus = true,
     },
