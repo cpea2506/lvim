@@ -80,4 +80,9 @@ icons.set_icon {
         color = "#ff5252",
         name = "Yaml",
     },
+    ["Makefile"] = {
+        icon = "M",
+        color = "#e3833e",
+        name = "Makefile",
+    },
 }
