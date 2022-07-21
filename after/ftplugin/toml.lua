@@ -21,7 +21,7 @@ if filename and filename:match "Cargo" then
             which_key = {
                 mappings = {
                     c = {
-                        name = "+Crates",
+                        name = "Crates",
                         a = { ":lua require('crates').update_all_crates()<CR>", "Update all crates" },
                         A = { ":lua require('crates').upgrade_all_crates()<CR>", "Upgrade all crates" },
                         c = { ":lua require('crates').show_crate_popup()<CR>", "Show crate popup" },
