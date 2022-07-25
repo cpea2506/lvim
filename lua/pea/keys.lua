@@ -1,11 +1,8 @@
 local keys = {
     normal_mode = {
-        -- hop
-        ["fa"] = ":HopAnywhere<CR>",
-        ["fc"] = ":HopChar1<CR>",
-        ["fw"] = ":HopWord<CR>",
-        ["fl"] = ":HopLine<CR>",
-        ["fr"] = ":HopPattern<CR>",
+        -- leap
+        ["f"] = "<Plug>(leap-forward)",
+        ["<S-f>"] = "<Plug>(leap-backward)",
 
         -- disable default tab switch buffer
         ["<S-l>"] = false,

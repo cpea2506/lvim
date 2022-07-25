@@ -1,6 +1,10 @@
 local plugins = {
     { "cpea2506/one_monokai.nvim" },
     {
+        "ggandor/leap.nvim",
+        event = "BufRead",
+    },
+    {
         "nvim-treesitter/playground",
         event = "BufRead",
     },
