@@ -56,9 +56,9 @@ local plugins = {
         event = "BufRead Cargo.toml",
     },
     {
-        "norcalli/nvim-colorizer.lua",
+        "brenoprata10/nvim-highlight-colors",
         config = function()
-            require("pea.config.colorizer").config()
+            require("pea.config.highlight_colors").config()
         end,
         event = "BufRead",
     },
