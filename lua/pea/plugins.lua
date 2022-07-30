@@ -14,6 +14,13 @@ local plugins = {
         event = "InsertEnter",
     },
     {
+        "max397574/better-escape.nvim",
+        config = function()
+            require("pea.config.better_escape").config()
+        end,
+        event = "InsertEnter",
+    },
+    {
         "phaazon/hop.nvim",
         config = function()
             require("pea.config.hop").config()

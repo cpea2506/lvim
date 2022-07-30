@@ -4,14 +4,19 @@ local keys = {
         ["f"] = "<Plug>(leap-forward)",
         ["<S-f>"] = "<Plug>(leap-backward)",
 
-        -- disable default tab switch buffer
-        ["<S-l>"] = false,
-        ["<S-h>"] = false,
-
         -- other
         ["<C-e>"] = ":bdelete!<CR>",
         ["<C-b>"] = ":NvimTreeToggle<CR>",
         ["<C-s>"] = ":w<CR>",
+
+        -- disable default
+        ["<S-l>"] = false,
+        ["<S-h>"] = false,
+    },
+    insert_mode = {
+        ["jj"] = false,
+        ["jk"] = false,
+        ["kj"] = false,
     },
 }
 
