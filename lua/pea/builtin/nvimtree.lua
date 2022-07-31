@@ -6,9 +6,6 @@ local nvimtree = {
         open_on_setup = true,
         update_cwd = true,
         hijack_unnamed_buffer_when_opening = true,
-        filesystem_watchers = {
-            enable = true,
-        },
         diagnostics = {
             enable = false,
         },
@@ -27,11 +24,6 @@ local nvimtree = {
         renderer = {
             indent_markers = {
                 enable = true,
-                icons = {
-                    corner = "└",
-                    edge = "│",
-                    none = " ",
-                },
             },
             icons = {
                 glyphs = {
