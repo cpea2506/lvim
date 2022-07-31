@@ -21,13 +21,6 @@ local plugins = {
         event = "InsertEnter",
     },
     {
-        "phaazon/hop.nvim",
-        config = function()
-            require("pea.config.hop").config()
-        end,
-        event = "BufRead",
-    },
-    {
         "kosayoda/nvim-lightbulb",
         config = function()
             require("pea.config.lightbulb").config()
