@@ -21,6 +21,7 @@ local cmp = {
 
 vim.list_extend(lvim.builtin.cmp.sources, {
     { name = "nvim_lsp_signature_help" },
+    { name = "rg" },
 })
 
 return cmp

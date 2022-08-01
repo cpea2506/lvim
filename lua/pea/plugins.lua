@@ -1,5 +1,6 @@
 local plugins = {
     { "cpea2506/one_monokai.nvim" },
+    { "lukas-reineke/cmp-rg" },
     {
         "ggandor/leap.nvim",
         event = "BufRead",
