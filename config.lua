@@ -1,7 +1,7 @@
 require "pea.options"
 require "pea.icons"
 
-vim.env.LVIM_DEV_MODE = true
+-- vim.env.LVIM_DEV_MODE = true
 
 function lvim:extend(opts)
     lvim = vim.tbl_deep_extend("force", self, opts)
