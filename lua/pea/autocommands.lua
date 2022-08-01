@@ -1,3 +1,11 @@
+local function set_relativenumber(relative)
+    local in_insert_mode = vim.api.nvim_get_mode().mode == "i"
+
+    if vim.o.nu then
+        vim.opt.relativenumber = relative and not in_insert_mode
+    end
+end
+
 local autocommands = {
     {
         "InsertEnter",
@@ -9,15 +17,19 @@ local autocommands = {
     {
         { "BufEnter", "FocusGained", "InsertLeave", "WinEnter" },
         {
-            desc = "Set relative number when in vim mode that's not insert",
-            command = "if &nu && mode() != 'i' | set rnu | endif",
+            desc = "Set relative number when not in insert mode",
+            callback = function()
+                set_relativenumber(true)
+            end,
         },
     },
     {
         { "BufLeave", "FocusLost", "InsertEnter", "WinLeave" },
         {
             desc = "Set number when in normal mode",
-            command = "if &nu | set nornu | endif",
+            callback = function()
+                set_relativenumber(false)
+            end,
         },
     },
 }
