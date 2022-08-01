@@ -38,7 +38,7 @@ jobs:
           echo "$HOME/.local/bin" >> $GITHUB_PATH
           bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/rolling/utils/installer/install-neovim-from-release)
       - name: Install config
-        timeout-minutes: 5
+        timeout-minutes: 8
         run: |
           export PATH="$HOME/.local/bin:$PATH"
           bash ./utils/install.sh
