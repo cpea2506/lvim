@@ -1,6 +1,5 @@
 local plugins = {
     { "cpea2506/one_monokai.nvim" },
-    { "lukas-reineke/cmp-rg" },
     {
         "ggandor/leap.nvim",
         event = "BufRead",
@@ -76,6 +75,10 @@ local plugins = {
     },
     {
         "hrsh7th/cmp-nvim-lsp-signature-help",
+        event = "InsertEnter",
+    },
+    {
+        "lukas-reineke/cmp-rg",
         event = "InsertEnter",
     },
 }
