@@ -1,12 +1,16 @@
-local window_width_limit = 85
+local winwidth_limit = 85
 
 local conditions = {
     buffer_not_empty = function()
         ---@diagnostic disable-next-line: missing-parameter
-        return vim.fn.empty(vim.fn.expand "%:t") ~= 1
+        local buffer = vim.fn.expand "%:t"
+
+        return vim.fn.empty(buffer) ~= 1
     end,
-    hide_in_width = function()
-        return vim.fn.winwidth(0) > window_width_limit
+    should_hide_in_width = function()
+        local current_winwidth = vim.fn.winwidth(0)
+
+        return current_winwidth > winwidth_limit
     end,
 }
 
