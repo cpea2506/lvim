@@ -21,24 +21,26 @@ function install_lunarvim {
 	echo "Would you like to install LunarVim? Please choose which version: "
 
 	while true; do
-		read -p "1. stable\n2. rolling\n(default: 1): " -r answer
+		printf "1. stable\n2. rolling\n(default: 1): "
+		read -r answer
 
 		case $answer in
 		1 | *[[:blank:]]* | "")
 			echo "Start to install stable"
-			try bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-			return 0
+			break
 			;;
 		2)
 			echo "Start to install rolling"
-			try LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)
-			return 0
+			export LV_BRANCH=rolling
+			break
 			;;
 		*)
 			echo "Please answer 1 or 2!"
 			;;
 		esac
 	done
+
+	try bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)
 
 	echo "Lunarvim installation done!"
 }
@@ -59,7 +61,12 @@ function remove_old_config {
 function packer_setup {
 	msg "Preparing Packer setup"
 
-	try lvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+	# install all new plugins
+	try lvim --headless \
+		-c "autocmd User PackerComplete quitall" \
+		-c "autocmd User PackerCompileDone quitall" \
+		-c "PackerInstall" \
+		-c "PackerCompile"
 
 	echo "Packer setup complete"
 }
