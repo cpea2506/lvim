@@ -64,8 +64,11 @@ function packer_setup {
 	# install all new plugins
 	try lvim --headless \
 		-c "autocmd User PackerComplete quitall" \
+		-c "PackerInstall"
+
+	# compile
+	try lvim --headless \
 		-c "autocmd User PackerCompileDone quitall" \
-		-c "PackerInstall" \
 		-c "PackerCompile"
 
 	echo "Packer setup complete"
