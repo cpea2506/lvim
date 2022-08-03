@@ -1,5 +1,4 @@
 local treesitter = {
-    sync_install = true,
     ensure_installed = {
         "rust",
         "swift",

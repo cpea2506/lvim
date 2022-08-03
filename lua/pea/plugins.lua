@@ -5,6 +5,10 @@ local plugins = {
         event = "BufRead",
     },
     {
+        "p00f/nvim-ts-rainbow",
+        event = "BufRead",
+    },
+    {
         "nvim-treesitter/playground",
         event = "BufRead",
     },
@@ -25,10 +29,6 @@ local plugins = {
         config = function()
             require("pea.config.lightbulb").config()
         end,
-        event = "BufRead",
-    },
-    {
-        "p00f/nvim-ts-rainbow",
         event = "BufRead",
     },
     {

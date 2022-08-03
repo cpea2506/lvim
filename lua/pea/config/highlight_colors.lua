@@ -7,7 +7,9 @@ M.config = function()
         return
     end
 
-    highlight_colors.setup()
+    highlight_colors.setup {
+        render = "background",
+    }
 end
 
 return M
