@@ -2,14 +2,13 @@ name: install-config
 
 on:
  push:
+    branches: [main]
     paths:
       - ".github/workflows/**"
       - "lua/**"
       - "utils/**"
  pull_request:
-    branches:
-      - "main"
-
+    branches: [main]
     paths:
       - ".github/workflows/**"
       - "lua/**"
