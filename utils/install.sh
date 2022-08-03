@@ -61,7 +61,12 @@ function remove_old_config {
 function packer_setup {
 	msg "Preparing Packer setup"
 
-	try lvim --headless -c "autocmd User PackerComplete quitall" -c "PackerSync"
+	# install all new plugins
+	try lvim --headless \
+		-c "autocmd User PackerComplete quitall" \
+		-c "autocmd User PackerCompileDone quitall" \
+		-c "PackerInstall" \
+		-c "PackerCompile"
 
 	echo "Packer setup complete"
 }
