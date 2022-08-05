@@ -14,7 +14,6 @@ local cmp = {
             Class = "ﴯ",
             Module = "",
             Struct = "פּ",
-            Variable = "",
         },
     },
 }
