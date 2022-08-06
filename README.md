@@ -24,9 +24,13 @@ This will install LunarVim for you if there isn't any.
 You can ensure install by specifying your list of languages or using `"all"`.
 
 ```lua
-lvim.builtin.treesitter.ensure_installed = {"rust", "swift", "lua", ...}
--- or 
-lvim.builtin.treesitter.ensure_installed = "all"
+{
+     ensure_installed = {"rust", "swift", "lua", ...}
+}
+-- or
+{
+     ensure_installed = "all"
+}
 ```
 
 #### [LspInstaller](lua/pea/lsp.lua)
