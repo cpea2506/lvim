@@ -6,7 +6,6 @@ local keys = {
 
         -- other
         ["<C-e>"] = ":bdelete!<CR>",
-        ["<C-b>"] = ":NvimTreeToggle<CR>",
         ["<C-s>"] = ":w<CR>",
 
         -- disable default
