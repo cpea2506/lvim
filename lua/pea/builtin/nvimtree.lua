@@ -20,8 +20,17 @@ local nvimtree = {
             adaptive_size = false,
             side = "right",
             preserve_window_proportions = true,
+            float = {
+                enable = true,
+                open_win_config = {
+                    -- display on the right, this is different from side
+                    col = vim.o.columns - 30,
+                    height = vim.o.lines,
+                },
+            },
         },
         renderer = {
+            full_name = true,
             indent_markers = {
                 enable = true,
             },
