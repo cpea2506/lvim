@@ -1,6 +1,4 @@
-local M = {}
-
-M.config = function()
+return function()
     local status_ok, lightbulb = pcall(require, "nvim-lightbulb")
 
     if not status_ok then
@@ -25,5 +23,3 @@ M.config = function()
         },
     }
 end
-
-return M

@@ -1,6 +1,4 @@
-local M = {}
-
-M.config = function()
+return function()
     local status_ok, dressing = pcall(require, "dressing")
 
     if not status_ok then
@@ -27,5 +25,3 @@ M.config = function()
         },
     }
 end
-
-return M

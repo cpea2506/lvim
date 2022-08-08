@@ -1,6 +1,4 @@
-local M = {}
-
-M.config = function()
+return function()
     local status_ok, crates = pcall(require, "crates")
 
     if not status_ok then
@@ -20,5 +18,3 @@ M.config = function()
         },
     }
 end
-
-return M
