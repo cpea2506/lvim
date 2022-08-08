@@ -1,11 +1,11 @@
-require("lvim.lsp.manager").setup "emmet_ls"
 require("lvim.lsp.manager").setup "tailwindcss"
+require("lvim.lsp.manager").setup("emmet_ls", { filetypes = { "svelte" } })
 
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
     {
         command = "prettier",
-        filetypes = { "typescriptreact" },
+        filetypes = { "svelte" },
     },
 }
 
@@ -13,6 +13,10 @@ local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
     {
         command = "eslint_d",
-        filetypes = { "typescriptreact" },
+        filetypes = { "svelte" },
+    },
+    {
+        command = "stylelint",
+        filetypes = { "svelte" },
     },
 }
