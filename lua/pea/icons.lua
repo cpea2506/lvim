@@ -65,6 +65,11 @@ icons.set_icon {
         color = "#3178c6",
         name = "Ts",
     },
+    ["mts"] = {
+        icon = "",
+        color = "#3178c6",
+        name = "Ts",
+    },
     ["xml"] = {
         icon = "",
         color = "#98c15c",
@@ -74,6 +79,16 @@ icons.set_icon {
         icon = "",
         color = "#ff5252",
         name = "Yaml",
+    },
+    [".prettierignore"] = {
+        icon = "",
+        color = "#efefef",
+        name = "PrettierIgnore",
+    },
+    [".eslintignore"] = {
+        icon = "",
+        color = "#efefef",
+        name = "EslintIgnore",
     },
     ["yml"] = {
         icon = "",
