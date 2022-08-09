@@ -73,7 +73,7 @@ icons.set_icon {
     ["cjs"] = {
         icon = "",
         color = "#e7d54c",
-        name = "Ts",
+        name = "Js",
     },
     ["xml"] = {
         icon = "",
