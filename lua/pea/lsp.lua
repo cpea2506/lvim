@@ -1,25 +1,19 @@
 local lsp = {
-    automatic_servers_installation = false,
     installer = {
         setup = {
+            automatic_installation = false,
             ensure_installed = {
                 "rust_analyzer",
                 "sumneko_lua",
                 "taplo",
                 "emmet_ls",
+                "svelte",
                 "tailwindcss",
                 "yamlls",
                 "bashls",
                 "tsserver",
                 "cssls",
                 "jsonls",
-            },
-            ui = {
-                border = "rounded",
-                keymaps = {
-                    toggle_server_expand = "o",
-                    uninstall_server = "d",
-                },
             },
         },
     },

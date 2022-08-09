@@ -1,9 +1,6 @@
 require("lvim.lsp.manager").setup("emmet_ls", {
     filetypes = { "scss" },
 })
-require("lvim.lsp.manager").setup("tailwindcss", {
-    filetypes = { "scss" },
-})
 
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {

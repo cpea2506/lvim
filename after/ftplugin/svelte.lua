@@ -1,6 +1,3 @@
-require("lvim.lsp.manager").setup("tailwindcss", {
-    filetypes = { "svelte" },
-})
 require("lvim.lsp.manager").setup("emmet_ls", {
     filetypes = { "svelte" },
 })

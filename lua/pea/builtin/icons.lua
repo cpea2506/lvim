@@ -1,10 +1,4 @@
-local status_ok, icons = pcall(require, "nvim-web-devicons")
-
-if not status_ok then
-    return
-end
-
-icons.set_icon {
+local icons = {
     ["docker-compose.yml"] = {
         icon = "",
         color = "#00a4ff",
@@ -106,3 +100,5 @@ icons.set_icon {
         name = "Makefile",
     },
 }
+
+return icons

@@ -15,6 +15,4 @@ local options = {
     guicursor = "n-v-c-sm:block,i-ci-ve:hor30,r-cr-o:hor20",
 }
 
-for key, value in pairs(options) do
-    vim.opt[key] = value
-end
+return options
