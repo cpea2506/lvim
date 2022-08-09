@@ -23,11 +23,6 @@ local lsp = {
             },
         },
     },
-    buffer_mappings = {
-        normal_mode = {
-            ["gm"] = { ":TSHighlightCapturesUnderCursor<CR>", "Show highlighting group" },
-        },
-    },
     diagnostics = {
         virtual_text = true,
         float = {

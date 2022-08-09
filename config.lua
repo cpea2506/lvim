@@ -27,5 +27,6 @@ lvim:extend {
         telescope = require "pea.builtin.telescope",
         treesitter = require "pea.builtin.treesitter",
         bufferline = require "pea.builtin.bufferline",
+        which_key = require "pea.builtin.which_key",
     },
 }
