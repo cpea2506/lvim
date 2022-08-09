@@ -70,6 +70,11 @@ icons.set_icon {
         color = "#3178c6",
         name = "Ts",
     },
+    ["cjs"] = {
+        icon = "",
+        color = "#e7d54c",
+        name = "Ts",
+    },
     ["xml"] = {
         icon = "",
         color = "#98c15c",
