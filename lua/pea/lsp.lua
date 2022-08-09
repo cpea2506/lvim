@@ -23,6 +23,11 @@ local lsp = {
             },
         },
     },
+    on_attach_callback = function(client, bufnr)
+        pcall(function()
+            require("inlay-hints").on_attach(client, bufnr)
+        end)
+    end,
     diagnostics = {
         virtual_text = true,
         float = {

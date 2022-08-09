@@ -10,12 +10,14 @@ return function()
 
     rust_tools.setup {
         tools = {
-            autoSetHints = false,
             on_initialized = function()
                 pcall(function()
                     require("inlay-hints").set_all()
                 end)
             end,
+            inlay_hints = {
+                auto = false,
+            },
             executor = executors.toggleterm,
             hover_actions = {
                 border = "rounded",
@@ -23,13 +25,7 @@ return function()
             },
         },
         server = {
-            on_attach = function(c, b)
-                pcall(function()
-                    require("inlay-hints").on_attach(b, c)
-                end)
-
-                lsp.common_on_attach(c, b)
-            end,
+            on_attach = lsp.common_on_attach,
             on_init = lsp.common_on_init,
             capabilities = lsp.common_capabilities(),
             standalone = false,
