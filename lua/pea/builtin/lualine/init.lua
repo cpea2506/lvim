@@ -20,7 +20,7 @@ local lualine = {
             "toggleterm",
             "alpha",
             "DressingInput",
-            "lsp-installer",
+            "mason.nvim",
             "lspinfo",
             "null-ls-info",
             "packer",
