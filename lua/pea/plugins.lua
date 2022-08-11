@@ -70,6 +70,11 @@ local plugins = {
         config = require "pea.config.presence",
         event = "BufRead",
     },
+    {
+        "declancm/cinnamon.nvim",
+        config = require "pea.config.cinnamon",
+        event = "BufRead",
+    },
 }
 
 return plugins
