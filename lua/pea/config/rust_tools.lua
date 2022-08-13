@@ -26,7 +26,6 @@ return function()
         },
         server = {
             on_attach = lsp.common_on_attach,
-            on_init = lsp.common_on_init,
             capabilities = lsp.common_capabilities(),
             standalone = false,
         },
