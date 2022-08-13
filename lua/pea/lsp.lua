@@ -23,7 +23,7 @@ local lsp = {
         end)
     end,
     diagnostics = {
-        virtual_text = true,
+        virtual_text = false,
         float = {
             focusable = true,
         },

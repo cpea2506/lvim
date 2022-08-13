@@ -22,7 +22,7 @@ local plugins = {
     },
     {
         "windwp/nvim-ts-autotag",
-        ft = { "html", "javascriptreact", "typescriptreact", "svelte", "tsx", "jsx" },
+        ft = { "html", "typescriptreact", "svelte" },
         event = "InsertEnter",
     },
     {
@@ -73,6 +73,11 @@ local plugins = {
     {
         "declancm/cinnamon.nvim",
         config = require "pea.config.cinnamon",
+        event = "BufRead",
+    },
+    {
+        "Maan2003/lsp_lines.nvim",
+        config = require "pea.config.lsp_lines",
         event = "BufRead",
     },
 }
