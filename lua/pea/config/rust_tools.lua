@@ -5,15 +5,17 @@ return function()
         return
     end
 
+    local inlay_hints_ok, inlay_hints = pcall(require, "inlay-hints")
+
     local lsp = require "lvim.lsp"
     local executors = require "rust-tools.executors"
 
     rust_tools.setup {
         tools = {
-            on_initialized = function()
-                pcall(function()
-                    require("inlay-hints").set_all()
-                end)
+            on_initialized = function(status)
+                if inlay_hints_ok and status.health == "ok" then
+                    inlay_hints.set_all()
+                end
             end,
             inlay_hints = {
                 auto = false,
