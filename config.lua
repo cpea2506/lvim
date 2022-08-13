@@ -1,6 +1,6 @@
 require "pea.utils"
 
-lvim:extend {
+lvim:set {
     colorscheme = "one_monokai",
     dev_mode = true,
     transparent_window = true,
@@ -27,7 +27,3 @@ lvim:extend {
         bufferline = require "pea.builtin.bufferline",
     },
 }
-
-lvim:set_options()
-lvim:set_icons()
-lvim:toggle_dev_mode()

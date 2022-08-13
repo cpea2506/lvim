@@ -4,7 +4,6 @@ local options = {
     hidden = true,
     showcmd = false,
     linebreak = true,
-    relativenumber = true,
     autoindent = true,
     tabstop = 4,
     shiftwidth = 4,

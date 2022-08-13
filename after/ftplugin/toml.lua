@@ -2,7 +2,7 @@
 local filename = vim.fn.expand "%:r"
 
 if filename and filename:match "Cargo" then
-    lvim:extend {
+    lvim:set {
         lsp = {
             buffer_mappings = {
                 normal_mode = {

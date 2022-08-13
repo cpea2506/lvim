@@ -1,3 +1,5 @@
+local inlay_hints_ok, inlay_hints = pcall(require, "inlay-hints")
+
 local lsp = {
     installer = {
         setup = {
@@ -17,17 +19,13 @@ local lsp = {
             },
         },
     },
-    on_attach_callback = function(client, bufnr)
-        pcall(function()
-            require("inlay-hints").on_attach(client, bufnr)
-        end)
-    end,
+    on_attach_callback = inlay_hints_ok and inlay_hints.on_attach,
     diagnostics = {
         virtual_text = false,
+        update_in_insert = true,
         float = {
             focusable = true,
         },
-        update_in_insert = true,
         signs = {
             values = {
                 { name = "DiagnosticSignError", text = "" },
