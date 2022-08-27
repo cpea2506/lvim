@@ -5,6 +5,9 @@ local bufferline = {
         diagnostics = false,
         offsets = false,
         show_buffer_close_icons = false,
+        indicator = {
+            style = "none",
+        },
     },
     keymap = {
         normal_mode = {
