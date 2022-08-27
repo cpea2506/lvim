@@ -43,26 +43,27 @@ You can ensure install by specifying your list of servers
 }
 ```
 
-
 #### GUI:
 
 If you are using `Neovide` and/or `Vimr`. You need to do these things to make it receive LunarVim config:
 
-  1. Go inside `lvim/utils` folder: `cd $HOME/.config/lvim/utils`
-  2. Setup
-  - Neovide
+1. Go inside `lvim/utils` folder: `cd $HOME/.config/lvim/utils`
+2. Setup
 
-    ```bash
-    chmod +x ./lvide
-  
-    mv ./lvide $HOME/.local/bin/.
-    ```
-  - Vimr
+- Neovide
 
-    ```bash
-    chmod +x ./lvimr
-  
-    mv ./lvimr $HOME/.local/bin/.
-    ```
-  
-  3. Now you can start using `lvide` for `neovide` and/or `lvimr` for `vimr`
+  ```bash
+  chmod +x ./lvide
+
+  mv ./lvide $HOME/.local/bin/.
+  ```
+
+- Vimr
+
+  ```bash
+  chmod +x ./lvimr
+
+  mv ./lvimr $HOME/.local/bin/.
+  ```
+
+3. Now you can start using `lvide` for `neovide` and/or `lvimr` for `vimr`
