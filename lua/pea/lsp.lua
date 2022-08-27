@@ -21,7 +21,7 @@ local lsp = {
     },
     on_attach_callback = inlay_hints_ok and inlay_hints.on_attach,
     diagnostics = {
-        virtual_text = false,
+        virtual_text = true,
         update_in_insert = true,
         float = {
             focusable = true,

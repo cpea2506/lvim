@@ -11,6 +11,5 @@ return function()
         hide_cursor = true,
         extended_keymaps = true,
         always_scroll = true,
-        scroll_limit = -1,
     }
 end

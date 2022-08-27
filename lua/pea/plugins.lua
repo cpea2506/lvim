@@ -41,6 +41,11 @@ local plugins = {
         event = "BufRead",
     },
     {
+        "samodostal/image.nvim",
+        config = require "pea.config.image",
+        event = "BufRead",
+    },
+    {
         "stevearc/dressing.nvim",
         config = require "pea.config.dressing",
         event = "BufRead",
@@ -77,9 +82,19 @@ local plugins = {
     },
     {
         "Maan2003/lsp_lines.nvim",
-        config = require "pea.config.lsp_lines",
+        -- config = require "pea.config.lsp_lines",
         event = "BufRead",
     },
+    {
+        "kylechui/nvim-surround",
+        config = require "pea.config.nvim_surround",
+    },
+    -- {
+    --     "smjonas/inc-rename.nvim",
+    --     config = function()
+    --         require("inc_rename").setup()
+    --     end,
+    -- },
 }
 
 return plugins
