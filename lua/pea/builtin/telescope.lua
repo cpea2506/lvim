@@ -5,6 +5,7 @@ local status_ok, actions = pcall(require, "telescope.actions")
 if status_ok then
     telescope = {
         defaults = {
+            file_ignore_patterns = { "^.git/" },
             mappings = {
                 i = {
                     ["<C-j>"] = actions.move_selection_next,
