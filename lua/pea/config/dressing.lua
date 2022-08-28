@@ -10,18 +10,16 @@ return function()
             enabled = true,
             winblend = 0,
             anchor = "NW",
+            override = function(conf)
+                conf.col = 1
+                conf.row = 1
+
+                return conf
+            end,
         },
         select = {
             enabled = true,
             backend = { "telescope" },
-            format_item_override = {
-                codeaction = function(action_tuple)
-                    local title = action_tuple[2].title:gsub("\r\n", "\\r\\n")
-                    local client = vim.lsp.get_client_by_id(action_tuple[1])
-
-                    return string.format("%s\t[%s]", title:gsub("\n", "\\n"), client.name)
-                end,
-            },
         },
     }
 end
