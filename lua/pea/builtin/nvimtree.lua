@@ -4,8 +4,9 @@ local nvimtree = {
         disable_netrw = false,
         hijack_cursor = true,
         open_on_setup = true,
-        update_cwd = true,
+        sync_root_with_cwd = true,
         hijack_unnamed_buffer_when_opening = true,
+        create_in_closed_folder = true,
         diagnostics = {
             enable = false,
         },
