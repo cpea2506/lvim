@@ -81,13 +81,19 @@ local plugins = {
         event = "BufRead",
     },
     {
-        "Maan2003/lsp_lines.nvim",
-        -- config = require "pea.config.lsp_lines",
+        "kylechui/nvim-surround",
+        config = require "pea.config.nvim_surround",
         event = "BufRead",
     },
     {
-        "kylechui/nvim-surround",
-        config = require "pea.config.nvim_surround",
+        "folke/todo-comments.nvim",
+        config = require "pea.config.todo_comments",
+        event = "BufRead",
+    },
+    {
+        "vigoux/notifier.nvim",
+        config = require "pea.config.notifier",
+        event = "BufRead",
     },
     -- {
     --     "smjonas/inc-rename.nvim",
