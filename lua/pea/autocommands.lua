@@ -32,6 +32,25 @@ local autocommands = {
             end,
         },
     },
+    {
+        { "BufEnter" },
+        {
+            desc = "Open NvimTree when buffer is empty",
+            callback = function()
+                local bufname = vim.api.nvim_buf_get_name(0)
+                local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+                local buf_has_content = #lines > 1 or (#lines == 1 and lines[1] ~= "")
+
+                vim.schedule(function()
+                    local buftype = vim.api.nvim_buf_get_option(0, "filetype")
+
+                    if bufname == "" and buftype == "" and not buf_has_content then
+                        vim.api.nvim_command "NvimTreeOpen"
+                    end
+                end)
+            end,
+        },
+    },
 }
 
 return autocommands
