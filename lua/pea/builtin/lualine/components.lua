@@ -133,6 +133,8 @@ local components = {
         color = { fg = colors.violet, gui = "bold" },
         cond = conditions.should_hide_in_width,
     },
+    filetype = { "filetype", cond = conditions.should_hide_in_width },
+    location = { "location", cond = conditions.should_hide_in_width },
     os = {
         function()
             -- no room for window
