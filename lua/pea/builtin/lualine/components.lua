@@ -34,7 +34,12 @@ local components = {
                 ["!"] = colors.red,
                 t = colors.red,
             }
-            vim.api.nvim_command("hi! LualineMode guifg=" .. mode_color[vim.fn.mode()] .. " guibg=" .. colors.bg)
+
+            vim.api.nvim_set_hl(0, "LualineMode", {
+                fg = mode_color[vim.fn.mode()],
+                bg = colors.bg,
+            })
+
             return ""
         end,
         color = "LualineMode",
@@ -123,8 +128,10 @@ local components = {
         cond = conditions.should_hide_in_width,
     },
     branch = {
-        "branch",
+        "b:gitsigns_head",
+        icon = "",
         color = { fg = colors.violet, gui = "bold" },
+        cond = conditions.should_hide_in_width,
     },
     os = {
         function()
@@ -135,7 +142,7 @@ local components = {
         color = { fg = colors.fg },
     },
     encoding = {
-        "encoding", -- option component same as &encoding in viml
+        "o:encoding",
         cond = conditions.should_hide_in_width,
         color = { fg = colors.green, gui = "bold" },
     },
