@@ -1,7 +1,6 @@
 local treesitter = {
     ensure_installed = {
         "rust",
-        "swift",
         "lua",
         "vim",
         "typescript",
