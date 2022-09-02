@@ -1,9 +1,9 @@
 {
-    "typescript.inlayHints.parameterNames.enabled": "all",
-    "typescript.inlayHints.parameterTypes.enabled": true,
-    "typescript.inlayHints.variableTypes.enabled": true,
-    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
-    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
-    "typescript.inlayHints.enumMemberValues.enabled": true,
-    "typescript.updateImportsOnFileMove.enabled": "always"
+        "typescript.inlayHints.includeInlayParameterNameHints": "all",
+        "typescript.inlayHints.includeInlayParameterNameHintsWhenArgumentMatchesName": true,
+        "typescript.inlayHints.includeInlayFunctionParameterTypeHints" : true,
+        "typescript.inlayHints.includeInlayVariableTypeHints" : true,
+        "typescript.inlayHints.includeInlayPropertyDeclarationTypeHints" : true,
+        "typescript.inlayHints.includeInlayFunctionLikeReturnTypeHints" : true,
+        "typescript.inlayHints.includeInlayEnumMemberValueHints" : true
 }
