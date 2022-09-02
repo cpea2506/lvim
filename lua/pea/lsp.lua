@@ -1,4 +1,4 @@
-local inlay_hints_ok, inlay_hints = pcall(require, "inlay-hints")
+local inlayhints_ok, inlayhints = pcall(require, "lsp-inlayhints")
 
 local lsp = {
     installer = {
@@ -19,7 +19,7 @@ local lsp = {
             },
         },
     },
-    on_attach_callback = inlay_hints_ok and inlay_hints.on_attach,
+    on_attach_callback = inlayhints_ok and inlayhints.on_attach,
     diagnostics = {
         virtual_text = true,
         update_in_insert = true,

@@ -31,8 +31,8 @@ local plugins = {
         event = "InsertEnter",
     },
     {
-        "simrat39/inlay-hints.nvim",
-        config = require "pea.config.inlay_hints",
+        "lvimuser/lsp-inlayhints.nvim",
+        config = require "pea.config.inlayhints",
         event = "BufRead",
     },
     {
@@ -83,11 +83,6 @@ local plugins = {
     {
         "kylechui/nvim-surround",
         config = require "pea.config.nvim_surround",
-        event = "BufRead",
-    },
-    {
-        "folke/todo-comments.nvim",
-        config = require "pea.config.todo_comments",
         event = "BufRead",
     },
     {
