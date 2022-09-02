@@ -7,7 +7,6 @@ local cmp = {
     },
     confirm_opts = {
         select = true,
-        behavior = "insert",
     },
     formatting = {
         kind_icons = {
