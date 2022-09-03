@@ -6,8 +6,6 @@ return function()
     end
 
     notifier.setup {
-        components = {
-            "lsp",
-        },
+        components = { "lsp" },
     }
 end

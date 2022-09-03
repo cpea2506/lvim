@@ -8,7 +8,6 @@ return function()
     cinnamon.setup {
         default_keymaps = true,
         extra_keymaps = true,
-        hide_cursor = true,
         extended_keymaps = true,
         always_scroll = true,
     }
