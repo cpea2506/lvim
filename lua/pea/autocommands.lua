@@ -33,7 +33,7 @@ local autocommands = {
         },
     },
     {
-        { "BufEnter" },
+        "BufEnter",
         {
             desc = "Open NvimTree when buffer is empty",
             callback = function()

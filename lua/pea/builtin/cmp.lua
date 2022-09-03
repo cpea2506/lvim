@@ -14,6 +14,9 @@ local cmp = {
             Module = "",
             Struct = "פּ",
         },
+        source_names = {
+            crates = "(Crates)",
+        },
     },
 }
 

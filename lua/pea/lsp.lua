@@ -1,5 +1,13 @@
 local inlayhints_ok, inlayhints = pcall(require, "lsp-inlayhints")
 
+local function show_documentation()
+    if vim.fn.expand "%:t" == "Cargo.toml" then
+        require("crates").show_popup()
+    else
+        vim.lsp.buf.hover()
+    end
+end
+
 local lsp = {
     installer = {
         setup = {
@@ -17,6 +25,11 @@ local lsp = {
                 "cssls",
                 "jsonls",
             },
+        },
+    },
+    buffer_mappings = {
+        normal_mode = {
+            ["K"] = { show_documentation, "Show hover" },
         },
     },
     on_attach_callback = inlayhints_ok and inlayhints.on_attach,
