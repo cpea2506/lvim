@@ -2,10 +2,10 @@ local which_key = {
     mappings = {
         T = {
             name = "Treesitter",
-            i = { ":TSConfigInfo<CR>", "Info" },
-            u = { ":TSUpdateSync<CR>", "Sync update" },
-            h = { ":TSHighlightCapturesUnderCursor<CR>", "Show highlighting group" },
-            p = { ":TSPlaygroundToggle<CR>", "Toggle playground" },
+            i = { "<cmd>TSConfigInfo<cr>", "Info" },
+            u = { "<cmd>TSUpdateSync<cr>", "Sync update" },
+            h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Show highlighting group" },
+            p = { "<cmd>TSPlaygroundToggle<cr>", "Toggle playground" },
         },
     },
 }

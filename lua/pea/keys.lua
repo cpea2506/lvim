@@ -5,8 +5,8 @@ local keys = {
         ["<S-f>"] = "<Plug>(leap-backward)",
 
         -- other
-        ["<C-e>"] = ":bdelete!<CR>",
-        ["<C-s>"] = ":w<CR>",
+        ["<C-e>"] = "<cmd>BufferKill<cr>",
+        ["<C-s>"] = "<cmd>w<cr>",
     },
     insert_mode = {
         ["jj"] = false,
