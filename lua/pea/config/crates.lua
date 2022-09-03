@@ -6,7 +6,7 @@ return function()
     end
 
     crates.setup {
-        avoid_prerelease = false,
+        avoid_prerelease = true,
         date_format = "%d-%m-%Y",
         disable_invalid_feature_diagnostic = true,
         popup = {
