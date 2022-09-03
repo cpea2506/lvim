@@ -1,4 +1,6 @@
 {
     "Lua.hint.enable": true,
-    "Lua.hint.setType": true
+    "Lua.hint.setType": true,
+    "Lua.semantic.keyword": true,
+    "Lua.diagnostics.disable": ["missing-parameter", "param-type-mismatch"]
 }

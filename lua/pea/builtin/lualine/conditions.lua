@@ -2,7 +2,6 @@ local winwidth_limit = 85
 
 local conditions = {
     buffer_not_empty = function()
-        ---@diagnostic disable-next-line: missing-parameter
         local buffer = vim.fn.expand "%:t"
 
         return vim.fn.empty(buffer) ~= 1
