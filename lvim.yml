@@ -9,3 +9,6 @@ globals:
     args:
       - type: nil
         required: false
+  join_paths:
+    args:
+      - type: ...

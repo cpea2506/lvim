@@ -1,10 +1,11 @@
--- nothing can stop me from having mismatch parameter's type
----@diagnostic disable: param-type-mismatch
-
-local user_config_path = require("lvim.config"):get_user_config_path()
 local text = require "lvim.interface.text"
-local packer_path = get_runtime_dir() .. "/site/pack/packer/start"
-local num_plugins_loaded = #vim.fn.globpath(packer_path, "*", 0, 1)
+local user_config_path = require("lvim.config"):get_user_config_path()
+
+local function get_num_plugin_loaded()
+    local packer_path = join_paths(get_runtime_dir(), "site", "pack", "packer", "**")
+
+    return #packer_path
+end
 
 local function button(sc, val, keybind)
     local sc_ = sc:gsub("%s", ""):gsub("SPC", "<leader>")
@@ -17,7 +18,16 @@ local function button(sc, val, keybind)
         align_shortcut = "right",
         hl = "DashBoardCenter",
         hl_shortcut = "Keyword",
-        keymap = { "n", sc_, keybind, { silent = true, nowait = true, noremap = true } },
+        keymap = {
+            "n",
+            sc_,
+            keybind,
+            {
+                silent = true,
+                nowait = true,
+                noremap = true,
+            },
+        },
     }
 
     local on_press = function()
@@ -69,12 +79,12 @@ local components = {
     buttons = {
         type = "group",
         val = {
-            button("SPC f", "  Find File", ":Telescope find_files<CR>"),
-            button("SPC n", "  New File", ":ene!<CR>"),
-            button("SPC P", "  Recent Projects ", ":Telescope projects<CR>"),
-            button("SPC s r", "  Recently Used Files", ":Telescope oldfiles<CR>"),
-            button("SPC s t", "  Find Word", ":Telescope live_grep<CR>"),
-            button("SPC L c", "  Configuration", ":edit " .. user_config_path .. "<CR>"),
+            button("SPC f", "  Find File", ":Telescope find_files<cr>"),
+            button("SPC n", "  New File", ":ene!<cr>"),
+            button("SPC P", "  Recent Projects ", ":Telescope projects<cr>"),
+            button("SPC s r", "  Recently Used Files", ":Telescope oldfiles<cr>"),
+            button("SPC s t", "  Find Word", ":Telescope live_grep<cr>"),
+            button("SPC L c", "  Configuration", ":edit " .. user_config_path .. "<cr>"),
         },
         opts = {
             spacing = 1,
@@ -83,7 +93,7 @@ local components = {
     footer = {
         type = "text",
         val = text.align_center({ width = 0 }, {
-            "PeaVim loaded " .. num_plugins_loaded .. " plugins ",
+            "PeaVim loaded " .. get_num_plugin_loaded() .. " plugins ",
             "",
             "Let me show you what is true text editor!",
         }, 0.5),
