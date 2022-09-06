@@ -27,3 +27,18 @@ lvim:set {
         bufferline = require "pea.builtin.bufferline",
     },
 }
+
+require("one_monokai").setup {
+    colors = {
+        dark_pink = "#ff008c",
+        dark_cyan = "#2b8db3",
+    },
+    themes = function(colors)
+        return {
+            LeapMatch = { fg = colors.dark_pink, underline = true },
+            LeapLabelPrimary = { fg = colors.dark_pink },
+            LeapLabelSecondary = { fg = colors.dark_cyan },
+            LeapBackdrop = { fg = colors.gray },
+        }
+    end,
+}
