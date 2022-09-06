@@ -1,8 +1,9 @@
 local terminal = {
-    size = 15,
     active = true,
+    size = 15,
     shade_terminals = false,
     direction = "horizontal",
+    autochdir = true,
 }
 
 return terminal
