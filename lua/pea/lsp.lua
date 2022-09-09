@@ -14,6 +14,7 @@ local lsp = {
             automatic_installation = false,
             ensure_installed = {
                 "rust_analyzer",
+                "marksman",
                 "sumneko_lua",
                 "taplo",
                 "emmet_ls",
