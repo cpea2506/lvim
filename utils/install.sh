@@ -2,6 +2,7 @@
 
 declare -r LUNAR_CONFIG_HOME="${LUNAR_CONFIG_HOME:-"$HOME/.config/lvim"}"
 declare -r LUNAR_RUNTIME_HOME="${LUNAR_RUNTIME_HOME:-"$HOME/.local/share/lunarvim"}"
+declare -r LV_BRANCH="${LV_BRANCH:-"master"}"
 
 function msg {
 	printf "%80s\n" ' ' | tr ' ' -
@@ -40,7 +41,7 @@ function install_lunarvim {
 		esac
 	done
 
-	try bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)
+	try bash <(curl -s "https://raw.githubusercontent.com/lunarvim/lunarvim/$LV_BRANCH/utils/installer/install.sh") --no-install-dependencies
 
 	echo "Lunarvim installation done!"
 }
