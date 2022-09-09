@@ -2,9 +2,9 @@ local text = require "lvim.interface.text"
 local user_config_path = require("lvim.config"):get_user_config_path()
 
 local function get_num_plugin_loaded()
-    local packer_path = join_paths(get_runtime_dir(), "site", "pack", "packer", "**")
+    local packer_path = join_paths(get_runtime_dir(), "site", "pack", "packer", "*")
 
-    return #packer_path
+    return #vim.fn.globpath(packer_path, "*", 0, 1)
 end
 
 local function button(sc, val, keybind)
