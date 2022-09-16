@@ -1,4 +1,9 @@
 local which_key = {
+    setup = {
+        window = {
+            border = "rounded",
+        },
+    },
     mappings = {
         T = {
             name = "Treesitter",

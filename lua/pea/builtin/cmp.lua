@@ -8,6 +8,9 @@ local cmp = {
     confirm_opts = {
         select = true,
     },
+    experimental = {
+        ghost_text = true,
+    },
     formatting = {
         kind_icons = {
             Class = "ﴯ",

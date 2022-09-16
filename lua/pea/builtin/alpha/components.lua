@@ -79,12 +79,12 @@ local components = {
     buttons = {
         type = "group",
         val = {
-            button("SPC f", "  Find File", ":Telescope find_files<cr>"),
-            button("SPC n", "  New File", ":ene!<cr>"),
-            button("SPC P", "  Recent Projects ", ":Telescope projects<cr>"),
-            button("SPC s r", "  Recently Used Files", ":Telescope oldfiles<cr>"),
-            button("SPC s t", "  Find Word", ":Telescope live_grep<cr>"),
-            button("SPC L c", "  Configuration", ":edit " .. user_config_path .. "<cr>"),
+            button("f", "  Find File", ":Telescope find_files<cr>"),
+            button("n", "  New File", ":ene!<cr>"),
+            button("p", "  Recent Projects ", ":Telescope projects<cr>"),
+            button("r", "  Recently Used Files", ":Telescope oldfiles<cr>"),
+            button("t", "  Find Word", ":Telescope live_grep<cr>"),
+            button("c", "  Configuration", ":edit " .. user_config_path .. "<cr>"),
         },
         opts = {
             spacing = 1,
