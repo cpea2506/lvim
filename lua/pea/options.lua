@@ -7,9 +7,10 @@ local options = {
     autoindent = true,
     tabstop = 4,
     shiftwidth = 4,
-    cmdheight = 1,
+    cmdheight = 0,
     fillchars = "eob: ",
     whichwrap = "",
+    timeoutlen = 500,
     guifont = "SFMono Nerd Font:h13",
     guicursor = "n-v-c-sm:block,i-ci-ve:hor30,r-cr-o:hor20",
 }

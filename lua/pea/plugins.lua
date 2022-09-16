@@ -1,7 +1,10 @@
 local plugins = {
-    { "cpea2506/one_monokai.nvim" },
     {
-        "ggandor/leap.nvim",
+        "cpea2506/one_monokai.nvim",
+        branch = "dev-0.8",
+    },
+    {
+        "nvim-treesitter/playground",
         event = "BufRead",
     },
     {
@@ -9,7 +12,7 @@ local plugins = {
         event = "BufRead",
     },
     {
-        "nvim-treesitter/playground",
+        "ggandor/leap.nvim",
         event = "BufRead",
     },
     {
@@ -24,6 +27,12 @@ local plugins = {
         "windwp/nvim-ts-autotag",
         ft = { "html", "typescriptreact", "svelte" },
         event = "InsertEnter",
+    },
+    {
+        "utilyre/barbecue.nvim",
+        config = require "pea.config.barbecue",
+        requires = "SmiteshP/nvim-navic",
+        event = "BufRead",
     },
     {
         "max397574/better-escape.nvim",
@@ -90,12 +99,6 @@ local plugins = {
         config = require "pea.config.notifier",
         event = "BufRead",
     },
-    -- {
-    --     "smjonas/inc-rename.nvim",
-    --     config = function()
-    --         require("inc_rename").setup()
-    --     end,
-    -- },
 }
 
 return plugins

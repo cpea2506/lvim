@@ -27,6 +27,7 @@ return function()
         log_level = log_levels.none,
         client_id = client_id.pea_vim,
         buttons = true,
+        show_time = false,
         workspace_text = function()
             return "Rustacean"
         end,
