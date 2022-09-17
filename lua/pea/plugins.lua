@@ -29,6 +29,11 @@ local plugins = {
         event = "InsertEnter",
     },
     {
+        "theHamsta/nvim-semantic-tokens",
+        config = require "pea.config.semantic_tokens",
+        event = "BufRead",
+    },
+    {
         "utilyre/barbecue.nvim",
         config = require "pea.config.barbecue",
         requires = "SmiteshP/nvim-navic",

@@ -42,6 +42,18 @@ local lsp = {
         if navic_ok and client.server_capabilities.documentSymbolProvider then
             navic.attach(client, bufnr)
         end
+
+        local caps = client.server_capabilities
+        local semantic_tokens_full = vim.lsp.buf.semantic_tokens_full
+        if caps.semanticTokensProvider and caps.semanticTokensProvider.full and semantic_tokens_full then
+            semantic_tokens_full()
+
+            vim.api.nvim_create_autocmd("TextChanged", {
+                group = vim.api.nvim_create_augroup("SemanticTokens", {}),
+                buffer = bufnr,
+                callback = semantic_tokens_full,
+            })
+        end
     end,
     diagnostics = {
         virtual_text = true,
