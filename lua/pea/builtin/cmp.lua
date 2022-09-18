@@ -4,8 +4,6 @@ if status_ok then
     local cmdline_mappings = nvim_cmp.mapping.preset.cmdline()
     cmdline_mappings["<C-j>"] = cmdline_mappings["<S-Tab>"]
     cmdline_mappings["<C-k>"] = cmdline_mappings["<Tab>"]
-    cmdline_mappings["<Tab>"] = cmdline_mappings["<C-j>"]
-    cmdline_mappings["<S-Tab>"] = cmdline_mappings["<C-k>"]
 
     local cmdline_setup = nvim_cmp.setup.cmdline
     cmdline_setup(":", {
