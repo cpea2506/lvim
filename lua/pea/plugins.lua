@@ -33,13 +33,18 @@ local plugins = {
         event = "InsertEnter",
     },
     {
+        "Pocco81/auto-save.nvim",
+        config = require "pea.config.autosave",
+        event = "InsertLeave",
+    },
+    {
         "theHamsta/nvim-semantic-tokens",
         config = require "pea.config.semantic_tokens",
         event = "BufRead",
     },
     {
-        "utilyre/barbecue.nvim",
-        config = require "pea.config.barbecue",
+        "B4mbus/nvim-headband",
+        config = require "pea.config.headband",
         requires = "SmiteshP/nvim-navic",
         event = "BufRead",
     },
