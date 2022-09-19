@@ -67,23 +67,25 @@ local components = {
         "%=",
     },
     lsp = {
-        function(msg)
-            msg = msg or "LS Inactive"
+        function()
+            local msg = "LS Inactive"
 
-            local buf_clients = vim.lsp.get_active_clients()
+            local bufnr = vim.api.nvim_get_current_buf()
+            local buf_clients = vim.lsp.get_active_clients { bufnr = bufnr }
 
             if vim.tbl_isempty(buf_clients) then
-                return type(msg) == "boolean" or #msg == 0 and "LS Inactive" or msg
+                return msg
             end
 
-            local buf_ft = vim.bo.filetype
             local buf_client_names = {}
 
             for _, client in pairs(buf_clients) do
                 if client.name ~= "null-ls" then
-                    table.insert(buf_client_names, client.name)
+                    buf_client_names[#buf_client_names + 1] = client.name
                 end
             end
+
+            local buf_ft = vim.bo.filetype
 
             -- add formatter
             local formatters = require "lvim.lsp.null-ls.formatters"
@@ -95,8 +97,7 @@ local components = {
             local supported_linters = linters.list_registered(buf_ft)
             vim.list_extend(buf_client_names, supported_linters)
 
-            local unique_client_names = vim.fn.uniq(buf_client_names)
-            return table.concat(unique_client_names, " | ")
+            return table.concat(buf_client_names, " | ")
         end,
         icon = " LSP:",
         color = { fg = colors.jungle_green, gui = "bold" },
