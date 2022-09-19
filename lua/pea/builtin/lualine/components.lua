@@ -64,15 +64,13 @@ local components = {
         },
     },
     center = {
-        function()
-            return "%="
-        end,
+        "%=",
     },
     lsp = {
         function(msg)
             msg = msg or "LS Inactive"
 
-            local buf_clients = vim.lsp.buf_get_clients()
+            local buf_clients = vim.lsp.get_active_clients()
 
             if vim.tbl_isempty(buf_clients) then
                 return type(msg) == "boolean" or #msg == 0 and "LS Inactive" or msg
@@ -97,7 +95,8 @@ local components = {
             local supported_linters = linters.list_registered(buf_ft)
             vim.list_extend(buf_client_names, supported_linters)
 
-            return table.concat(buf_client_names, " | ")
+            local unique_client_names = vim.fn.uniq(buf_client_names)
+            return table.concat(unique_client_names, " | ")
         end,
         icon = " LSP:",
         color = { fg = colors.jungle_green, gui = "bold" },
@@ -133,8 +132,14 @@ local components = {
         color = { fg = colors.violet, gui = "bold" },
         cond = conditions.should_hide_in_width,
     },
-    filetype = { "filetype", cond = conditions.should_hide_in_width },
-    location = { "location", cond = conditions.should_hide_in_width },
+    filetype = {
+        "filetype",
+        cond = conditions.should_hide_in_width,
+    },
+    location = {
+        "location",
+        cond = conditions.should_hide_in_width,
+    },
     os = {
         function()
             -- no room for window
