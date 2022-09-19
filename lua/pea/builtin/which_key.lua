@@ -5,6 +5,10 @@ local which_key = {
         },
     },
     mappings = {
+        t = {
+            name = "Trouble",
+            o = { "<cmd>TroubleToggle<cr>", "Show diagnostics" },
+        },
         T = {
             name = "Treesitter",
             i = { "<cmd>TSConfigInfo<cr>", "Info" },

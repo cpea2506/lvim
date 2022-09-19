@@ -18,6 +18,7 @@ local lualine = {
             "TelescopePrompt",
             "NvimTree",
             "toggleterm",
+            "Trouble",
             "alpha",
             "DressingInput",
             "mason",

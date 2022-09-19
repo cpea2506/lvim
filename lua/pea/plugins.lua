@@ -8,6 +8,11 @@ local plugins = {
         event = "BufRead",
     },
     {
+        "folke/trouble.nvim",
+        config = require "pea.config.trouble",
+        cmd = "TroubleToggle",
+    },
+    {
         "p00f/nvim-ts-rainbow",
         event = "BufRead",
     },

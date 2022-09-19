@@ -23,7 +23,6 @@ local treesitter = {
     },
     rainbow = {
         enable = true,
-        extended_mode = true,
     },
     playground = {
         enable = true,
