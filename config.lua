@@ -13,6 +13,7 @@ lvim:set {
     options = require "pea.options",
     builtin = {
         cmp = require "pea.builtin.cmp",
+        lir = require "pea.builtin.lir",
         alpha = require "pea.builtin.alpha",
         mason = require "pea.builtin.mason",
         icons = require "pea.builtin.icons",
