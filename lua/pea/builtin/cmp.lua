@@ -33,16 +33,16 @@ local cmp = {
     experimental = {
         ghost_text = true,
     },
+    sources = {
+        { name = "nvim_lsp_signature_help" },
+        { name = "rg" },
+        unpack(lvim.builtin.cmp.sources),
+    },
     formatting = {
         source_names = {
             crates = "(Crates)",
         },
     },
 }
-
-vim.list_extend(lvim.builtin.cmp.sources, {
-    { name = "nvim_lsp_signature_help" },
-    { name = "rg" },
-})
 
 return cmp
