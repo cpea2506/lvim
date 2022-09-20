@@ -6,6 +6,6 @@ return function()
     end
 
     better_escape.setup {
-        mapping = { "jk" },
+        mapping = { "jk", "kj" },
     }
 end

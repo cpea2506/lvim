@@ -8,11 +8,6 @@ local plugins = {
         event = "BufRead",
     },
     {
-        "folke/trouble.nvim",
-        config = require "pea.config.trouble",
-        cmd = "TroubleToggle",
-    },
-    {
         "p00f/nvim-ts-rainbow",
         event = "BufRead",
     },
@@ -33,6 +28,11 @@ local plugins = {
         event = "InsertEnter",
     },
     {
+        "folke/trouble.nvim",
+        config = require "pea.config.trouble",
+        cmd = "TroubleToggle",
+    },
+    {
         "windwp/nvim-ts-autotag",
         ft = { "html", "typescriptreact", "svelte" },
         event = "InsertEnter",
@@ -45,12 +45,6 @@ local plugins = {
     {
         "theHamsta/nvim-semantic-tokens",
         config = require "pea.config.semantic_tokens",
-        event = "BufRead",
-    },
-    {
-        "B4mbus/nvim-headband",
-        config = require "pea.config.headband",
-        requires = "SmiteshP/nvim-navic",
         event = "BufRead",
     },
     {
@@ -90,7 +84,7 @@ local plugins = {
     },
     {
         "Saecki/crates.nvim",
-        config = require "pea.config.crates",
+        config = require "pea.config.nvim_crates",
         event = "BufRead Cargo.toml",
     },
     {
