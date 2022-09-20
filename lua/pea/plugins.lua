@@ -35,7 +35,6 @@ local plugins = {
     {
         "windwp/nvim-ts-autotag",
         ft = { "html", "typescriptreact", "svelte" },
-        event = "InsertEnter",
     },
     {
         "Pocco81/auto-save.nvim",
