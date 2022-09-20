@@ -23,6 +23,7 @@ lvim:set {
         nvimtree = require "pea.builtin.nvimtree",
         autopairs = require "pea.builtin.autopairs",
         which_key = require "pea.builtin.which_key",
+        breadcrumbs = require "pea.builtin.breadcrumbs",
         telescope = require "pea.builtin.telescope",
         treesitter = require "pea.builtin.treesitter",
         illuminate = require "pea.builtin.illuminate",
