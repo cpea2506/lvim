@@ -30,7 +30,6 @@ local lsp = {
     },
     on_attach_callback = utils.on_attach,
     diagnostics = {
-        virtual_text = true,
         update_in_insert = true,
         float = {
             focusable = true,

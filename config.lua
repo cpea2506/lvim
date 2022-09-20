@@ -25,6 +25,7 @@ lvim:set {
         which_key = require "pea.builtin.which_key",
         telescope = require "pea.builtin.telescope",
         treesitter = require "pea.builtin.treesitter",
+        illuminate = require "pea.builtin.illuminate",
         bufferline = require "pea.builtin.bufferline",
     },
 }
