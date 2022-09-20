@@ -34,11 +34,6 @@ local cmp = {
         ghost_text = true,
     },
     formatting = {
-        kind_icons = {
-            Class = "ﴯ",
-            Module = "",
-            Struct = "פּ",
-        },
         source_names = {
             crates = "(Crates)",
         },
