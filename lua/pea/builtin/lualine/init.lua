@@ -4,8 +4,6 @@ local colors = require "pea.builtin.lualine.colors"
 local lualine = {
     options = {
         icons_enabled = true,
-        component_separators = "",
-        section_separators = "",
         theme = {
             normal = {
                 c = { fg = colors.fg, bg = colors.bg },

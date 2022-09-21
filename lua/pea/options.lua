@@ -2,7 +2,6 @@ local options = {
     wrap = true,
     list = false,
     hidden = true,
-    showcmd = false,
     linebreak = true,
     autoindent = true,
     tabstop = 4,
