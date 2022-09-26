@@ -37,11 +37,6 @@ local plugins = {
         ft = { "html", "typescriptreact", "svelte" },
     },
     {
-        "Pocco81/auto-save.nvim",
-        config = require "pea.config.autosave",
-        event = "InsertLeave",
-    },
-    {
         "theHamsta/nvim-semantic-tokens",
         config = require "pea.config.semantic_tokens",
         event = "BufRead",
