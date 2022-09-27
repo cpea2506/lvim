@@ -5,6 +5,7 @@ local options = {
     linebreak = true,
     autoindent = true,
     tabstop = 4,
+    showtabline = 0,
     shiftwidth = 4,
     cmdheight = 1,
     fillchars = "eob: ",
