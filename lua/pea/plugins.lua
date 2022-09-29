@@ -28,6 +28,11 @@ local plugins = {
         event = "InsertEnter",
     },
     {
+        "folke/todo-comments.nvim",
+        requires = "nvim-lua/plenary.nvim",
+        config = require "pea.config.todo_comments",
+    },
+    {
         "folke/trouble.nvim",
         config = require "pea.config.trouble",
         cmd = "TroubleToggle",
