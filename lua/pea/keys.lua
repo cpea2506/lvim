@@ -9,8 +9,8 @@ local keys = {
         ["<C-s>"] = "<cmd>w<cr>",
     },
     o = {
-        ["f"] = "<Plug>(leap-forward)",
-        ["F"] = "<Plug>(leap-backward)",
+        ["f"] = "<Plug>(leap-forward-x)",
+        ["F"] = "<Plug>(leap-backward-x)",
     },
 }
 

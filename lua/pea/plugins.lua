@@ -4,18 +4,6 @@ local plugins = {
         branch = "dev-0.8",
     },
     {
-        "nvim-treesitter/playground",
-        event = "BufRead",
-    },
-    {
-        "p00f/nvim-ts-rainbow",
-        event = "BufRead",
-    },
-    {
-        "ggandor/leap.nvim",
-        event = "BufRead",
-    },
-    {
         "hrsh7th/cmp-nvim-lsp-signature-help",
         event = "InsertEnter",
     },
@@ -28,9 +16,12 @@ local plugins = {
         event = "InsertEnter",
     },
     {
-        "folke/todo-comments.nvim",
-        requires = "nvim-lua/plenary.nvim",
-        config = require "pea.config.todo_comments",
+        "ggandor/leap.nvim",
+        keys = { "f", "F" },
+    },
+    {
+        "windwp/nvim-ts-autotag",
+        ft = { "html", "typescriptreact", "svelte" },
     },
     {
         "folke/trouble.nvim",
@@ -38,18 +29,27 @@ local plugins = {
         cmd = "TroubleToggle",
     },
     {
-        "windwp/nvim-ts-autotag",
-        ft = { "html", "typescriptreact", "svelte" },
-    },
-    {
-        "theHamsta/nvim-semantic-tokens",
-        config = require "pea.config.semantic_tokens",
-        event = "BufRead",
+        "woosaaahh/sj.nvim",
+        config = require "pea.config.sj",
+        keys = "<leader>j",
     },
     {
         "max397574/better-escape.nvim",
         config = require "pea.config.better_escape",
         event = "InsertEnter",
+    },
+    {
+        "simrat39/rust-tools.nvim",
+        config = require "pea.config.rust_tools",
+        ft = { "rust" },
+    },
+    {
+        "nvim-treesitter/playground",
+        event = "BufRead",
+    },
+    {
+        "p00f/nvim-ts-rainbow",
+        event = "BufRead",
     },
     {
         "lvimuser/lsp-inlayhints.nvim",
@@ -62,6 +62,16 @@ local plugins = {
         event = "BufRead",
     },
     {
+        "folke/todo-comments.nvim",
+        config = require "pea.config.todo_comments",
+        event = "BufRead",
+    },
+    {
+        "theHamsta/nvim-semantic-tokens",
+        config = require "pea.config.semantic_tokens",
+        event = "BufRead",
+    },
+    {
         "samodostal/image.nvim",
         config = require "pea.config.image",
         event = "BufRead",
@@ -70,11 +80,6 @@ local plugins = {
         "stevearc/dressing.nvim",
         config = require "pea.config.dressing",
         event = "BufRead",
-    },
-    {
-        "simrat39/rust-tools.nvim",
-        config = require "pea.config.rust_tools",
-        ft = { "rust", "rs" },
     },
     {
         "nacro90/numb.nvim",
