@@ -17,7 +17,7 @@ local plugins = {
     },
     {
         "ggandor/leap.nvim",
-        keys = { "f", "F" },
+        event = "BufRead",
     },
     {
         "windwp/nvim-ts-autotag",
