@@ -5,7 +5,7 @@ My LunarVim configuration, inspired from my [Peavim](https://github.com/cpea2506
 <img width="1500" alt="dashboard" src="./assets/dashboard.png">
 <img width="1500" alt="main" src="./assets/main.png">
 
-### One Line Installation Command
+## One-liner installation command
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/cpea2506/lvim/main/utils/install.sh)
@@ -17,33 +17,7 @@ This will install LunarVim for you if there isn't any.
 
 - Neovim >= 0.8
 
-### Options
-
-#### [Treesitter](lua/pea/builtin/treesitter.lua)
-
-You can ensure install by specifying your list of languages or using `"all"`.
-
-```lua
-{
-     ensure_installed = {"rust", "swift", "lua", ...}
-}
--- or
-{
-     ensure_installed = "all"
-}
-```
-
-#### [LspInstaller](lua/pea/lsp.lua)
-
-You can ensure install by specifying your list of servers
-
-```lua
-{
-     ensure_installed = {"rust_analyzer", "sumneko_lua", ...}
-}
-```
-
-#### GUI:
+## GUI:
 
 If you are using `Neovide` and/or `Vimr`. You need to do these things to make it receive LunarVim config:
 
