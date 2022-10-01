@@ -64,28 +64,28 @@ local components = {
         },
     },
     center = {
-        function()
-            return "%="
-        end,
+        "%=",
     },
     lsp = {
-        function(msg)
-            msg = msg or "LS Inactive"
+        function()
+            local msg = "LS Inactive"
 
-            local buf_clients = vim.lsp.buf_get_clients()
+            local bufnr = vim.api.nvim_get_current_buf()
+            local buf_clients = vim.lsp.get_active_clients { bufnr = bufnr }
 
             if vim.tbl_isempty(buf_clients) then
-                return type(msg) == "boolean" or #msg == 0 and "LS Inactive" or msg
+                return msg
             end
 
-            local buf_ft = vim.bo.filetype
             local buf_client_names = {}
 
             for _, client in pairs(buf_clients) do
                 if client.name ~= "null-ls" then
-                    table.insert(buf_client_names, client.name)
+                    buf_client_names[#buf_client_names + 1] = client.name
                 end
             end
+
+            local buf_ft = vim.bo.filetype
 
             -- add formatter
             local formatters = require "lvim.lsp.null-ls.formatters"
@@ -133,8 +133,14 @@ local components = {
         color = { fg = colors.violet, gui = "bold" },
         cond = conditions.should_hide_in_width,
     },
-    filetype = { "filetype", cond = conditions.should_hide_in_width },
-    location = { "location", cond = conditions.should_hide_in_width },
+    filetype = {
+        "filetype",
+        cond = conditions.should_hide_in_width,
+    },
+    location = {
+        "location",
+        cond = conditions.should_hide_in_width,
+    },
     os = {
         function()
             -- no room for window

@@ -1,9 +1,14 @@
 return function()
-    local status_ok, todo_comments = pcall(require, "todo-comments")
+    local colors = require "one_monokai.colors"
 
-    if not status_ok then
-        return
-    end
-
-    todo_comments.setup()
+    require("todo-comments").setup {
+        keywords = {
+            HACK = { color = "hack" },
+            PERF = { color = "perf" },
+        },
+        colors = {
+            perf = { colors.purple },
+            hack = { colors.cyan },
+        },
+    }
 end

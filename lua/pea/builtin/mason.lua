@@ -1,6 +1,5 @@
 local mason = {
     ui = {
-        border = "rounded",
         keymaps = {
             toggle_package_expand = "o",
             uninstall_package = "d",

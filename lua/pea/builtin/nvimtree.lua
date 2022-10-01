@@ -1,7 +1,6 @@
 local nvimtree = {
     active = true,
     setup = {
-        disable_netrw = false,
         hijack_cursor = true,
         open_on_setup = true,
         sync_root_with_cwd = true,
@@ -9,6 +8,9 @@ local nvimtree = {
         create_in_closed_folder = true,
         diagnostics = {
             enable = false,
+        },
+        hijack_directories = {
+            enable = true,
         },
         actions = {
             open_file = {

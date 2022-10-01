@@ -1,9 +1,9 @@
 {
-        "typescript.inlayHints.includeInlayParameterNameHints": "all",
-        "typescript.inlayHints.includeInlayParameterNameHintsWhenArgumentMatchesName": true,
-        "typescript.inlayHints.includeInlayFunctionParameterTypeHints" : true,
-        "typescript.inlayHints.includeInlayVariableTypeHints" : true,
-        "typescript.inlayHints.includeInlayPropertyDeclarationTypeHints" : true,
-        "typescript.inlayHints.includeInlayFunctionLikeReturnTypeHints" : true,
-        "typescript.inlayHints.includeInlayEnumMemberValueHints" : true
+  "typescript.inlayHints.includeInlayParameterNameHints": "all",
+  "typescript.inlayHints.includeInlayParameterNameHintsWhenArgumentMatchesName": true,
+  "typescript.inlayHints.includeInlayFunctionParameterTypeHints": true,
+  "typescript.inlayHints.includeInlayVariableTypeHints": true,
+  "typescript.inlayHints.includeInlayPropertyDeclarationTypeHints": true,
+  "typescript.inlayHints.includeInlayFunctionLikeReturnTypeHints": true,
+  "typescript.inlayHints.includeInlayEnumMemberValueHints": true
 }

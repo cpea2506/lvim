@@ -13,6 +13,7 @@ lvim:set {
     options = require "pea.options",
     builtin = {
         cmp = require "pea.builtin.cmp",
+        lir = require "pea.builtin.lir",
         alpha = require "pea.builtin.alpha",
         mason = require "pea.builtin.mason",
         icons = require "pea.builtin.icons",
@@ -24,6 +25,9 @@ lvim:set {
         which_key = require "pea.builtin.which_key",
         telescope = require "pea.builtin.telescope",
         treesitter = require "pea.builtin.treesitter",
+        illuminate = require "pea.builtin.illuminate",
         bufferline = require "pea.builtin.bufferline",
+        indentlines = require "pea.builtin.indentlines",
+        breadcrumbs = require "pea.builtin.breadcrumbs",
     },
 }

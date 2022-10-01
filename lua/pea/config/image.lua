@@ -1,11 +1,5 @@
 return function()
-    local status_ok, image = pcall(require, "image")
-
-    if not status_ok then
-        return
-    end
-
-    image.setup {
+    require("image").setup {
         render = {
             min_padding = 5,
             show_label = true,

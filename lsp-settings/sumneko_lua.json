@@ -1,6 +1,12 @@
 {
-    "Lua.hint.enable": true,
-    "Lua.hint.setType": true,
-    "Lua.semantic.keyword": true,
-    "Lua.diagnostics.disable": ["missing-parameter", "param-type-mismatch"]
+  "Lua.hint.enable": true,
+  "Lua.hint.setType": true,
+  "Lua.hint.arrayIndex": "Disable",
+  "Lua.semantic.keyword": true,
+  "Lua.runtime.version": "LuaJIT",
+  "Lua.diagnostics.disable": [
+    "missing-parameter",
+    "param-type-mismatch",
+    "undefined-global"
+  ]
 }

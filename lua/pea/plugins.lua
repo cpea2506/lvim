@@ -1,34 +1,55 @@
 local plugins = {
-    { "cpea2506/one_monokai.nvim" },
     {
-        "ggandor/leap.nvim",
-        event = "BufRead",
-    },
-    {
-        "p00f/nvim-ts-rainbow",
-        event = "BufRead",
-    },
-    {
-        "nvim-treesitter/playground",
-        event = "BufRead",
+        "cpea2506/one_monokai.nvim",
+        branch = "dev-0.8",
     },
     {
         "hrsh7th/cmp-nvim-lsp-signature-help",
         event = "InsertEnter",
     },
     {
+        "hrsh7th/cmp-cmdline",
+        event = "CmdlineEnter",
+    },
+    {
         "lukas-reineke/cmp-rg",
         event = "InsertEnter",
     },
     {
+        "ggandor/leap.nvim",
+        event = "BufRead",
+    },
+    {
         "windwp/nvim-ts-autotag",
         ft = { "html", "typescriptreact", "svelte" },
-        event = "InsertEnter",
+    },
+    {
+        "folke/trouble.nvim",
+        config = require "pea.config.trouble",
+        cmd = "TroubleToggle",
+    },
+    {
+        "woosaaahh/sj.nvim",
+        config = require "pea.config.sj",
+        keys = "<leader>j",
     },
     {
         "max397574/better-escape.nvim",
         config = require "pea.config.better_escape",
         event = "InsertEnter",
+    },
+    {
+        "simrat39/rust-tools.nvim",
+        config = require "pea.config.rust_tools",
+        ft = { "rust" },
+    },
+    {
+        "nvim-treesitter/playground",
+        event = "BufRead",
+    },
+    {
+        "p00f/nvim-ts-rainbow",
+        event = "BufRead",
     },
     {
         "lvimuser/lsp-inlayhints.nvim",
@@ -38,6 +59,16 @@ local plugins = {
     {
         "kosayoda/nvim-lightbulb",
         config = require "pea.config.lightbulb",
+        event = "BufRead",
+    },
+    {
+        "folke/todo-comments.nvim",
+        config = require "pea.config.todo_comments",
+        event = "BufRead",
+    },
+    {
+        "theHamsta/nvim-semantic-tokens",
+        config = require "pea.config.semantic_tokens",
         event = "BufRead",
     },
     {
@@ -51,23 +82,18 @@ local plugins = {
         event = "BufRead",
     },
     {
-        "simrat39/rust-tools.nvim",
-        config = require "pea.config.rust_tools",
-        ft = { "rust", "rs" },
-    },
-    {
         "nacro90/numb.nvim",
         config = require "pea.config.numb",
         event = "BufRead",
     },
     {
         "Saecki/crates.nvim",
-        config = require "pea.config.crates",
+        config = require "pea.config.nvim_crates",
         event = "BufRead Cargo.toml",
     },
     {
         "brenoprata10/nvim-highlight-colors",
-        config = require "pea.config.highlight_colors",
+        config = require "pea.config.hi_colors",
         event = "BufRead",
     },
     {
@@ -90,12 +116,6 @@ local plugins = {
         config = require "pea.config.notifier",
         event = "BufRead",
     },
-    -- {
-    --     "smjonas/inc-rename.nvim",
-    --     config = function()
-    --         require("inc_rename").setup()
-    --     end,
-    -- },
 }
 
 return plugins

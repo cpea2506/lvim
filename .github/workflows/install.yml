@@ -23,13 +23,13 @@ jobs:
         include:
           - runner: ubuntu-latest
             os: Linux
-            neovim: v0.7.2
+            neovim: v0.8.0
           - runner: ubuntu-22.04
             os: Linux
             neovim: nightly
           - runner: macos-latest
             os: OS X
-            neovim: v0.7.2
+            neovim: v0.8.0
           - runner: macos-12
             os: OS X
             neovim: nightly

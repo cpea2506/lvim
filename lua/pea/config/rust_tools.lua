@@ -1,19 +1,11 @@
 return function()
-    local status_ok, rust_tools = pcall(require, "rust-tools")
-
-    if not status_ok then
-        return
-    end
-
     local lsp = require "lvim.lsp"
-    local executors = require "rust-tools.executors"
 
-    rust_tools.setup {
+    require("rust-tools").setup {
         tools = {
             inlay_hints = {
                 auto = false,
             },
-            executor = executors.toggleterm,
             hover_actions = {
                 border = "rounded",
                 auto_focus = true,

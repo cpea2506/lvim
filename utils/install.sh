@@ -49,13 +49,16 @@ function install_lunarvim {
 function clone_config {
 	msg "Cloning configuration"
 
-	try git clone --branch main --depth 1 \
-		"https://github.com/cpea2506/lvim.git" "$LUNAR_CONFIG_HOME"
+	try git clone --branch main "https://github.com/cpea2506/lvim.git" "$LUNAR_CONFIG_HOME"
 }
 
 function remove_old_config {
-	msg "Remove old LunarVim config"
+	msg "Replace old LunarVim config"
 
+	echo "Backup..."
+	try mv "$LUNAR_CONFIG_HOME" "$LUNAR_CONFIG_HOME.old"
+
+	echo "Remove old config"
 	try rm -rf "$LUNAR_CONFIG_HOME"
 }
 

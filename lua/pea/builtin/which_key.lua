@@ -1,5 +1,14 @@
 local which_key = {
+    setup = {
+        window = {
+            border = "rounded",
+        },
+    },
     mappings = {
+        t = {
+            name = "Trouble",
+            o = { "<cmd>TroubleToggle<cr>", "Show diagnostics" },
+        },
         T = {
             name = "Treesitter",
             i = { "<cmd>TSConfigInfo<cr>", "Info" },

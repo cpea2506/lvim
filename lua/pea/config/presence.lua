@@ -1,9 +1,5 @@
 return function()
-    local status_ok, presence = pcall(require, "presence")
-
-    if not status_ok then
-        return
-    end
+    require "presence"
 
     local client_id = {
         default = "793271441293967371",
@@ -20,13 +16,12 @@ return function()
         debug = "debug",
     }
 
-    presence:setup {
-        auto_update = true,
+    require("presence"):setup {
         neovim_image_text = "LunarVim",
         main_image = "file",
         log_level = log_levels.none,
         client_id = client_id.pea_vim,
-        buttons = true,
+        show_time = false,
         workspace_text = function()
             return "Rustacean"
         end,
