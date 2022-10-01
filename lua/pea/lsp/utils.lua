@@ -15,11 +15,6 @@ function M.on_attach(client, bufnr)
         inlayhints.on_attach(client, bufnr)
     end
 
-    local navic_ok, navic = pcall(require, "nvim-navic")
-    if navic_ok and client.server_capabilities.documentSymbolProvider then
-        navic.attach(client, bufnr)
-    end
-
     local caps = client.server_capabilities
     local semantic_tokens_full = vim.lsp.buf.semantic_tokens_full
     if caps.semanticTokensProvider and caps.semanticTokensProvider.full and semantic_tokens_full then

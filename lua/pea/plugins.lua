@@ -93,7 +93,7 @@ local plugins = {
     },
     {
         "brenoprata10/nvim-highlight-colors",
-        config = require "pea.config.highlight_colors",
+        config = require "pea.config.hi_colors",
         event = "BufRead",
     },
     {
