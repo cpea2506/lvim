@@ -1,22 +1,22 @@
 require "pea.utils"
 
 lvim:set {
-    colorscheme = "one_monokai",
     dev_mode = true,
-    transparent_window = true,
     leader = "space",
     format_on_save = true,
-    keys = require "pea.keys",
     lsp = require "pea.lsp",
+    keys = require "pea.keys",
+    transparent_window = true,
+    icons = require "pea.icons",
+    colorscheme = "one_monokai",
     plugins = require "pea.plugins",
-    autocommands = require "pea.autocommands",
     options = require "pea.options",
+    autocommands = require "pea.autocommands",
     builtin = {
         cmp = require "pea.builtin.cmp",
         lir = require "pea.builtin.lir",
         alpha = require "pea.builtin.alpha",
         mason = require "pea.builtin.mason",
-        icons = require "pea.builtin.icons",
         notify = require "pea.builtin.notify",
         lualine = require "pea.builtin.lualine",
         terminal = require "pea.builtin.terminal",

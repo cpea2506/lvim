@@ -6,6 +6,7 @@ local nvimtree = {
         sync_root_with_cwd = true,
         hijack_unnamed_buffer_when_opening = true,
         create_in_closed_folder = true,
+        auto_reload_on_write = true,
         diagnostics = {
             enable = false,
         },

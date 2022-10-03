@@ -14,12 +14,13 @@ end
 
 function lvim:set_icons()
     local status_ok, icons = pcall(require, "nvim-web-devicons")
+    local dev_icons = self.icons.dev
 
-    if not status_ok or not self.builtin.icons then
+    if not status_ok or not dev_icons then
         return
     end
 
-    icons.set_icon(self.builtin.icons)
+    icons.set_icon(dev_icons)
 end
 
 ---reset cache before calling module
