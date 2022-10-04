@@ -1,18 +1,18 @@
 local options = {
     wrap = true,
+    tabstop = 4,
     list = false,
     hidden = true,
-    linebreak = true,
-    autoindent = true,
-    tabstop = 4,
-    showtabline = 0,
-    shiftwidth = 4,
     cmdheight = 0,
-    fillchars = "eob: ",
+    shiftwidth = 4,
     whichwrap = "",
+    showtabline = 0,
+    linebreak = true,
     timeoutlen = 500,
+    autoindent = true,
+    fillchars = { eob = " " },
+    guicursor = "i-ci-ve:hor30",
     guifont = "SFMono Nerd Font:h13",
-    guicursor = "n-v-c-sm:block,i-ci-ve:hor30,r-cr-o:hor20",
 }
 
 return options
