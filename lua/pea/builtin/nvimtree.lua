@@ -26,11 +26,16 @@ local nvimtree = {
             preserve_window_proportions = true,
             float = {
                 enable = true,
-                open_win_config = {
-                    -- display on the right, this is different from side
-                    col = vim.o.columns - 30,
-                    height = vim.o.lines,
-                },
+                open_win_config = function()
+                    return {
+                        row = 0,
+                        width = 30,
+                        border = "rounded",
+                        relative = "editor",
+                        col = vim.o.columns,
+                        height = vim.o.lines,
+                    }
+                end,
             },
         },
         renderer = {
