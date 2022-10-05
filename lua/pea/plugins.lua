@@ -1,8 +1,5 @@
 local plugins = {
-    {
-        "cpea2506/one_monokai.nvim",
-        branch = "dev-0.8",
-    },
+    "cpea2506/one_monokai.nvim",
     {
         "hrsh7th/cmp-nvim-lsp-signature-help",
         event = "InsertEnter",
