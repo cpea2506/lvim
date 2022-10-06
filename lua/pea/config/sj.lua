@@ -3,9 +3,6 @@ return function()
 
     sj.setup {
         auto_jump = true,
-        highlights = {
-            SjLabel = { link = "LeapLabelPrimary" },
-        },
     }
 
     vim.keymap.set("n", "<leader>j", sj.run)
