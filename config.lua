@@ -14,6 +14,7 @@ lvim:set {
     autocommands = reload "pea.autocommands",
     builtin = {
         cmp = reload "pea.builtin.cmp",
+        dap = reload "pea.builtin.dap",
         lir = reload "pea.builtin.lir",
         alpha = reload "pea.builtin.alpha",
         mason = reload "pea.builtin.mason",
