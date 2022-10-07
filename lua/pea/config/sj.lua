@@ -5,5 +5,7 @@ return function()
         auto_jump = true,
     }
 
-    vim.keymap.set("n", "<leader>j", sj.run)
+    require("which-key").register({
+        j = { sj.run, "Search jump" },
+    }, lvim.builtin.which_key.opts)
 end

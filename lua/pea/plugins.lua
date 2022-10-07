@@ -28,7 +28,7 @@ local plugins = {
     {
         "woosaaahh/sj.nvim",
         config = require "pea.config.sj",
-        keys = "<leader>j",
+        after = "which-key.nvim",
     },
     {
         "max397574/better-escape.nvim",
