@@ -3,7 +3,6 @@ local indentlines = {
     options = {
         indent_level = 10,
         max_indent_increase = 1,
-        show_first_indent_level = false,
         strict_tabs = true,
         filetype = { "svelte", "typescriptreact", "html" },
         use_treesitter_scope = true,
