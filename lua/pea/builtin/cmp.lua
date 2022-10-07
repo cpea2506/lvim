@@ -12,7 +12,7 @@ if status_ok then
             { name = "cmdline" },
         },
     })
-    cmdline_setup("/", {
+    cmdline_setup({ "/", "?" }, {
         mapping = cmdline_mappings,
         sources = {
             { name = "buffer" },
