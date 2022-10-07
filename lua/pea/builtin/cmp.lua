@@ -1,23 +1,25 @@
 local status_ok, nvim_cmp = pcall(require, "cmp")
 
 if status_ok then
-    local cmdline_mappings = nvim_cmp.mapping.preset.cmdline()
-    cmdline_mappings["<C-j>"] = cmdline_mappings["<S-Tab>"]
-    cmdline_mappings["<C-k>"] = cmdline_mappings["<Tab>"]
+    vim.schedule(function()
+        local cmdline_mappings = nvim_cmp.mapping.preset.cmdline()
+        cmdline_mappings["<C-j>"] = cmdline_mappings["<S-Tab>"]
+        cmdline_mappings["<C-k>"] = cmdline_mappings["<Tab>"]
 
-    local cmdline_setup = nvim_cmp.setup.cmdline
-    cmdline_setup(":", {
-        mapping = cmdline_mappings,
-        sources = {
-            { name = "cmdline" },
-        },
-    })
-    cmdline_setup({ "/", "?" }, {
-        mapping = cmdline_mappings,
-        sources = {
-            { name = "buffer" },
-        },
-    })
+        local cmdline_setup = nvim_cmp.setup.cmdline
+        cmdline_setup(":", {
+            mapping = cmdline_mappings,
+            sources = {
+                { name = "cmdline" },
+            },
+        })
+        cmdline_setup({ "/", "?" }, {
+            mapping = cmdline_mappings,
+            sources = {
+                { name = "buffer" },
+            },
+        })
+    end)
 end
 
 local cmp = {
