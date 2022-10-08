@@ -3,6 +3,7 @@ local nvimtree = {
     setup = {
         hijack_cursor = true,
         open_on_setup = true,
+        focus_empty_on_setup = true,
         sync_root_with_cwd = true,
         hijack_unnamed_buffer_when_opening = true,
         create_in_closed_folder = true,
@@ -26,6 +27,7 @@ local nvimtree = {
             preserve_window_proportions = true,
             float = {
                 enable = true,
+                quit_on_focus_loss = false,
                 open_win_config = function()
                     return {
                         row = 0,
