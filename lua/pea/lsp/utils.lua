@@ -16,16 +16,19 @@ function M.on_attach(client, bufnr)
     end
 
     local caps = client.server_capabilities
-    local semantic_tokens_full = vim.lsp.buf.semantic_tokens_full
-    if caps.semanticTokensProvider and caps.semanticTokensProvider.full and semantic_tokens_full then
-        -- fire it first time on load as well
-        semantic_tokens_full()
+
+    if caps.semanticTokensProvider and caps.semanticTokensProvider.full then
+        local semantic_tokens_full = vim.lsp.buf.semantic_tokens_full
+        local augroup = vim.api.nvim_create_augroup("SemanticTokens", {})
 
         vim.api.nvim_create_autocmd("TextChanged", {
-            group = vim.api.nvim_create_augroup("SemanticTokens", {}),
+            group = augroup,
             buffer = bufnr,
             callback = semantic_tokens_full,
         })
+
+        -- fire it first time on load as well
+        semantic_tokens_full()
     end
 end
 
