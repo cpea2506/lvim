@@ -9,11 +9,7 @@ function M.show_documentation()
 end
 
 function M.on_attach(client, bufnr)
-    local inlayhints_ok, inlayhints = pcall(require, "lsp-inlayhints")
-
-    if inlayhints_ok then
-        inlayhints.on_attach(client, bufnr)
-    end
+    require("lsp-inlayhints").on_attach(client, bufnr)
 
     local caps = client.server_capabilities
 

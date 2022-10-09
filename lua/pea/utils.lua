@@ -9,14 +9,13 @@ function lvim:set_options()
 end
 
 function lvim:set_icons()
-    local status_ok, icons = pcall(require, "nvim-web-devicons")
     local dev_icons = self.icons.dev
 
-    if not status_ok or not dev_icons then
+    if not dev_icons then
         return
     end
 
-    icons.set_icon(dev_icons)
+    require("nvim-web-devicons").set_icon(dev_icons)
 end
 
 ---Set lvim values with options in form of table

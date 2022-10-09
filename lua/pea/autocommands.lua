@@ -45,7 +45,7 @@ local autocommands = {
                     local buftype = vim.api.nvim_buf_get_option(0, "filetype")
 
                     if bufname == "" and buftype == "" and not buf_has_content then
-                        pcall(vim.api.nvim_command, "NvimTreeOpen")
+                        vim.api.nvim_command "NvimTreeOpen"
                     end
                 end)
             end,
