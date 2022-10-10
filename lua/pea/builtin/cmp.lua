@@ -33,7 +33,10 @@ local cmp = {
     },
     sources = {
         { name = "nvim_lsp_signature_help" },
-        { name = "rg" },
+        {
+            name = "rg",
+            keyword_length = 3,
+        },
         unpack(lvim.builtin.cmp.sources),
     },
     formatting = {
