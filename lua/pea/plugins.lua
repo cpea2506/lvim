@@ -1,6 +1,11 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
     {
+        "fedepujol/move.nvim",
+        config = require "pea.config.move",
+        event = "BufRead",
+    },
+    {
         "hrsh7th/cmp-nvim-lsp-signature-help",
         event = "InsertEnter",
     },
