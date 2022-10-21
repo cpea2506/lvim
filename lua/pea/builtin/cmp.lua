@@ -35,7 +35,10 @@ local cmp = {
         { name = "nvim_lsp_signature_help" },
         {
             name = "rg",
-            keyword_length = 3,
+            keyword_length = 5,
+            option = {
+                additional_arguments = "--smart-case",
+            },
         },
         unpack(lvim.builtin.cmp.sources),
     },
