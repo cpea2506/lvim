@@ -18,7 +18,6 @@ lvim:set {
         lir = reload "pea.builtin.lir",
         alpha = reload "pea.builtin.alpha",
         mason = reload "pea.builtin.mason",
-        notify = reload "pea.builtin.notify",
         lualine = reload "pea.builtin.lualine",
         terminal = reload "pea.builtin.terminal",
         nvimtree = reload "pea.builtin.nvimtree",
