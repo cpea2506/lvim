@@ -1,5 +1,7 @@
 return function()
     require("notifier").setup {
-        components = { "lsp" },
+        status_width = function()
+            return vim.o.columns
+        end,
     }
 end
