@@ -3,6 +3,8 @@ local which_key = {
         window = {
             border = "rounded",
         },
+        ignore_missing = true,
+        triggers = { "<leader>" },
     },
     mappings = {
         t = {
