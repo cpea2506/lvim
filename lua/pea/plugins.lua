@@ -36,8 +36,8 @@ local plugins = {
         after = "which-key.nvim",
     },
     {
-        "max397574/better-escape.nvim",
-        config = require "pea.config.better_escape",
+        "TheBlob42/houdini.nvim",
+        config = require "pea.config.houdini",
         event = "InsertEnter",
     },
     {
