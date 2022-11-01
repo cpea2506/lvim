@@ -20,7 +20,9 @@ function M.on_attach(client, bufnr)
         vim.api.nvim_create_autocmd("TextChanged", {
             group = augroup,
             buffer = bufnr,
-            callback = semantic_tokens_full,
+            callback = function()
+                semantic_tokens_full()
+            end,
         })
 
         -- fire it first time on load as well
