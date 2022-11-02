@@ -44,8 +44,6 @@ jobs:
           bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/rolling/utils/installer/install-neovim-from-release)
       - name: Install config
         timeout-minutes: 4
-        env:
-          LV_BRANCH: rolling
         run: |
           export PATH="$HOME/.local/bin:$PATH"
           bash ./utils/install.sh
