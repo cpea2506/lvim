@@ -76,6 +76,7 @@ local plugins = {
     {
         "samodostal/image.nvim",
         config = require "pea.config.image",
+        requires = "m00qek/baleia.nvim",
         event = "BufRead",
     },
     {
