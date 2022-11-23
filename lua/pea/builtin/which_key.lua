@@ -5,6 +5,7 @@ local which_key = {
         },
         ignore_missing = true,
         triggers = { "<leader>" },
+        show_keys = false,
     },
     mappings = {
         t = {

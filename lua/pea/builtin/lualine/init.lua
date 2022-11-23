@@ -23,6 +23,7 @@ local lualine = {
             "lspinfo",
             "null-ls-info",
             "packer",
+            "noice",
         },
         globalstatus = true,
     },

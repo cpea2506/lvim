@@ -1,6 +1,12 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
     {
+        "folke/noice.nvim",
+        config = require "pea.config.noice",
+        requires = "MunifTanjim/nui.nvim",
+        event = "BufRead",
+    },
+    {
         "fedepujol/move.nvim",
         config = require "pea.config.move",
         event = "BufRead",
@@ -112,11 +118,6 @@ local plugins = {
     {
         "kylechui/nvim-surround",
         config = require "pea.config.nvim_surround",
-        event = "BufRead",
-    },
-    {
-        "vigoux/notifier.nvim",
-        config = require "pea.config.notifier",
         event = "BufRead",
     },
 }
