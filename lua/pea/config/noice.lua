@@ -2,6 +2,11 @@ return function()
     require("noice").setup {
         cmdline = {
             view = "cmdline",
+            format = {
+                cmdline = { icon_hl_group = "DevIconVim" },
+                lua = { icon_hl_group = "DevIconLua" },
+                help = { icon_hl_group = "DiagnosticSignError" },
+            },
         },
         popupmenu = {
             backend = "cmp",
