@@ -5,7 +5,7 @@ return function()
             format = {
                 cmdline = { icon_hl_group = "DevIconVim" },
                 lua = { icon_hl_group = "DevIconLua" },
-                help = { icon_hl_group = "DiagnosticSignError" },
+                help = { icon_hl_group = "Operator" },
             },
         },
         popupmenu = {
