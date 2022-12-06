@@ -1,7 +1,6 @@
 return function()
     require("dressing").setup {
         input = {
-            winblend = 0,
             anchor = "NW",
             insert_only = false,
             override = function(conf)
@@ -10,6 +9,9 @@ return function()
 
                 return conf
             end,
+            win_options = {
+                winblend = 0,
+            },
             mappings = {
                 n = {
                     ["q"] = "Close",
