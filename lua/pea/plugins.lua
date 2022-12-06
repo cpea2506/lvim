@@ -2,6 +2,11 @@ local plugins = {
     "cpea2506/one_monokai.nvim",
     "nvim-telescope/telescope-file-browser.nvim",
     {
+        "cpea2506/auto-save.nvim",
+        config = require "pea.config.autosave",
+        event = "InsertLeave",
+    },
+    {
         "folke/noice.nvim",
         config = require "pea.config.noice",
         requires = "MunifTanjim/nui.nvim",
