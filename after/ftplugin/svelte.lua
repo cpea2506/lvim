@@ -16,8 +16,4 @@ linters.setup {
         command = "eslint_d",
         filetypes = { "svelte" },
     },
-    {
-        command = "stylelint",
-        filetypes = { "svelte" },
-    },
 }
