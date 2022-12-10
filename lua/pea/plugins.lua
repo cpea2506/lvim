@@ -2,11 +2,6 @@ local plugins = {
     "cpea2506/one_monokai.nvim",
     "nvim-telescope/telescope-file-browser.nvim",
     {
-        "cpea2506/auto-save.nvim",
-        config = require "pea.config.autosave",
-        event = "InsertLeave",
-    },
-    {
         "folke/noice.nvim",
         config = require "pea.config.noice",
         requires = "MunifTanjim/nui.nvim",
@@ -62,7 +57,7 @@ local plugins = {
         event = "BufRead",
     },
     {
-        "p00f/nvim-ts-rainbow",
+        "https://git.sr.ht/~p00f/nvim-ts-rainbow",
         event = "BufRead",
     },
     {
@@ -78,11 +73,6 @@ local plugins = {
     {
         "folke/todo-comments.nvim",
         config = require "pea.config.todo_comments",
-        event = "BufRead",
-    },
-    {
-        "theHamsta/nvim-semantic-tokens",
-        config = require "pea.config.semantic_tokens",
         event = "BufRead",
     },
     {
