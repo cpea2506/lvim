@@ -1,6 +1,4 @@
 return function()
-    require "presence"
-
     local client_id = {
         default = "793271441293967371",
         vs_code = "383226320970055681",
