@@ -1,6 +1,5 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
-    "nvim-telescope/telescope-file-browser.nvim",
     {
         "folke/noice.nvim",
         config = require "pea.config.noice",

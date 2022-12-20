@@ -16,9 +16,6 @@ local telescope = {
             },
         },
     },
-    on_config_done = function(teles)
-        teles.load_extension "file_browser"
-    end,
 }
 
 return telescope
