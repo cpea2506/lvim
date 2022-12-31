@@ -100,6 +100,31 @@ local icons = {
             color = "#e3833e",
             name = "Makefile",
         },
+        ["ogg"] = {
+            icon = "",
+            color = "#e3ffff",
+            name = "Ogg",
+        },
+        ["mp3"] = {
+            icon = "",
+            color = "#e3ffff",
+            name = "Mp3",
+        },
+        ["wav"] = {
+            icon = "",
+            color = "#e3ffff",
+            name = "Wav",
+        },
+        ["wasm"] = {
+            icon = "",
+            color = "#6150e7",
+            name = "Wasm",
+        },
+        ["ttf"] = {
+            icon = "",
+            color = "#ffffff",
+            name = "Ttf",
+        },
     },
 }
 
