@@ -7,6 +7,11 @@ local plugins = {
         event = "BufRead",
     },
     {
+        "EtiamNullam/deferred-clipboard.nvim",
+        config = require "pea.config.clipboard",
+        event = "BufRead",
+    },
+    {
         "fedepujol/move.nvim",
         config = require "pea.config.move",
         event = "BufRead",
