@@ -61,7 +61,7 @@ local plugins = {
         event = "BufRead",
     },
     {
-        "https://git.sr.ht/~p00f/nvim-ts-rainbow",
+        "mrjones2014/nvim-ts-rainbow",
         event = "BufRead",
     },
     {
