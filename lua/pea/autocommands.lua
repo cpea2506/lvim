@@ -22,22 +22,6 @@ end
 
 local autocommands = {
     {
-        "CmdlineEnter",
-        {
-            desc = "Highlight searching matches",
-            pattern = { "/", "?" },
-            command = "set hlsearch",
-        },
-    },
-    {
-        "CmdlineLeave",
-        {
-            desc = "Remove searching highlight",
-            pattern = { "/", "?" },
-            command = "set nohlsearch",
-        },
-    },
-    {
         "InsertEnter",
         {
             desc = "Centered window when access insert mode",

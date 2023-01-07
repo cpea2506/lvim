@@ -1,6 +1,11 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
     {
+        "asiryk/auto-hlsearch.nvim",
+        config = require "pea.config.hlsearch",
+        event = "BufRead",
+    },
+    {
         "folke/noice.nvim",
         config = require "pea.config.noice",
         requires = "MunifTanjim/nui.nvim",
