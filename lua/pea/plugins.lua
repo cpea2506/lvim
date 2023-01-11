@@ -1,25 +1,33 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
     {
-        "asiryk/auto-hlsearch.nvim",
-        config = require "pea.config.hlsearch",
+        "mrjones2014/nvim-ts-rainbow",
         event = "BufRead",
+    },
+    {
+        "ggandor/leap.nvim",
+        event = "VeryLazy",
+    },
+    {
+        "asiryk/auto-hlsearch.nvim",
+        event = "VeryLazy",
+        config = require "pea.config.hlsearch",
     },
     {
         "folke/noice.nvim",
+        event = "VeryLazy",
         config = require "pea.config.noice",
-        requires = "MunifTanjim/nui.nvim",
-        event = "BufRead",
+        dependencies = "MunifTanjim/nui.nvim",
     },
     {
         "EtiamNullam/deferred-clipboard.nvim",
+        event = "VeryLazy",
         config = require "pea.config.clipboard",
-        event = "BufRead",
     },
     {
         "fedepujol/move.nvim",
+        event = "VeryLazy",
         config = require "pea.config.move",
-        event = "BufRead",
     },
     {
         "hrsh7th/cmp-nvim-lsp-signature-help",
@@ -34,96 +42,88 @@ local plugins = {
         event = "InsertEnter",
     },
     {
-        "ggandor/leap.nvim",
-        event = "BufRead",
-    },
-    {
         "windwp/nvim-ts-autotag",
         ft = { "html", "typescriptreact", "svelte" },
     },
     {
-        "folke/trouble.nvim",
-        config = require "pea.config.trouble",
-        cmd = "TroubleToggle",
-    },
-    {
         "woosaaahh/sj.nvim",
+        event = "VeryLazy",
         config = require "pea.config.sj",
-        after = "which-key.nvim",
     },
     {
         "TheBlob42/houdini.nvim",
-        config = require "pea.config.houdini",
         event = "InsertEnter",
+        config = require "pea.config.houdini",
     },
     {
         "simrat39/rust-tools.nvim",
+        ft = "rust",
         config = require "pea.config.rust_tools",
-        ft = { "rust" },
-    },
-    {
-        "nvim-treesitter/playground",
-        event = "BufRead",
-    },
-    {
-        "mrjones2014/nvim-ts-rainbow",
-        event = "BufRead",
     },
     {
         "lvimuser/lsp-inlayhints.nvim",
+        event = "VeryLazy",
         config = require "pea.config.inlayhints",
-        event = "BufRead",
     },
     {
         "kosayoda/nvim-lightbulb",
+        event = "VeryLazy",
         config = require "pea.config.lightbulb",
-        event = "BufRead",
     },
     {
         "folke/todo-comments.nvim",
-        config = require "pea.config.todo_comments",
         event = "BufRead",
+        config = require "pea.config.todo_comments",
     },
     {
         "samodostal/image.nvim",
-        config = require "pea.config.image",
-        requires = "m00qek/baleia.nvim",
         event = "BufRead",
+        config = require "pea.config.image",
+        dependencies = "m00qek/baleia.nvim",
     },
     {
         "stevearc/dressing.nvim",
+        event = "VeryLazy",
         config = require "pea.config.dressing",
-        event = "BufRead",
     },
     {
         "nacro90/numb.nvim",
+        event = "VeryLazy",
         config = require "pea.config.numb",
-        event = "BufRead",
     },
     {
         "Saecki/crates.nvim",
-        config = require "pea.config.nvim_crates",
         event = "BufRead Cargo.toml",
+        config = require "pea.config.nvim_crates",
     },
     {
         "brenoprata10/nvim-highlight-colors",
-        config = require "pea.config.hi_colors",
         event = "BufRead",
+        config = require "pea.config.hi_colors",
     },
     {
         "cpea2506/presence.nvim",
-        config = require "pea.config.presence",
         event = "BufRead",
+        config = require "pea.config.presence",
     },
     {
         "declancm/cinnamon.nvim",
+        event = "VeryLazy",
         config = require "pea.config.cinnamon",
-        event = "BufRead",
     },
     {
         "kylechui/nvim-surround",
+        event = "VeryLazy",
         config = require "pea.config.nvim_surround",
-        event = "BufRead",
+    },
+    {
+        "nvim-treesitter/playground",
+        cmd = { "TSHighlightCapturesUnderCursor", "TSHighlightCapturesUnderCursor" },
+    },
+    {
+        "folke/trouble.nvim",
+        cmd = "TroubleToggle",
+        config = require "pea.config.trouble",
     },
 }
 
