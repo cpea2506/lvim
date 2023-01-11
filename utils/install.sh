@@ -62,22 +62,6 @@ function remove_old_config {
 	try rm -rf "$LUNAR_CONFIG_HOME"
 }
 
-function packer_setup {
-	msg "Preparing Packer setup"
-
-	# install all new plugins
-	try lvim --headless \
-		-c "autocmd User PackerComplete quitall" \
-		-c "PackerInstall"
-
-	# compile
-	try lvim --headless \
-		-c "autocmd User PackerCompileDone quitall" \
-		-c "PackerCompile"
-
-	echo "Packer setup complete"
-}
-
 function main {
 	echo "Start setting up configuration"
 
@@ -85,7 +69,6 @@ function main {
 
 	remove_old_config
 	clone_config
-	packer_setup
 }
 
 main
