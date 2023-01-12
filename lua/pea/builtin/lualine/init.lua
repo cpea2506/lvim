@@ -15,6 +15,7 @@ local lualine = {
         disabled_filetypes = {
             "TelescopePrompt",
             "NvimTree",
+            "lazy",
             "toggleterm",
             "Trouble",
             "alpha",
@@ -22,7 +23,6 @@ local lualine = {
             "mason",
             "lspinfo",
             "null-ls-info",
-            "packer",
             "noice",
         },
         globalstatus = true,
