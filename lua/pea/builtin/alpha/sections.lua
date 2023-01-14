@@ -1,9 +1,9 @@
 local text = require "lvim.interface.text"
 
 local function get_num_plugin_loaded()
-    local packer_path = join_paths(get_runtime_dir(), "site", "pack", "packer", "*")
+    local lazy_path = join_paths(get_runtime_dir(), "site", "pack", "lazy", "*")
 
-    return #vim.fn.globpath(packer_path, "*", 0, 1)
+    return #vim.fn.globpath(lazy_path, "*", 0, 1)
 end
 
 local sections = {
