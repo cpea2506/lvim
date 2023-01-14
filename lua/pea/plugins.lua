@@ -25,7 +25,7 @@ local plugins = {
         config = require "pea.config.clipboard",
     },
     {
-        "fedepujol/move.nvim",
+        "ur4ltz/move.nvim",
         event = "VeryLazy",
         config = require "pea.config.move",
     },
