@@ -21,7 +21,6 @@ local plugins = {
     },
     {
         "EtiamNullam/deferred-clipboard.nvim",
-        event = "VeryLazy",
         config = require "pea.config.clipboard",
     },
     {

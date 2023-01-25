@@ -1,5 +1,3 @@
 return function()
-    require("deferred-clipboard").setup {
-        lazy = true,
-    }
+    require("deferred-clipboard").setup()
 end
