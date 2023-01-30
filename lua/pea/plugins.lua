@@ -20,10 +20,6 @@ local plugins = {
         dependencies = "MunifTanjim/nui.nvim",
     },
     {
-        "EtiamNullam/deferred-clipboard.nvim",
-        config = require "pea.config.clipboard",
-    },
-    {
         "ur4ltz/move.nvim",
         event = "VeryLazy",
         config = require "pea.config.move",
