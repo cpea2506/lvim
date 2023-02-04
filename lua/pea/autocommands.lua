@@ -7,16 +7,26 @@ local function set_relativenumber(relative)
     end
 end
 
-local function open_nvim_tree_on_empty_buffer()
+local function nvim_tree_open_on_setup(data)
     vim.schedule(function()
-        local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
-        local buf_has_content = #lines > 1 or (#lines == 1 and lines[1] ~= "")
-        local bufname = vim.api.nvim_buf_get_name(0)
-        local ft = vim.bo.filetype
+        -- buffer is a [No Name]
+        local no_name = vim.api.nvim_buf_get_name(data.buf) == "" and vim.bo[data.buf].filetype == ""
 
-        if bufname == "" and ft == "" and not buf_has_content then
-            pcall(vim.cmd, "NvimTreeOpen")
+        -- buffer is a directory
+        local directory = vim.fn.isdirectory(data.file) == 1
+
+        if not no_name and not directory then
+            return
         end
+
+        -- change to the directory
+        if directory then
+            vim.cmd.cd(data.file)
+        end
+
+        pcall(function()
+            require("nvim-tree.api").tree.open()
+        end)
     end)
 end
 
@@ -49,8 +59,8 @@ local autocommands = {
     {
         "BufEnter",
         {
-            desc = "Open NvimTree when buffer is empty",
-            callback = open_nvim_tree_on_empty_buffer,
+            desc = "Open NvimTree on setup",
+            callback = nvim_tree_open_on_setup,
         },
     },
 }
