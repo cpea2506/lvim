@@ -10,7 +10,9 @@ end
 local function nvim_tree_open_on_setup(data)
     vim.schedule(function()
         -- buffer is a [No Name]
-        local no_name = vim.api.nvim_buf_get_name(data.buf) == "" and vim.bo[data.buf].filetype == ""
+        local no_name = vim.api.nvim_buf_get_name(data.buf) == ""
+            and vim.bo[data.buf].filetype == ""
+            and vim.bo[data.buf].buftype == ""
 
         -- buffer is a directory
         local directory = vim.fn.isdirectory(data.file) == 1
