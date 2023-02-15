@@ -7,7 +7,7 @@ local lsp = {
             ensure_installed = {
                 "rust_analyzer",
                 "marksman",
-                "sumneko_lua",
+                "lua_ls",
                 "taplo",
                 "emmet_ls",
                 "svelte",
