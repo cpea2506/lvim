@@ -115,11 +115,6 @@ local icons = {
             color = "#e3ffff",
             name = "Wav",
         },
-        ["wasm"] = {
-            icon = "",
-            color = "#6150e7",
-            name = "Wasm",
-        },
         ["ttf"] = {
             icon = "",
             color = "#ffffff",
