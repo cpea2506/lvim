@@ -29,10 +29,6 @@ local plugins = {
         event = "InsertEnter",
     },
     {
-        "hrsh7th/cmp-cmdline",
-        event = "CmdlineEnter",
-    },
-    {
         "lukas-reineke/cmp-rg",
         event = "InsertEnter",
     },

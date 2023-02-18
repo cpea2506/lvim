@@ -28,7 +28,7 @@ local cmp = {
         },
     },
     cmdline = {
-        enable = false,
+        enable = true,
     },
     on_config_done = function(_cmp)
         local cmdline_setup = _cmp.setup.cmdline
