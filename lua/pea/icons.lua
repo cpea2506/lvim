@@ -1,20 +1,5 @@
 local icons = {
     dev = {
-        ["docker-compose.yml"] = {
-            icon = "",
-            color = "#00a4ff",
-            name = "Dockerfile",
-        },
-        [".dockerignore"] = {
-            icon = "",
-            color = "#00a4ff",
-            name = "Dockerfile",
-        },
-        ["Dockerfile"] = {
-            icon = "",
-            color = "#00a4ff",
-            name = "Dockerfile",
-        },
         [".gitignore"] = {
             icon = "",
             color = "#aaeaff",
@@ -36,11 +21,6 @@ local icons = {
             name = "Json",
         },
         ["lua"] = {
-            icon = "",
-            color = "#42a5f5",
-            name = "Lua",
-        },
-        [".luacheckrc"] = {
             icon = "",
             color = "#42a5f5",
             name = "Lua",
@@ -75,6 +55,11 @@ local icons = {
             color = "#98c15c",
             name = "Xml",
         },
+        ["yml"] = {
+            icon = "",
+            color = "#ff5252",
+            name = "Yaml",
+        },
         ["yaml"] = {
             icon = "",
             color = "#ff5252",
@@ -89,11 +74,6 @@ local icons = {
             icon = "",
             color = "#efefef",
             name = "EslintIgnore",
-        },
-        ["yml"] = {
-            icon = "",
-            color = "#ff5252",
-            name = "Yaml",
         },
         ["Makefile"] = {
             icon = "M",
