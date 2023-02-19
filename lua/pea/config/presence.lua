@@ -14,7 +14,7 @@ return function()
         debug = "debug",
     }
 
-    require("presence"):setup {
+    require("presence").setup {
         neovim_image_text = "LunarVim",
         main_image = "file",
         log_level = log_levels.none,
