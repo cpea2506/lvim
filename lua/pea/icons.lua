@@ -15,23 +15,13 @@ local icons = {
             color = "#e7d54c",
             name = "Js",
         },
-        ["json"] = {
-            icon = "ﬥ",
-            color = "#cbcb41",
-            name = "Json",
-        },
-        ["lua"] = {
-            icon = "",
-            color = "#42a5f5",
-            name = "Lua",
-        },
         ["rs"] = {
             icon = "",
-            color = "#ee7950",
+            color = "#ff7043",
             name = "Rust",
         },
         ["toml"] = {
-            icon = "[T]",
+            icon = "T",
             color = "#ffffff",
             name = "Toml",
         },
@@ -49,11 +39,6 @@ local icons = {
             icon = "",
             color = "#e7d54c",
             name = "Js",
-        },
-        ["xml"] = {
-            icon = "",
-            color = "#98c15c",
-            name = "Xml",
         },
         ["yml"] = {
             icon = "",
@@ -74,11 +59,6 @@ local icons = {
             icon = "",
             color = "#efefef",
             name = "EslintIgnore",
-        },
-        ["Makefile"] = {
-            icon = "M",
-            color = "#e3833e",
-            name = "Makefile",
         },
         ["ogg"] = {
             icon = "",
