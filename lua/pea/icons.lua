@@ -10,11 +10,6 @@ local icons = {
             color = "#aaeaff",
             name = "GitModules",
         },
-        ["js"] = {
-            icon = "",
-            color = "#e7d54c",
-            name = "Js",
-        },
         ["rs"] = {
             icon = "",
             color = "#ff7043",
@@ -25,13 +20,13 @@ local icons = {
             color = "#ffffff",
             name = "Toml",
         },
-        ["ts"] = {
-            icon = "ﯤ",
-            color = "#3178c6",
-            name = "Ts",
+        ["js"] = {
+            icon = "󰌞",
+            color = "#e7d54c",
+            name = "Js",
         },
-        ["mts"] = {
-            icon = "",
+        ["ts"] = {
+            icon = "󰛦",
             color = "#3178c6",
             name = "Ts",
         },
