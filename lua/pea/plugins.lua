@@ -1,7 +1,7 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
     {
-        "mrjones2014/nvim-ts-rainbow",
+        "HiPhish/nvim-ts-rainbow2",
         event = "BufRead",
     },
     {
