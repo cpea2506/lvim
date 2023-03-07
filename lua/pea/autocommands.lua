@@ -39,7 +39,7 @@ local autocommands = {
         },
     },
     {
-        { "BufEnter", "FocusGained", "InsertLeave", "WinEnter" },
+        { "BufEnter", "FocusGained", "InsertLeave", "WinEnter", "CmdLineLeave" },
         {
             desc = "Set relative number when not in insert mode",
             callback = function()
@@ -48,7 +48,7 @@ local autocommands = {
         },
     },
     {
-        { "BufLeave", "FocusLost", "InsertEnter", "WinLeave" },
+        { "BufLeave", "FocusLost", "InsertEnter", "WinLeave", "CmdLineEnter" },
         {
             desc = "Turn off relative number when in insert mode",
             callback = function()
