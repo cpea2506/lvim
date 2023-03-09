@@ -20,6 +20,12 @@ local lsp = {
             },
         },
     },
+    automatic_configuration = {
+        skipped_servers = {
+            "clangd",
+            unpack(lvim.lsp.automatic_configuration.skipped_servers),
+        },
+    },
     buffer_mappings = {
         normal_mode = {
             ["K"] = {
