@@ -28,6 +28,11 @@ local lsp = {
             },
         },
     },
+    null_ls = {
+        setup = {
+            border = "rounded",
+        },
+    },
     on_attach_callback = utils.on_attach,
     diagnostics = {
         update_in_insert = true,
