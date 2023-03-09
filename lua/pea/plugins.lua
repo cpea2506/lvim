@@ -1,6 +1,10 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
     {
+        "cpea2506/relative-toggle.nvim",
+        event = "BufRead",
+    },
+    {
         "HiPhish/nvim-ts-rainbow2",
         event = "BufRead",
     },
