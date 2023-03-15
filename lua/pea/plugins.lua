@@ -35,7 +35,6 @@ local plugins = {
     {
         "ur4ltz/move.nvim",
         event = "VeryLazy",
-        config = require "pea.config.move",
     },
     {
         "hrsh7th/cmp-nvim-lsp-signature-help",
