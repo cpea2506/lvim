@@ -13,6 +13,11 @@ local options = {
     fillchars = { eob = " " },
     guicursor = "i-ci-ve:hor30",
     guifont = "SFMono Nerd Font:h13",
+
+    -- windows.nvim
+    winwidth = 10,
+    winminwidth = 10,
+    equalalways = false,
 }
 
 return options

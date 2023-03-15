@@ -18,6 +18,15 @@ local plugins = {
         config = require "pea.config.hlsearch",
     },
     {
+        "anuvyklack/windows.nvim",
+        event = "BufRead",
+        config = require "pea.config.windows",
+        dependencies = {
+            "anuvyklack/middleclass",
+            "anuvyklack/animation.nvim",
+        },
+    },
+    {
         "folke/noice.nvim",
         event = "VeryLazy",
         config = require "pea.config.noice",
