@@ -5,6 +5,11 @@ local plugins = {
         event = "BufRead",
     },
     {
+        "chrishrb/gx.nvim",
+        event = "BufEnter",
+        config = require "pea.config.gx",
+    },
+    {
         "HiPhish/nvim-ts-rainbow2",
         event = "BufRead",
     },
