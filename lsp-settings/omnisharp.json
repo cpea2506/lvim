@@ -1,0 +1,11 @@
+{
+  "omnisharp.organizeImportsOnFormat": true,
+  "omnisharp.enableRoslynAnalyzers": true,
+  "omnisharp.enableDecompilationSupport": true,
+  "omnisharp.analyzeOpenDocumentsOnly": true,
+  "csharp.inlayHints.types.forLambdaParameterTypes": true,
+  "omnisharp.enableImportCompletion": true,
+  "omnisharp.enableAsyncCompletion": true,
+  "csharp.inlayHints.types.forImplicitVariableTypes": true,
+  "csharp.inlayHints.types.forImplicitObjectCreation": true
+}

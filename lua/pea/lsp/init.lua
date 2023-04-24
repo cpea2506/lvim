@@ -23,6 +23,7 @@ local lsp = {
     automatic_configuration = {
         skipped_servers = {
             "clangd",
+            "omnisharp",
             unpack(lvim.lsp.automatic_configuration.skipped_servers),
         },
     },
@@ -40,18 +41,16 @@ local lsp = {
         },
     },
     on_attach_callback = utils.on_attach,
-    diagnostics = {
-        update_in_insert = true,
-        float = {
-            focusable = true,
-        },
-        signs = {
-            values = {
-                { name = "DiagnosticSignError", text = "" },
-                { name = "DiagnosticSignWarn", text = "" },
-                { name = "DiagnosticSignHint", text = "" },
-                { name = "DiagnosticSignInfo", text = "" },
-            },
+}
+
+vim.diagnostic.config {
+    update_in_insert = true,
+    signs = {
+        values = {
+            { name = "DiagnosticSignError", text = "" },
+            { name = "DiagnosticSignWarn", text = "" },
+            { name = "DiagnosticSignHint", text = "" },
+            { name = "DiagnosticSignInfo", text = "" },
         },
     },
 }

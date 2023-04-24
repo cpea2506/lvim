@@ -1,0 +1,12 @@
+{
+  "name": "lvim-snippets",
+  "author": "cpea",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "cs",
+        "path": "./cs.json"
+      }
+    ]
+  }
+}

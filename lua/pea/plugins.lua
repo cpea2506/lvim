@@ -5,6 +5,10 @@ local plugins = {
         event = "BufRead",
     },
     {
+        "Hoffs/omnisharp-extended-lsp.nvim",
+        ft = "cs",
+    },
+    {
         "chrishrb/gx.nvim",
         event = "BufEnter",
         config = require "pea.config.gx",
