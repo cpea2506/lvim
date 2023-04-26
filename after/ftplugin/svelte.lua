@@ -1,7 +1,3 @@
-require("lvim.lsp.manager").setup("emmet_ls", {
-    filetypes = { "svelte" },
-})
-
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
     {
