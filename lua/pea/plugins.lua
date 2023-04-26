@@ -1,6 +1,11 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
     {
+        "akinsho/git-conflict.nvim",
+        config = require "pea.config.conflict",
+        event = "BufRead",
+    },
+    {
         "cpea2506/relative-toggle.nvim",
         event = "BufRead",
     },
