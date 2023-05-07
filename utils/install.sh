@@ -69,6 +69,8 @@ function main {
 
 	remove_old_config
 	clone_config
+
+	echo "Setting up configuration done"
 }
 
 main
