@@ -15,7 +15,8 @@ This will install LunarVim for you if there isn't any.
 
 ### Requirement
 
-- Neovim >= 0.8
+- Unix-like OS (macOS, Linux,...)
+- Neovim >= 0.9.0
 
 ## GUI:
 

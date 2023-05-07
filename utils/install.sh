@@ -2,7 +2,7 @@
 
 declare -r LUNAR_CONFIG_HOME="${LUNAR_CONFIG_HOME:-"$HOME/.config/lvim"}"
 declare -r LUNAR_RUNTIME_HOME="${LUNAR_RUNTIME_HOME:-"$HOME/.local/share/lunarvim"}"
-declare -r LV_BRANCH="${LV_BRANCH:-"master"}"
+declare -r LV_BRANCH="${LV_BRANCH:-release-1.3/neovim-0.9}"
 
 function msg {
 	printf "%80s\n" ' ' | tr ' ' -
@@ -31,8 +31,8 @@ function install_lunarvim {
 			break
 			;;
 		2)
-			echo "Start to install rolling"
-			export LV_BRANCH=rolling
+			echo "Start to install nightly"
+			export LV_BRANCH=master
 			break
 			;;
 		*)
@@ -69,6 +69,8 @@ function main {
 
 	remove_old_config
 	clone_config
+
+	echo "Setting up configuration done"
 }
 
 main
