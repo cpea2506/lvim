@@ -5,7 +5,6 @@ My LunarVim configuration, inspired from my [Peavim](https://github.com/cpea2506
 <img width="1162" alt="dashboard" src="https://user-images.githubusercontent.com/42694704/204636689-8b57aeb1-b091-4246-a0cb-1452b98054b5.png">
 <img width="1162" alt="main" src="https://user-images.githubusercontent.com/42694704/204637373-81dc7077-d255-40de-b015-f4b856868d23.png">
 
-
 ## One-liner installation command
 
 ```bash
