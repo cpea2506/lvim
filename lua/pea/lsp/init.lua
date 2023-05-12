@@ -27,6 +27,7 @@ local lsp = {
             "omnisharp",
             unpack(lvim.lsp.automatic_configuration.skipped_servers),
         },
+        skipped_filetypes = { "cs" },
     },
     buffer_mappings = {
         normal_mode = {
