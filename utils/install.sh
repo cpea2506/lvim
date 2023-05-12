@@ -2,7 +2,7 @@
 
 declare -r LUNAR_CONFIG_HOME="${LUNAR_CONFIG_HOME:-"$HOME/.config/lvim"}"
 declare -r LUNAR_RUNTIME_HOME="${LUNAR_RUNTIME_HOME:-"$HOME/.local/share/lunarvim"}"
-declare -r LV_BRANCH="${LV_BRANCH:-release-1.3/neovim-0.9}"
+declare -r LV_BRANCH="${LV_BRANCH:-"release-1.3/neovim-0.9"}"
 
 function msg {
 	printf "%80s\n" ' ' | tr ' ' -
@@ -22,7 +22,7 @@ function install_lunarvim {
 	echo "Would you like to install LunarVim? Please choose which version: "
 
 	while true; do
-		printf "1. stable\n2. rolling\n(default: 1): "
+		printf "1. stable\n2. nightly\n(default: 1): "
 		read -r answer
 
 		case $answer in
