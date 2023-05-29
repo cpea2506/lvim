@@ -79,6 +79,7 @@ local plugins = {
     },
     {
         "lvimuser/lsp-inlayhints.nvim",
+        branch = "anticonceal",
         event = "VeryLazy",
         config = require "pea.config.inlayhints",
     },
