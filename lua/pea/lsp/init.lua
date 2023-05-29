@@ -6,7 +6,6 @@ local lsp = {
             automatic_installation = false,
             ensure_installed = {
                 "bashls",
-                "clangd",
                 "cmake",
                 "jsonls",
                 "lua_ls",
