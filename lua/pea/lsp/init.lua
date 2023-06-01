@@ -10,7 +10,6 @@ local lsp = {
                 "jsonls",
                 "lua_ls",
                 "marksman",
-                "omnisharp",
                 "rust_analyzer",
                 "svelte",
                 "tailwindcss",
@@ -23,7 +22,6 @@ local lsp = {
     automatic_configuration = {
         skipped_servers = {
             "clangd",
-            "omnisharp",
             unpack(lvim.lsp.automatic_configuration.skipped_servers),
         },
         skipped_filetypes = { "cs" },

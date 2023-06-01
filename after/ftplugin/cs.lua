@@ -1,89 +1,13 @@
-local lsp = require "lvim.lsp"
-
-require("lvim.lsp.manager").setup("omnisharp", {
+require("lvim.lsp.manager").setup("csharp_ls", {
     handlers = {
-        ["textDocument/definition"] = require("omnisharp_extended").handler,
+        ["textDocument/definition"] = require("csharpls_extended").handler,
     },
-    capabilities = vim.tbl_deep_extend("force", lsp.common_capabilities(), {
-        workspace = {
-            didChangeWatchedFiles = {
-                dynamicRegistration = true,
-            },
-        },
-    }),
-    on_attach = function(client, bufnr)
-        --see: https://github.com/OmniSharp/omnisharp-roslyn/issues/2483
-        client.server_capabilities.semanticTokensProvider.legend = {
-            tokenModifiers = { "static" },
-            tokenTypes = {
-                "comment",
-                "excluded",
-                "identifier",
-                "keyword",
-                "keyword",
-                "number",
-                "operator",
-                "operator",
-                "preprocessor",
-                "string",
-                "whitespace",
-                "text",
-                "static",
-                "preprocessor",
-                "punctuation",
-                "string",
-                "string",
-                "class",
-                "delegate",
-                "enum",
-                "interface",
-                "module",
-                "struct",
-                "typeParameter",
-                "field",
-                "enumMember",
-                "constant",
-                "local",
-                "parameter",
-                "method",
-                "method",
-                "property",
-                "event",
-                "_namespace",
-                "label",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "xml",
-                "regexp",
-                "regexp",
-                "regexp",
-                "regexp",
-                "regexp",
-                "regexp",
-                "regexp",
-                "regexp",
-                "regexp",
-            },
-        }
-
-        lsp.common_on_attach(client, bufnr)
-    end,
 })
+
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+    {
+        command = "csharpier",
+        filetypes = { "cs" },
+    },
+}
