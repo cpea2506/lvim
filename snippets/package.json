@@ -5,7 +5,7 @@
     "snippets": [
       {
         "language": "cs",
-        "path": "./cs.json"
+        "path": "./unity.json"
       }
     ]
   }
