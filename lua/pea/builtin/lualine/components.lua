@@ -69,9 +69,7 @@ local components = {
     lsp = {
         function()
             local msg = "LS Inactive"
-
-            local bufnr = vim.api.nvim_get_current_buf()
-            local buf_clients = vim.lsp.get_active_clients { bufnr = bufnr }
+            local buf_clients = vim.lsp.get_active_clients { bufnr = 0 }
 
             if vim.tbl_isempty(buf_clients) then
                 return msg
@@ -117,8 +115,8 @@ local components = {
         end,
         symbols = {
             added = " ",
-            modified = " 柳",
-            removed = "  ",
+            modified = "柳",
+            removed = " ",
         },
         diff_color = {
             added = { fg = colors.green },
@@ -156,8 +154,7 @@ local components = {
     },
     treesitter = {
         function()
-            local buf = vim.api.nvim_get_current_buf()
-            local active_status = vim.treesitter.highlighter.active[buf]
+            local active_status = vim.treesitter.highlighter.active[0]
 
             return active_status and "滑" or ""
         end,
