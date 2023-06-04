@@ -10,7 +10,7 @@ local plugins = {
         event = "BufRead",
     },
     {
-        "Decodetalkers/csharpls-extended-lsp.nvim",
+        "Hoffs/omnisharp-extended-lsp.nvim",
         ft = "cs",
     },
     {
