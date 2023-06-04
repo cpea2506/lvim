@@ -11,6 +11,11 @@ return function()
         popupmenu = {
             backend = "cmp",
         },
+        format = {
+            spinner = {
+                name = "circleFull",
+            },
+        },
         lsp = {
             override = {
                 ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
@@ -19,6 +24,13 @@ return function()
             },
             signature = {
                 enabled = false,
+            },
+            progress = {
+                format_done = {
+                    { " ", hl_group = "Identifier" },
+                    { "{data.progress.title} ", hl_group = "NoiceLspProgressTitle" },
+                    { "{data.progress.client} ", hl_group = "NoiceLspProgressClient" },
+                },
             },
         },
         presets = {
