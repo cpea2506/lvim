@@ -5,6 +5,7 @@
   "omnisharp.analyzeOpenDocumentsOnly": true,
   "omnisharp.enableImportCompletion": true,
   "omnisharp.enableAsyncCompletion": true,
+  "csharp.semanticHighlighting.enabled": true,
   "csharp.inlayHints.parameters.enabled": true,
   "csharp.inlayHints.parameters.forIndexerParameters": true,
   "csharp.inlayHints.parameters.forLiteralParameters": true,
