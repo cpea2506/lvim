@@ -6,7 +6,9 @@ local lsp = {
             automatic_installation = false,
             ensure_installed = {
                 "bashls",
+                "clangd",
                 "cmake",
+                "csharp_ls",
                 "jsonls",
                 "lua_ls",
                 "marksman",
@@ -24,7 +26,7 @@ local lsp = {
             "clangd",
             unpack(lvim.lsp.automatic_configuration.skipped_servers),
         },
-        skipped_filetypes = { "cs" },
+        skipped_filetypes = { "cs", "cpp" },
     },
     buffer_mappings = {
         normal_mode = {
