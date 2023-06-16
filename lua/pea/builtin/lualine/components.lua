@@ -69,7 +69,8 @@ local components = {
     lsp = {
         function()
             local msg = "LS Inactive"
-            local buf_clients = vim.lsp.get_active_clients { bufnr = 0 }
+            local bufnr = vim.api.nvim_get_current_buf()
+            local buf_clients = vim.lsp.get_active_clients { bufnr = bufnr }
 
             if vim.tbl_isempty(buf_clients) then
                 return msg
@@ -142,7 +143,7 @@ local components = {
     os = {
         function()
             -- no room for window
-            return vim.fn.has "mac" and "" or ""
+            return vim.fn.has "mac" == 1 and "" or ""
         end,
         cond = conditions.should_hide_in_width,
         color = { fg = colors.fg },
@@ -154,7 +155,8 @@ local components = {
     },
     treesitter = {
         function()
-            local active_status = vim.treesitter.highlighter.active[0]
+            local bufnr = vim.api.nvim_get_current_buf()
+            local active_status = vim.treesitter.highlighter.active[bufnr]
 
             return active_status and "滑" or ""
         end,
