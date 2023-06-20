@@ -21,7 +21,7 @@ return function()
         client_id = client_id.pea_vim,
         show_time = false,
         workspace_text = function()
-            return "Rustacean"
+            return "Crababarian 🦀"
         end,
     }
 end
