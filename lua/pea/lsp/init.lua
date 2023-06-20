@@ -24,9 +24,9 @@ local lsp = {
     automatic_configuration = {
         skipped_servers = {
             "clangd",
+            "csharp_ls",
             unpack(lvim.lsp.automatic_configuration.skipped_servers),
         },
-        skipped_filetypes = { "cs", "cpp" },
     },
     buffer_mappings = {
         normal_mode = {
