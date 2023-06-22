@@ -119,11 +119,6 @@ local plugins = {
         config = require "pea.config.presence",
     },
     {
-        "declancm/cinnamon.nvim",
-        event = "VeryLazy",
-        config = require "pea.config.cinnamon",
-    },
-    {
         "kylechui/nvim-surround",
         event = "VeryLazy",
         config = require "pea.config.nvim_surround",
