@@ -78,12 +78,6 @@ local plugins = {
         config = require "pea.config.rust_tools",
     },
     {
-        "lvimuser/lsp-inlayhints.nvim",
-        branch = "anticonceal",
-        event = "VeryLazy",
-        config = require "pea.config.inlayhints",
-    },
-    {
         "kosayoda/nvim-lightbulb",
         event = "VeryLazy",
         config = require "pea.config.lightbulb",
