@@ -1,9 +1,5 @@
 local keys = {
     normal_mode = {
-        -- leap.nvim
-        ["f"] = "<Plug>(leap-forward)",
-        ["F"] = "<Plug>(leap-backward)",
-
         -- move.nvim
         ["<M-j>"] = ":MoveLine(1)<CR>",
         ["<M-k>"] = ":MoveLine(-1)<CR>",
@@ -24,10 +20,6 @@ local keys = {
         ["<M-k>"] = ":MoveBlock(-1)<CR>",
         ["<M-h>"] = ":MoveHBlock(-1)<CR>",
         ["<M-l>"] = ":MoveHBlock(1)<CR>",
-    },
-    o = {
-        ["f"] = "<Plug>(leap-forward-x)",
-        ["F"] = "<Plug>(leap-backward-x)",
     },
 }
 

@@ -1,6 +1,11 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
     {
+        "folke/flash.nvim",
+        config = require "pea.config.flash",
+        event = "VeryLazy",
+    },
+    {
         "akinsho/git-conflict.nvim",
         config = require "pea.config.conflict",
         event = "BufRead",
@@ -21,10 +26,6 @@ local plugins = {
     {
         "HiPhish/nvim-ts-rainbow2",
         event = "BufRead",
-    },
-    {
-        "ggandor/leap.nvim",
-        event = "VeryLazy",
     },
     {
         "asiryk/auto-hlsearch.nvim",
@@ -61,11 +62,6 @@ local plugins = {
     {
         "windwp/nvim-ts-autotag",
         ft = { "html", "typescriptreact", "svelte" },
-    },
-    {
-        "woosaaahh/sj.nvim",
-        event = "VeryLazy",
-        config = require "pea.config.sj",
     },
     {
         "TheBlob42/houdini.nvim",
