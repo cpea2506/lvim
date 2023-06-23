@@ -9,7 +9,7 @@ function M.show_documentation()
 end
 
 function M.on_attach(client, bufnr)
-    if client.server_capabilities.inlayHintProvider then
+    if vim.tbl_get(client.server_capabilities, "inlayHintProvider") then
         vim.lsp.buf.inlay_hint(bufnr, true)
     end
 end
