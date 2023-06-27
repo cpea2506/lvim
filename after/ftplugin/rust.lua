@@ -3,6 +3,5 @@ formatters.setup {
     {
         command = "rustfmt",
         filetypes = { "rust" },
-        args = { "--edition", "2021" },
     },
 }

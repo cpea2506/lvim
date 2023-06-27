@@ -25,6 +25,7 @@ local lsp = {
         skipped_servers = {
             "clangd",
             "csharp_ls",
+            "rust_analyzer",
             unpack(lvim.lsp.automatic_configuration.skipped_servers),
         },
     },
