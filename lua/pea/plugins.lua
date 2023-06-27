@@ -120,10 +120,6 @@ local plugins = {
         config = require "pea.config.nvim_surround",
     },
     {
-        "nvim-treesitter/playground",
-        cmd = { "TSHighlightCapturesUnderCursor", "TSHighlightCapturesUnderCursor" },
-    },
-    {
         "folke/trouble.nvim",
         cmd = "TroubleToggle",
         config = require "pea.config.trouble",
