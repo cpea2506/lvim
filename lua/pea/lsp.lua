@@ -1,5 +1,3 @@
-local utils = require "pea.lsp.utils"
-
 local lsp = {
     installer = {
         setup = {
@@ -32,7 +30,13 @@ local lsp = {
     buffer_mappings = {
         normal_mode = {
             ["K"] = {
-                utils.show_documentation,
+                function()
+                    if vim.fn.expand "%:t" == "Cargo.toml" then
+                        require("crates").show_popup()
+                    else
+                        vim.lsp.buf.hover()
+                    end
+                end,
                 "Show hover",
             },
         },
@@ -42,7 +46,11 @@ local lsp = {
             border = "rounded",
         },
     },
-    on_attach_callback = utils.on_attach,
+    on_attach_callback = function(client, bufnr)
+        if vim.tbl_get(client.server_capabilities, "inlayHintProvider") then
+            vim.lsp.inlay_hint(bufnr, true)
+        end
+    end,
 }
 
 vim.diagnostic.config {
