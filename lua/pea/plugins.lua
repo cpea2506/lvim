@@ -24,7 +24,7 @@ local plugins = {
         config = require "pea.config.gx",
     },
     {
-        "HiPhish/nvim-ts-rainbow2",
+        "HiPhish/rainbow-delimiters.nvim",
         event = "BufRead",
     },
     {
