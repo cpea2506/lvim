@@ -1,13 +1,11 @@
 return function()
     require("flash").setup {
-        {
-            search = {
-                incremental = true,
-            },
-            jump = {
-                nohlsearch = true,
-                autojump = true,
-            },
+        search = {
+            trigger = ":",
+        },
+        jump = {
+            nohlsearch = true,
+            autojump = true,
         },
     }
 end
