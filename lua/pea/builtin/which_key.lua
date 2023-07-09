@@ -12,6 +12,7 @@ local which_key = {
             name = "Trouble",
             o = { "<cmd>TroubleToggle<cr>", "Show diagnostics" },
         },
+        i = { "<cmd>Inspect<cr>", "Inspect highlighting" },
         T = {
             u = { "<cmd>TSUpdateSync<cr>", "Sync update" },
             h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Show highlighting group" },
