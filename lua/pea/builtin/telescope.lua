@@ -16,6 +16,11 @@ local telescope = {
             },
         },
     },
+    pickers = {
+        buffers = {
+            initial_mode = "insert",
+        },
+    },
 }
 
 return telescope
