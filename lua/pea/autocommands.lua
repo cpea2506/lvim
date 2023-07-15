@@ -36,6 +36,12 @@ local autocommands = {
             callback = nvim_tree_open_on_setup,
         },
     },
+    {
+        { "BufWinEnter", "BufRead", "BufNewFile" },
+        {
+            command = "setlocal formatoptions-=c formatoptions-=r formatoptions-=o",
+        },
+    },
 }
 
 return autocommands
