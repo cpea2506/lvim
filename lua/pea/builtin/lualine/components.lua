@@ -70,7 +70,7 @@ local components = {
         function()
             local msg = "LS Inactive"
             local bufnr = vim.api.nvim_get_current_buf()
-            local buf_clients = vim.lsp.get_active_clients { bufnr = bufnr }
+            local buf_clients = vim.lsp.get_clients { bufnr = bufnr }
 
             if vim.tbl_isempty(buf_clients) then
                 return msg
