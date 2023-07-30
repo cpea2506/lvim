@@ -1,9 +1,9 @@
 return function()
     require("dressing").setup {
         input = {
-            anchor = "NW",
             insert_only = false,
             override = function(conf)
+                conf.anchor = "NW"
                 conf.col = 1
                 conf.row = 1
 
