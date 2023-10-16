@@ -1,6 +1,11 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
     {
+        "luckasRanarison/clear-action.nvim",
+        config = require "pea.config.clear_action",
+        event = "BufRead",
+    },
+    {
         "folke/flash.nvim",
         config = require "pea.config.flash",
         event = "VeryLazy",
@@ -72,11 +77,6 @@ local plugins = {
         "simrat39/rust-tools.nvim",
         ft = "rust",
         config = require "pea.config.rust_tools",
-    },
-    {
-        "kosayoda/nvim-lightbulb",
-        event = "VeryLazy",
-        config = require "pea.config.lightbulb",
     },
     {
         "folke/todo-comments.nvim",
