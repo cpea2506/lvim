@@ -50,6 +50,13 @@ local lsp = {
         if vim.tbl_get(client.server_capabilities, "inlayHintProvider") then
             vim.lsp.inlay_hint(bufnr, true)
         end
+
+        -- TODO: remove in the future after null-ls is replaced
+        local status_ok, null_ls = pcall(require, "null-ls")
+
+        if status_ok then
+            null_ls.enable {}
+        end
     end,
 }
 

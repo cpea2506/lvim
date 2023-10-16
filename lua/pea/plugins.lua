@@ -1,6 +1,10 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
     {
+        "hinell/lsp-timeout.nvim",
+        dependencies = "neovim/nvim-lspconfig",
+    },
+    {
         "luckasRanarison/clear-action.nvim",
         config = require "pea.config.clear_action",
         event = "BufRead",
