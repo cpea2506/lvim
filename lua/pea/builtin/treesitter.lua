@@ -1,19 +1,11 @@
 local treesitter = {
     ensure_installed = {
-        "bash",
         "comment",
         "json",
         "lua",
         "markdown",
         "markdown_inline",
         "regex",
-        "rust",
-        "scss",
-        "svelte",
-        "toml",
-        "tsx",
-        "typescript",
-        "vim",
         "yaml",
     },
     autotag = {

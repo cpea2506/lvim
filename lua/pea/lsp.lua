@@ -3,18 +3,12 @@ local lsp = {
         setup = {
             automatic_installation = false,
             ensure_installed = {
-                "bashls",
                 "clangd",
                 "cmake",
                 "csharp_ls",
                 "jsonls",
                 "lua_ls",
                 "marksman",
-                "rust_analyzer",
-                "svelte",
-                "tailwindcss",
-                "taplo",
-                "tsserver",
                 "yamlls",
             },
         },
@@ -23,22 +17,7 @@ local lsp = {
         skipped_servers = {
             "clangd",
             "csharp_ls",
-            "rust_analyzer",
             unpack(lvim.lsp.automatic_configuration.skipped_servers),
-        },
-    },
-    buffer_mappings = {
-        normal_mode = {
-            ["K"] = {
-                function()
-                    if vim.fn.expand "%:t" == "Cargo.toml" then
-                        require("crates").show_popup()
-                    else
-                        vim.lsp.buf.hover()
-                    end
-                end,
-                "Show hover",
-            },
         },
     },
     null_ls = {
