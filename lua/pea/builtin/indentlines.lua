@@ -1,5 +1,5 @@
 local indentlines = {
-    active = true,
+    active = false,
     options = {
         indent_level = 10,
         max_indent_increase = 1,

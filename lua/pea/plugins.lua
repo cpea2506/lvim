@@ -1,6 +1,10 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
     {
+        "jmederosalvarado/roslyn.nvim",
+        config = require "pea.config.roslyn",
+    },
+    {
         "hinell/lsp-timeout.nvim",
         dependencies = "neovim/nvim-lspconfig",
     },
@@ -24,7 +28,7 @@ local plugins = {
         event = "BufRead",
     },
     {
-        "Decodetalkers/csharpls-extended-lsp.nvim",
+        "Hoffs/omnisharp-extended-lsp.nvim",
         ft = "cs",
     },
     {
@@ -69,18 +73,9 @@ local plugins = {
         event = "InsertEnter",
     },
     {
-        "windwp/nvim-ts-autotag",
-        ft = { "html", "typescriptreact", "svelte" },
-    },
-    {
         "TheBlob42/houdini.nvim",
         event = "InsertEnter",
         config = require "pea.config.houdini",
-    },
-    {
-        "simrat39/rust-tools.nvim",
-        ft = "rust",
-        config = require "pea.config.rust_tools",
     },
     {
         "folke/todo-comments.nvim",
@@ -102,16 +97,6 @@ local plugins = {
         "nacro90/numb.nvim",
         event = "VeryLazy",
         config = require "pea.config.numb",
-    },
-    {
-        "Saecki/crates.nvim",
-        event = "BufRead Cargo.toml",
-        config = require "pea.config.nvim_crates",
-    },
-    {
-        "brenoprata10/nvim-highlight-colors",
-        event = "BufRead",
-        config = require "pea.config.hi_colors",
     },
     {
         "cpea2506/presence.nvim",

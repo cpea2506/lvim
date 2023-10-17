@@ -1,7 +1,16 @@
-require("lvim.lsp.manager").setup("csharp_ls", {
+local lsp = require "lvim.lsp"
+
+require("lvim.lsp.manager").setup("omnisharp", {
     handlers = {
-        ["textDocument/definition"] = require("csharpls_extended").handler,
+        ["textDocument/definition"] = require("omnisharp_extended").handler,
     },
+    capabilities = vim.tbl_deep_extend("force", lsp.common_capabilities(), {
+        workspace = {
+            didChangeWatchedFiles = {
+                dynamicRegistration = true,
+            },
+        },
+    }),
 })
 
 local formatters = require "lvim.lsp.null-ls.formatters"
