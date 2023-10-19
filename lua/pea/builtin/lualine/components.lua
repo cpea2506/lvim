@@ -116,7 +116,7 @@ local components = {
         end,
         symbols = {
             added = " ",
-            modified = "柳",
+            modified = " ",
             removed = " ",
         },
         diff_color = {
@@ -158,7 +158,7 @@ local components = {
             local bufnr = vim.api.nvim_get_current_buf()
             local active_status = vim.treesitter.highlighter.active[bufnr]
 
-            return active_status and "滑" or ""
+            return active_status and " " or ""
         end,
         color = { fg = colors.green },
         padding = { right = 0 },
