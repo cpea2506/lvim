@@ -6,7 +6,6 @@ local lsp = {
                 "bashls",
                 "clangd",
                 "cmake",
-                "csharp_ls",
                 "jsonls",
                 "lua_ls",
                 "marksman",
@@ -22,7 +21,6 @@ local lsp = {
     automatic_configuration = {
         skipped_servers = {
             "clangd",
-            "csharp_ls",
             "rust_analyzer",
             unpack(lvim.lsp.automatic_configuration.skipped_servers),
         },

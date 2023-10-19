@@ -1,6 +1,11 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
     {
+        "jmederosalvarado/roslyn.nvim",
+        config = require "pea.config.roslyn",
+        ft = "cs",
+    },
+    {
         "hinell/lsp-timeout.nvim",
         dependencies = "neovim/nvim-lspconfig",
     },
@@ -22,10 +27,6 @@ local plugins = {
     {
         "cpea2506/relative-toggle.nvim",
         event = "BufRead",
-    },
-    {
-        "Decodetalkers/csharpls-extended-lsp.nvim",
-        ft = "cs",
     },
     {
         "chrishrb/gx.nvim",
