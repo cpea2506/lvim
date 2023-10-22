@@ -1,4 +1,3 @@
--- some settings can only passed as commandline flags, see `clangd --help`
 local clangd_flags = {
     "--background-index",
     "--all-scopes-completion",
@@ -7,10 +6,10 @@ local clangd_flags = {
     "--suggest-missing-includes",
     "--cross-file-rename",
     "--completion-style=detailed",
-    "--pch-storage=memory", -- could also be disk
+    "--pch-storage=memory",
     "--folding-ranges",
-    "--enable-config", -- clangd 11+ supports reading from .clangd configuration file
-    "--offset-encoding=utf-16", --temporary fix for null-ls
+    "--enable-config",
+    "--offset-encoding=utf-16",
     "--clang-tidy-checks=-*,llvm-*,clang-analyzer-*,modernize-*,-modernize-use-trailing-return-type",
 }
 

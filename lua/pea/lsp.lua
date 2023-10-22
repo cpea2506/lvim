@@ -10,10 +10,7 @@ local lsp = {
                 "lua_ls",
                 "marksman",
                 "rust_analyzer",
-                "svelte",
-                "tailwindcss",
                 "taplo",
-                "tsserver",
                 "yamlls",
             },
         },
@@ -44,18 +41,6 @@ local lsp = {
             border = "rounded",
         },
     },
-    on_attach_callback = function(client, bufnr)
-        if vim.tbl_get(client.server_capabilities, "inlayHintProvider") then
-            vim.lsp.inlay_hint(bufnr, true)
-        end
-
-        -- TODO: remove in the future after null-ls is replaced
-        local status_ok, null_ls = pcall(require, "null-ls")
-
-        if status_ok then
-            null_ls.enable {}
-        end
-    end,
 }
 
 vim.diagnostic.config {
