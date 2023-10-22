@@ -1,32 +1,37 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
     {
-        "jmederosalvarado/roslyn.nvim",
-        config = require "pea.config.roslyn",
-        ft = "cs",
-    },
-    {
-        "luckasRanarison/clear-action.nvim",
-        config = require "pea.config.clear_action",
-        event = "BufRead",
-    },
-    {
-        "folke/flash.nvim",
-        config = require "pea.config.flash",
-        event = "VeryLazy",
-    },
-    {
-        "akinsho/git-conflict.nvim",
-        config = require "pea.config.conflict",
-        event = "BufRead",
-    },
-    {
         "cpea2506/relative-toggle.nvim",
         event = "BufRead",
     },
     {
+        "cpea2506/presence.nvim",
+        event = "BufRead",
+        config = require "pea.config.presence",
+    },
+    {
+        "jmederosalvarado/roslyn.nvim",
+        ft = "cs",
+        config = require "pea.config.roslyn",
+    },
+    {
+        "luckasRanarison/clear-action.nvim",
+        event = "BufRead",
+        config = require "pea.config.clear_action",
+    },
+    {
+        "folke/flash.nvim",
+        event = "BufRead",
+        config = require "pea.config.flash",
+    },
+    {
+        "akinsho/git-conflict.nvim",
+        event = "BufRead",
+        config = require "pea.config.conflict",
+    },
+    {
         "chrishrb/gx.nvim",
-        event = "BufEnter",
+        event = "BufRead",
         config = require "pea.config.gx",
     },
     {
@@ -35,7 +40,7 @@ local plugins = {
     },
     {
         "asiryk/auto-hlsearch.nvim",
-        event = "VeryLazy",
+        event = "BufRead",
         config = require "pea.config.hlsearch",
     },
     {
@@ -49,13 +54,13 @@ local plugins = {
     },
     {
         "folke/noice.nvim",
-        event = "VeryLazy",
+        event = "BufRead",
         config = require "pea.config.noice",
         dependencies = "MunifTanjim/nui.nvim",
     },
     {
         "ur4ltz/move.nvim",
-        event = "VeryLazy",
+        event = "BufRead",
     },
     {
         "hrsh7th/cmp-nvim-lsp-signature-help",
@@ -64,10 +69,6 @@ local plugins = {
     {
         "lukas-reineke/cmp-rg",
         event = "InsertEnter",
-    },
-    {
-        "windwp/nvim-ts-autotag",
-        ft = { "html", "typescriptreact", "svelte" },
     },
     {
         "TheBlob42/houdini.nvim",
@@ -92,28 +93,23 @@ local plugins = {
     },
     {
         "stevearc/dressing.nvim",
-        event = "VeryLazy",
+        event = "BufRead",
         config = require "pea.config.dressing",
     },
     {
         "nacro90/numb.nvim",
-        event = "VeryLazy",
+        keys = ":",
         config = require "pea.config.numb",
     },
     {
         "Saecki/crates.nvim",
         event = "BufRead Cargo.toml",
-        config = require "pea.config.nvim_crates",
-    },
-    {
-        "cpea2506/presence.nvim",
-        event = "BufRead",
-        config = require "pea.config.presence",
+        config = require "pea.config.crates",
     },
     {
         "kylechui/nvim-surround",
-        event = "VeryLazy",
-        config = require "pea.config.nvim_surround",
+        event = "BufRead",
+        config = require "pea.config.surround",
     },
     {
         "folke/trouble.nvim",
