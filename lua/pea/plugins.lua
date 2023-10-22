@@ -6,10 +6,6 @@ local plugins = {
         ft = "cs",
     },
     {
-        "hinell/lsp-timeout.nvim",
-        dependencies = "neovim/nvim-lspconfig",
-    },
-    {
         "luckasRanarison/clear-action.nvim",
         config = require "pea.config.clear_action",
         event = "BufRead",
@@ -79,9 +75,9 @@ local plugins = {
         config = require "pea.config.houdini",
     },
     {
-        "simrat39/rust-tools.nvim",
+        "mrcjkb/ferris.nvim",
         ft = "rust",
-        config = require "pea.config.rust_tools",
+        config = require "pea.config.ferris",
     },
     {
         "folke/todo-comments.nvim",
@@ -108,11 +104,6 @@ local plugins = {
         "Saecki/crates.nvim",
         event = "BufRead Cargo.toml",
         config = require "pea.config.nvim_crates",
-    },
-    {
-        "brenoprata10/nvim-highlight-colors",
-        event = "BufRead",
-        config = require "pea.config.hi_colors",
     },
     {
         "cpea2506/presence.nvim",
