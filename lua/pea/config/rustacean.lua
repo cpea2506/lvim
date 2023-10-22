@@ -1,5 +1,5 @@
 return function()
-    vim.g.ferris = {
+    vim.g.rustaceanvim = {
         tools = {
             executor = "toggleterm",
             hover_actions = {

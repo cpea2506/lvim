@@ -75,9 +75,9 @@ local plugins = {
         config = require "pea.config.houdini",
     },
     {
-        "mrcjkb/ferris.nvim",
+        "mrcjkb/rustaceanvim",
         ft = "rust",
-        config = require "pea.config.ferris",
+        config = require "pea.config.rustacean",
     },
     {
         "folke/todo-comments.nvim",
