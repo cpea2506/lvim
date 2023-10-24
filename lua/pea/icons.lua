@@ -55,21 +55,6 @@ local icons = {
             color = "#efefef",
             name = "EslintIgnore",
         },
-        ["ogg"] = {
-            icon = "",
-            color = "#e3ffff",
-            name = "Ogg",
-        },
-        ["mp3"] = {
-            icon = "",
-            color = "#e3ffff",
-            name = "Mp3",
-        },
-        ["wav"] = {
-            icon = "",
-            color = "#e3ffff",
-            name = "Wav",
-        },
         ["ttf"] = {
             icon = "",
             color = "#ffffff",
