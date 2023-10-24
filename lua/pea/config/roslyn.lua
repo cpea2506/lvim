@@ -6,7 +6,7 @@ return function()
         capabilities = vim.tbl_deep_extend("force", lsp.common_capabilities(), {
             workspace = {
                 didChangeWatchedFiles = {
-                    dynamicRegistration = true,
+                    dynamicRegistration = false,
                 },
             },
         }),
