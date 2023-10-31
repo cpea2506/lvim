@@ -21,6 +21,9 @@ local telescope = {
             initial_mode = "insert",
         },
     },
+    on_config_done = function(tele)
+        tele.load_extension "corrode"
+    end,
 }
 
 return telescope

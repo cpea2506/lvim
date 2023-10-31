@@ -1,5 +1,6 @@
 local plugins = {
     "cpea2506/one_monokai.nvim",
+    "fdschmidt93/telescope-corrode.nvim",
     {
         "cpea2506/relative-toggle.nvim",
         event = "BufRead",

@@ -8,6 +8,9 @@ local which_key = {
         show_keys = false,
     },
     mappings = {
+        s = {
+            f = { "<cmd>Telescope corrode<cr>", "Find Files" },
+        },
         t = {
             name = "Trouble",
             o = { "<cmd>TroubleToggle<cr>", "Show diagnostics" },
