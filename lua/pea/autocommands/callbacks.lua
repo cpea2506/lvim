@@ -28,7 +28,7 @@ function M.on_lsp_attach(args)
     end
 
     if client.server_capabilities.inlayHintProvider then
-        vim.lsp.inlay_hint(bufnr, true)
+        vim.lsp.inlay_hint.enable(bufnr, true)
     end
 end
 
