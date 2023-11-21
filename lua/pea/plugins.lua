@@ -2,11 +2,6 @@ local plugins = {
     "cpea2506/one_monokai.nvim",
     "fdschmidt93/telescope-corrode.nvim",
     {
-        "boltlessengineer/smart-tab.nvim",
-        event = "BufRead",
-        config = require "pea.config.smart_tab",
-    },
-    {
         "cpea2506/relative-toggle.nvim",
         event = "BufRead",
     },

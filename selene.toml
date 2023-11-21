@@ -1,1 +1,4 @@
 std = "lvim"
+
+[lints]
+mixed_table = "allow"
