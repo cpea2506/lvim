@@ -60,7 +60,7 @@ local plugins = {
         dependencies = "MunifTanjim/nui.nvim",
     },
     {
-        "ur4ltz/move.nvim",
+        "fedepujol/move.nvim",
         event = "BufRead",
     },
     {
