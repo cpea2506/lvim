@@ -1,5 +1,5 @@
 local indentlines = {
-    active = false,
+    active = true,
 }
 
 return indentlines
