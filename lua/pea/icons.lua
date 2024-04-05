@@ -11,7 +11,7 @@ local icons = {
             name = "GitModules",
         },
         ["rs"] = {
-            icon = "",
+            icon = "",
             color = "#ff7043",
             name = "Rust",
         },
