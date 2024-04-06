@@ -8,16 +8,6 @@ function lvim:set_options()
     end
 end
 
-function lvim:set_icons()
-    local dev_icons = self.icons.dev
-
-    if not dev_icons then
-        return
-    end
-
-    require("nvim-web-devicons").set_icon(dev_icons)
-end
-
 ---Set lvim values with options in form of table
 ---@param opts table #options table
 function lvim:set(opts)
@@ -26,5 +16,4 @@ function lvim:set(opts)
     vim.env.LVIM_DEV_MODE = self.dev_mode or false
 
     lvim:set_options()
-    lvim:set_icons()
 end

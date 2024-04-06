@@ -7,7 +7,6 @@ lvim:set {
     lsp = reload "pea.lsp",
     keys = reload "pea.keys",
     transparent_window = true,
-    icons = reload "pea.icons",
     colorscheme = "one_monokai",
     plugins = reload "pea.plugins",
     options = reload "pea.options",
